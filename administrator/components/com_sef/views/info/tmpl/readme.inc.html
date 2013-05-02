@@ -1,0 +1,644 @@
+<style type="text/css">
+h2 { color: #A1B754; }
+h1, h3, h4 { color: #666666; }
+div.docs,div.docs p,div.docs ul li,div.docs ol li {
+	text-align: left;
+	font-weight: lighter;
+	font-family: Tahoma, Arial, Verdana;
+}
+span.link { cursor: pointer; }
+div.docs p { padding-left: 3em; font-weight: lighter; }
+div.docs li p { padding-left: 0em; }
+div.docs .small {
+	color: #666666; font-size: 90%;
+}
+span.bold {
+	font-weight: bold;
+}
+</style>
+<div class="docs">
+<a name="top"></a>
+<h2>JoomSEF User Manual</h2>
+<p>version 3.4.0<br />
+by <a href="http://www.artio.net" target="_blank">ARTIO s.r.o.</a><br />
+last updated on 16. October 2009</p>
+<h2><a title="toc" name="toc"></a>Table of contents</h2>
+<ol>
+	<li><a href="#intro">Introduction</a></li>
+	<li><a href="#licence">Licence</a></li>
+	<li><a href="#install-and-conf">Installing and Configuring</a>
+	<ol
+		style="list-style-type: upper-roman; list-style-image: none; list-style-position: outside">
+		<li><a href="#install">Installation</a></li>
+		<li><a href="#iis">Configuring IIS</a></li>
+		<li><a href="#uninstall">Uninstall</a></li>
+		<li><a href="#upgrading_free_to_paid" target="_self">Upgrading
+		from free to paid version</a></li>
+		<li><a href="#checklist">Configuration Checklist</a></li>
+		<li><a href="#nonlatin">Non-latin languages</a></li>
+		<li><a href="#autoupdate">Automatic Updates</a></li>
+	</ol>
+	</li>
+	<li><a href="#tips">Useful Usage Tips</a>
+	<ol
+		style="list-style-type: upper-roman; list-style-image: none; list-style-position: outside">
+		<li><a href="#config">Configuration</a></li>
+		<li><a href="#optimize">Optimization</a></li>
+		<li><a href="#duplicates">Preventing duplicates</a></li>
+		<li><a href="#cache">Cache</a></li>
+		<li><a href="#patches">Patch System</a></li>
+		<li><a href="#joomfish">JoomFish Support</a></li>
+		<li><a href="#components">Component Configuration</a></li>
+		<li><a href="#urls">Modifying URLs</a></li>
+		<li><a href="#metadata">Metadata and Page Titles Organization
+		- JoomSEF Metabot</a></li>
+		<li><a href="#backup">Backing up your Custom URLs</a></li>
+	</ol>
+	</li>
+	<li><a href="#exts">Supported Joomla! Components</a>
+	<ol
+		style="list-style-type: upper-roman; list-style-image: none; list-style-position: outside">
+		<li><a href="#core">Joomla! Built-in Components</a></li>
+		<li><a href="#ext">3rd Party Components</a></li>
+		<li><a href="#list">List of Official Extensions Available</a></li>
+		<li><a href="#download_ext">Extension Downloads</a></li>
+		<li><a href="#install_ext">Extension Installation</a></li>
+		<li><a href="#upgrade_ext">Extension Upgrade</a></li>
+		<li><a href="#extensions">Extension Parameters</a></li>
+	</ol>
+	</li>
+	<li><a href="#help">Support and Help</a></li>
+	<li><a href="#donate">Donate to JoomSEF</a></li>
+	<li><a href="#ads">Advertisement Notice</a></li>
+	<li><a href="#credits">Credits</a></li>
+</ol>
+<ol>
+	<li>
+	<h2><a title="intro" name="intro"></a>Introduction</h2>
+	<p>ARTIO JoomSEF is a Joomla! component that generates and allows
+	creation of Search Engine Friendly (SEF) URLs for Apache and IIS,
+	returns proper 404 status code for missing content, provides logging of
+	404 errors, and creation of special "shortcut" URLs that allow the user
+	to redirection to the new URL.</p>
+	<p>Starting with version 1.3.0 JoomSEF also allows control of
+	specific meta tags, such as description or keywords for each generated
+	URL. JoomSEF comes with SEF support for most popular Joomla!
+	components. Some of those are delivered free as part of the JoomSEF
+	installation package and some are also available under commercial
+	licence. If you are missing a support for your favourite component,
+	ARTIO may develop it on request.</p>
+	<p>This documents describes how to install and setup ARTIO JoomSEF
+	Joomla! component. You can view this documentation again by selecting
+	the "ARTIO JoomSEF Documentation" button from the ARTIO JoomSEF Control
+	Panel.</p>
+	</li>
+	<li>
+	<h2><a title="licence" name="licence"></a>Licence</h2>
+	<p>This software is distributed under following <a
+		title="JoomSEF license conditions"
+		href="en/joomsef/artio-joomsef-license-and-pricing">licensing
+	conditions</a>. By installing and using this software, you agree to bind to
+	the licence conditions. Author reserves right to change these
+	conditions at any time without prior notice.</p>
+	</li>
+	<li>
+	<h2><a title="install-and-conf" name="install-and-conf"></a>Installing
+	and Configuring</h2>
+	<p>You can view installation instructions below by clicking the
+	appropriate arrow.</p>
+	<p>If your .htaccess file was set as writable the install may have
+	updated it already and you should not have to worry about it.</p>
+	<p>If your site is in a subdirectory be sure to change the
+	RewriteBase line accordingly. ex/ RewriteBase /joomla</p>
+	<ol
+		style="list-style-type: upper-roman; list-style-image: none; list-style-position: outside">
+		<li>
+		<h3><a title="install" name="install"></a>Installation</h3>
+		<ol>
+			<li>Upload the zip file to Joomla! using the component installer
+			in the usual way.</li>
+			<li>
+			<p>If not processed automatically by installer (e.g. due to write
+			restriction to file), adjust your .htaccess file. Please note, that
+			some directives may not be supported with specific web server or
+			dependant on its configuration. See the comments in file for details.</p>
+			<p>Unsupported directives in .htaccess file are most common
+			cause for seeing "500 Internal Server Error" message after JoomSEF
+			installation.</p>
+			</li>
+			<li>For Apache, set your ".htaccess" file like this (this is
+			file for Joomla 1.5.x):<br />
+			<pre>##<br /># @version $Id: htaccess.txt 9975 2008-01-30 17:02:11Z ircmaxell $<br /># @package Joomla<br /># @copyright Copyright (C) 2005 - 2008 Open Source Matters. All rights reserved.<br /># @license http://www.gnu.org/copyleft/gpl.html GNU/GPL<br /># Joomla! is Free Software<br />##<br /><br /><br />#####################################################<br />#  READ THIS COMPLETELY IF YOU CHOOSE TO USE THIS FILE<br />#<br /># The line just below this section: 'Options +FollowSymLinks' may cause problems<br /># with some server configurations.  It is required for use of mod_rewrite, but may already<br /># be set by your server administrator in a way that disallows changing it in<br /># your .htaccess file.  If using it causes your server to error out, comment it out (add # to<br /># beginning of line), reload your site in your browser and test your sef url's.  If they work,<br /># it has been set by your server administrator and you do not need it set here.<br />#<br />#####################################################<br /><br />##  Can be commented out if causes errors, see notes above.<br /># Options +FollowSymLinks<br /><br />#<br />#  mod_rewrite in use<br /><br />RewriteEngine On<br /><br /><br />#  Uncomment following line if your webserver's URL<br />#  is not directly related to physical file paths.<br />#  Update Your Joomla! Directory (just / for root)<br /><br /># RewriteBase /<br /><br /><br />########## Begin - Joomla! core SEF Section<br />#<br />RewriteCond %{REQUEST_FILENAME} !-f<br />RewriteCond %{REQUEST_FILENAME} !-d<br />RewriteCond %{REQUEST_URI} !^/index.php<br />RewriteCond %{REQUEST_URI} (/|\.php|\.html|\.htm|\.feed|\.pdf|\.raw|/[^.]*)$  [NC]<br />RewriteRule (.*) index.php<br />RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]<br />#<br />########## End - Joomla! core SEF Section<br /><br /><br />########## Begin - Rewrite rules to block out some common exploits<br />## If you experience problems on your site block out the operations listed below<br />## This attempts to block the most common type of exploit `attempts` to Joomla!<br />#<br /># Block out any script trying to set a mosConfig value through the URL<br />RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\%3D) [OR]<br /># Block out any script trying to base64_encode crap to send via URL<br />RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [OR]<br /># Block out any script that includes a &lt;script&gt; tag in URL<br />RewriteCond %{QUERY_STRING} (\&lt;|%3C).*script.*(\&gt;|%3E) [NC,OR]<br /># Block out any script trying to set a PHP GLOBALS variable via URL<br />RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]<br /># Block out any script trying to modify a _REQUEST variable via URL<br />RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})<br /># Send all blocked request to homepage with 403 Forbidden error!<br />RewriteRule ^(.*)$ index.php [F,L]<br />#<br />########## End - Rewrite rules to block out some common exploits<br /></pre>
+			<p>For older Joomla versions (1.0.x) see the original file in the
+			website root (htaccess.txt), rename it to .htaccess and follow the
+			comments within. Htaccess file for Joomla 1.0.x contains 2 rewrite
+			rules sections. With JoomSEF installation, the latter must be
+			uncommented (by default, it is commented out).</p>
+			</li>
+			<li>For IIS, see Configuring IIS.</li>
+			<li>Ensure that SEF is enabled under Global Configuration in the
+			Joomla! backend.</li>
+			<li>Edit the JoomSEF configuration, Change Enable to yes and
+			save.<br />
+			This is necessary to ensure the default 404 document gets saved to
+			the Joomla! database.</li>
+		</ol>
+		</li>
+		<li>
+		<h3><a title="iis" name="iis"></a>Configuring IIS</h3>
+		<p>Since JoomSEF 1.3.2, support for IIS servers has been retested
+		and updated.</p>
+		<p>JoomSEF has been successfully tested on IIS5 and IIS6. As the
+		installation process is rather complex, we provide just the basic
+		steps and hints here. If you have problems setting this up, please
+		contact our support team (please note that the support is a paid
+		service).</p>
+		<ol>
+			<li>
+			<h4>Configure PHP as ISAPI filter</h4>
+			In your IIS website configuration, configure PHP to run as ISAPI
+			filter. (recommended)</li>
+			<li>
+			<h4>Install ISAPI Rewrite Filter</h4>
+			To make JoomSEF work on your IIS, you will further need a rewrite
+			component similar to mod_rewrite to Apache. There is several of them
+			available, both free or commercial. Staying with free solutions, it
+			works e.g. with ISAPI_Rewrite Lite. From the others IISRewrite or
+			ISAPI_Rewrite Full should be ok. We have also tested it with IIRF
+			(Ionic's ISAPI Rewrite Filter) but this one was a bit buggy, although
+			closes to the original Apache's mod_rewrite (hopefully author can fix
+			it soon).<br />
+			Download the chosen component and follow its documentation to
+			install it.</li>
+			<li>
+			<h4>Create rewrite rules definition file</h4>
+			<p>Create an .ini with rewrite rules for the rewrite components.
+			The name of file and location may differ based on selected rewrite
+			module. For ISAPI_Rewrite the file name is httpd.ini and should be
+			store in the modules install directory. For details for your module
+			check its documentation.</p>
+			<p>The file analogy of the Apache's .htaccess. The rules needed
+			may differ on component chosen, your server configuration and your
+			usage needs. If you are unsure about configuring this (or also any of
+			the previous steps), you may contact our support.</p>
+			<p>In general you may copy the rules from the htaccess.txt file
+			distributed with Joomla! and adjust them to match the rewrite
+			component possibilities. Please note that every module has a slightly
+			different set of rules that it supports. (e.g. ISAPI_Rewrite does NOT
+			support %{REQUEST_FILENAME} !-f) and existing files need to be
+			checked by other rule. E.g. for every RewriteRule, add [L,U]
+			modifier.</p>
+			<p>If your Joomla! installation is not located in the website
+			root, you will need to add the relative path to all the RewriteRules.
+			(to simulate Apache's RewriteBase setting). If your Joomla! is
+			located directly in the web site root, just add "/" before the
+			index.php in the 2nd part of the RewriteRules.</p>
+			<p>Specific configuration may differ with different IIS Rewrite
+			modules used and its versions (Helicon Isapi Rewrite 2 or 3) and also
+			with Joomla versions 1.0 or 1.5.</p>
+			<p>An example configuration for IIRF for the site located in
+			subdirectory /joomla/demo would be following:</p>
+			<pre>########## Begin - Joomla! core SEF Section<br />#<br />RewriteCond %{REQUEST_FILENAME} !-f<br />RewriteCond %{REQUEST_FILENAME} !-d<br />RewriteCond %{REQUEST_URI} !^/index.php<br />RewriteCond %{REQUEST_URI} (/|\.php|\.html|\.htm|\.feed|\.pdf|\.raw|/[^.]*)$  [NC]<br />RewriteRule /joomla/demo/(.*) /joomla/demo/index.php<br />RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]<br />#<br />########## End - Joomla! core SEF Section<br /><br /><br />########## Begin - Rewrite rules to block out some common exploits<br />## If you experience problems on your site block out the operations listed below<br />## This attempts to block the most common type of exploit `attempts` to Joomla!<br />#<br /># Block out any script trying to set a mosConfig value through the URL<br />RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\%3D) [OR]<br /># Block out any script trying to base64_encode crap to send via URL<br />RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [OR]<br /># Block out any script that includes a &lt;script&gt; tag in URL<br />RewriteCond %{QUERY_STRING} (\&lt;|%3C).*script.*(\&gt;|%3E) [NC,OR]<br /># Block out any script trying to set a PHP GLOBALS variable via URL<br />RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]<br /># Block out any script trying to modify a _REQUEST variable via URL<br />RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})<br /># Send all blocked request to homepage with 403 Forbidden error!<br />RewriteRule ^(.*)$ index.php [F,L]<br />#<br />########## End - Rewrite rules to block out some common exploits<br /></pre>
+			<p></p>
+			</li>
+			<h4>Configure the Custom Errors (optional)</h4>
+			<span style="font-weight: bold; color: red;">NOTE: in the
+			example below, Joomla! is installed in the virtual directory Joomla!</span>
+			Using the Internet Services Manager, right-click the directory in
+			which Joomla! is installed.
+			<br />
+			Select properties &gt;&gt; Custom Error
+			<br />
+			set the 404 to URL:/joomla/index.php
+			<br />
+			set the 405 to URL:/joomla/index.php
+		</ol>
+		</li>
+		<li>
+		<h3><a title="uninstall" name="uninstall"></a>Uninstall</h3>
+		<ol>
+			<li>Uninstall the component using the component unistaller in
+			the usual way.</li>
+			<li>Restore your .htaccess file to the default version (see
+			htaccess.txt) or remove it completely - depending on whether you will
+			continue to use Joomla! default SEO or not.</li>
+		</ol>
+		</li>
+		<li>
+		<h3><a title="upgrading_free_to_paid"
+			name="upgrading_free_to_paid"></a>Upgrading from free to paid version</h3>
+		<p>If you have purchased a paid version of JoomSEF and you want to
+		replace the free one without loosing the current configuration and
+		already stored SEF URLs, please follow this procedure:</p>
+		<ol style="padding-left: 5em">
+			<li>from JoomSEF control panel, choose "Upgrade"</li>
+			<li>from upgrade page, choose "Install from page"</li>
+			<li>choose the installation file you have download from ARTIO
+			website</li>
+			<li>click the upgrade button</li>
+		</ol>
+		</li>
+		<li>
+		<h3><a title="checklist" name="checklist"></a>Configuration
+		Checklist</h3>
+		<p>Make sure that:</p>
+		<ol style="padding-left: 5em">
+			<li>the .htaccess exists in the root of your Joomla! site</li>
+			<li>the 3rd party section rules in .htaccess are uncommented</li>
+			<li>the "RewriteBase" rule matches YOUR Joomla! installation</li>
+			<li>Joomla! SEF is "ON" in site "Global configuration"</li>
+			<li>JoomSEF is "ON" in site "JoomSEF configuration"</li>
+		</ol>
+		</li>
+		<li>
+		<h3><a title="nonlatin" name="nonlatin"></a>Non-latin languages</h3>
+		<p>If your web site uses non-latin languages (such as Greek,
+		Hebrew, etc.), make sure to configure the character conversion map
+		correctly in JoomSEF Configuration / Non-ASCII character replacements
+		for all characters your language is using.</p>
+		<p>The format you need to use is
+		oldChar1|newChar1,oldChar2|newChar2,... .<br />
+		Example: α|a,β|b,γ|c,...</p>
+		</li>
+		<li>
+		<h3><a title="autoupdate" name="autoupdate"></a>Automatic Updates</h3>
+		<p>Starting with version 1.3.0, JoomSEF provides automatic updates
+		capabilities. From version 2.0.x automatic upgrades also apply to
+		JoomSEF extensions.</p>
+		<p>Thanks to this feature, it is no longer needed to uninstall and
+		install the component each time you want to upgrade to newer version.
+		After activating the automatic upgrade tool in the JoomSEF control
+		panel, the component will check, whether newer version is available
+		on-line and if yes, it will automatically download it and install
+		rewriting your current version.</p>
+		</li>
+	</ol>
+	</li>
+	<li>
+	<h2><a title="tips" name="tips"></a>Useful Usage Tips</h2>
+	<ol
+		style="list-style-type: upper-roman; list-style-image: none; list-style-position: outside">
+		<li>
+		<h3><a title="config" name="config"></a>Configuration</h3>
+		<p>Using the ARTIO JoomSEF configuration is fairly straight
+		forward. For more information on each item hover your mouse over the
+		blue (i) images when you are in the configuration screen.</p>
+		<p>When you save the configuration it will remove all your URL's
+		from the database. If you have a high traffic site it may be wise to
+		put it offline before saving the ARTIO JoomSEF config or purging the
+		database and go and browse your site starting at the main page. This
+		will create the URL's properly for you and prevent numbers from being
+		added to the ends of URL's people were browsing that changed.</p>
+		<p>You may want to purge the 404 log before creating fresh urls.</p>
+		</li>
+		<li>
+		<h3><a title="optimize" name="optimize"></a>Optimization</h3>
+		<p>To achieve maximum performance, you should consider several
+		things.</p>
+		<p>Always have the latest JoomSEF version installed as we continue
+		optimizations with every release.</p>
+		<p>Enable Joomla! caching.</p>
+		<p>Use JoomSEF Configuration to turn SEF off for those components
+		you do not need it or which generate too many unoptimized links.
+		Typically when you note links like 45.html, 46.html, ..., something is
+		probably wrong.</p>
+		<p>If certain component is using pagination, sorting and similar
+		parameters an advanced configuration option <em>"Append non-SEF
+		variables to URL"</em> may significantly reduce a number of SEF links
+		generated and thus also your DB load. However, please note that the
+		excluded variables will be reappended to your URL in standard form as
+		&amp;varname=value.</p>
+		<p>JoomSEF will always be a DB-driven SEO component. It will
+		produce very nice and highly editable URLs for you, but for the cost
+		of higher load for your DB. When configured properly and cached, the
+		load increase should not be significant, but especially with big and
+		frequently visited sites, pay a special attention to configuration and
+		installed modules and plan your SEO carefully.</p>
+		</li>
+		<li>
+		<h3><a title="duplicates" name="duplicates"></a>Preventing
+		duplicates</h3>
+		<p>If you are facing duplicate content items links e.g. <em>http://yoursite.you/article.html</em>,
+		<em>http://yoursite.you/article-2.html</em>, etc. that lead to the
+		same content, this is most probably caused by so called "Itemid"
+		variable (although there may be other reasons also).</p>
+		<p>The Itemid is internal Joomla! variable used to identify the
+		source of a URL link. E.g. main menu or sub menu item that your
+		visitor used to get to a certain content. According to this variable,
+		different Joomla! configurations are applied - e.g. what template will
+		be used or what modules will be visible, etc.</p>
+		<p>Since JoomSEF 1.4.0, several new configuration options are
+		provided in "Advanced configuration" section. The option <em>"Exclude
+		source info"</em> may be used to exclude the Itemid variable from the URL
+		and thus eliminate the duplicates caused by it. However, ignoring it
+		completely may lead to unwanted Joomla! functionality, like not
+		switching the templates as desired or so. Whether this will be a
+		problem for you or not depends mainly on the way how your site is
+		designed and how complicated it is. If you need to fix this, the
+		Itemid should be "reappended" to the SEF URL as an extra part using
+		the option <em>"Reappend source"</em>. Then the resulting URL will
+		look <em>http://yoursite.you/article.html&amp;Itemid=xy</em>.</p>
+		<p>Since JoomSEF 2.0.0 there is a possibility to set your own
+		Itemid for each extension that will always be used with it - thus even
+		when <em>"Reappend source"</em> is set to Yes, that extension won't
+		have the ?Itemid=xy appended. You can find this option in extension
+		parameters. If you leave the <em>"Override Itemid"</em> field blank,
+		the default Itemid will be used, but won't be appended as ?Itemid=xy
+		in URL. Thus you can achieve that the ?Itemid=xy will be added only to
+		those extensions that need it (mostly content). But be careful,
+		setting Itemid to some random number can ruin your menu functionality!</p>
+		<p>Another new option is <em>"Ignore multiple sources"</em>. If
+		selected, only one URL will be created for each page using the first
+		Itemid. Every other link varying in Itemid only will be ignored and
+		the already created one will be used instead. But again - this can
+		ruin your menu functionality! This option has no effect on extensions
+		with custom Itemid set.</p>
+		</li>
+		<li>
+		<h3><a title="cache" name="cache"></a>Cache</h3>
+		<p>JoomSEF 2.0.0 introduces own cache functionality to decrease
+		the amount of queries to your database. You can find this option in
+		Advanced Configuration section.</p>
+		<p>When caching is enabled, the most often used links will be kept
+		in memory and will not require querying database every time. You can
+		set the cache size (how many links can be stored in memory) and
+		minimum hit count - only links with hit count greater than specified
+		value will be stored in cache. Be careful about the cache size option
+		- the more links in cache means less queries to database, but on the
+		other hand bigger memory consumption.</p>
+		</li>
+		<li>
+		<h3><a title="patches" name="patches"></a>Patch System</h3>
+		<p>JoomSEF 2.0.0 also comes with the new Patch System. This will
+		also decrease amount of queries made to database because everyone can
+		use only those patches he needs, so no more "SELECT DATABASE()"
+		queries if you use only one database.</p>
+		<p>A patch is basically a mambot specifically designed to work with
+		JoomSEF only. This means that you can use default Joomla! Mambot
+		installer to manage these patches. Also every patch you install must
+		be published in Site Mambots section in order to work.</p>
+		</li>
+		<li>
+		<h3><a title="joomfish" name="joomfish"></a>JoomFish Support</h3>
+		<p>There are several ways you can let JoomSEF build URLs on your
+		multi-lingual site. They are displayed in JoomFish Related
+		Configuration section of JoomSEF configuration when JoomFish is
+		installed.</p>
+		<p><strong>Language integration</strong></p>
+		<ul>
+			<li><strong>Include in path</strong> - with this option selected
+			your URLs will look like www.mysite.com/en/somepage.html</li>
+			<li><strong>Add as suffix</strong> - this option will make your
+			URLs look like www.mysite.com/somepage_en.html</li>
+			<li><strong>Use different domains</strong> - useful option if
+			you have several domains registered for your site. Resulting URLs
+			will look like http://en.mysite.com/somepage.html</li>
+			<li><strong>Do not add</strong> - does not add any language code
+			to URLs. Should be used only when <em>"Translate URLs"</em> option is
+			active or it will create duplicate links.</li>
+		</ul>
+		<p><strong>Always use language</strong><br />
+		With this option active the language code will always be added to
+		resulting URL. This may decrease duplicate links count as there won't
+		be two links (with and without language code) pointing to the same
+		page.</p>
+		<p><strong>Translate URLs</strong><br />
+		Activate to have your URLs translated using JoomFish - this will
+		improve the readability of your URLs for people preferring other
+		languages.</p>
+		<p><strong>Domain Configuration</strong><br />
+		Here is the place to set custom domain for each language if you have <strong>Use
+		different domains</strong> selected.</p>
+		</li>
+		<li>
+		<h3><a title="components" name="components"></a>Component
+		Configuration</h3>
+		<p>In the Component Configuration section of JoomSEF configuration
+		you can set some options for each component individually.</p>
+		<p><strong>Handling</strong><br />
+		Controls the way how links are processed.</p>
+		<ul>
+			<li><strong>Use default handler</strong> - JoomSEF will try to
+			create the best looking URL it can using all available resources.</li>
+			<li><strong>Nocache</strong> - JoomSEF will create URLs the same
+			way as default Joomla! SEF does - they won't be stored in database
+			and will look like
+			www.mysite.com/component/option,com_virtuemart/Itemid,50/</li>
+			<li><strong>Skip</strong> - JoomSEF will not process URLs at all
+			and they will look as with the SEF disabled entirely.</li>
+		</ul>
+		<p><strong>Custom title</strong><br />
+		Lets you set your own extension title to use in URL instead of default
+		menu title. Leave blank for default one. If you use JoomFish you can
+		also translate these custom titles.<br />
+		When checking the check box next to the custom title box, the menu
+		title part of the URL will be left empty.</p>
+		</li>
+		<li>
+		<h3><a title="urls" name="urls"></a>Modifying URLs</h3>
+		<p>You can modify URL's to your liking. Go into the ARTIO JoomSEF
+		Control Panel and click ' View/Edit SEF Urls'. Select the URL you wish
+		to modify. If you click the check box labeled 'Save as Custom
+		Redirect' it will place this URL into the 'Custom Redirect' area which
+		you can navigate to from the ARTIO JoomSEF Control Panel. When you
+		click 'View/Edit Custom Redirects' you will see your URL in here now
+		instead. These urls will not be removed when you save the config. You
+		can modify these and save them as you wish.</p>
+		<p>This is particularly useful if you are updating from an old
+		site because any URL's that are no longer available will be logged. You
+		can view these URL's by clicking 'View/Edit 404 Logs' in the ARTIO
+		JoomSEF Control Panel. You can redirect visitors to the new page by
+		selecting the URL you wish to modify and entering the new url. Note:
+		The ability to enter non-Joomla! URL's into this area is coming soon!
+		This will allow you to easily transfer a non-Joomla! site to Joomla
+		using ARTIO JoomSEF and any of your old URL's will be redirected to
+		the new page within Joomla!.</p>
+		</li>
+		<li>
+		<h3><a title="metadata" name="metadata"></a>Metadata and Page
+		Titles Organization - JoomSEF Metabot</h3>
+		<p>To organize and adjust your site metadata (such as title, meta
+		desc, meta keywords, etc.] from one place, you may use features
+		offered by JoomSEF Metabot. Metabot is installed as a standard Joomla!
+		system mambot (plugin in Joomla 1.5.x) and takes care about
+		composition of your page title and meta data in the page head section.</p>
+		<p>Metabot will load the metadata you have defined for a certain
+		SEF URL using the JoomSEF URL editor and will place them into the head
+		section of your current Joomla! page.</p>
+		<p>Hint: To define title and/or meta tags for your homepage (that
+		has not really an URL generated by SEF, but composes just from your
+		site base URL), create a new entry in the URL list where the SEF URL
+		will stay blank and the original URL will say just index.php.</p>
+		<p>For metabot, to work correctly, it must be used always with
+		JoomSEF component and it has to be in published state. Metabot has
+		also several user configurable option, such as the way how page / site
+		name in page titles is organized and other metadata related settings.
+		To access this configuration, find the ARTIO Metabot in installed
+		Joomla mambots (plugins) list and click it. The configurable
+		parameters then can be found on the right side of the mambot (plugin)
+		detail page.</p>
+		</li>
+		<li>
+		<h3><a title="backup" name="backup"></a>Backing up your Custom
+		URLs</h3>
+		<p>It is recommended to backup your database before doing this.</p>
+		<p>You can also import and export URL's from the Custom Redirect
+		area. To do this click the 'Import/Export Custom URLS' link above the
+		table of URL's. To backup your URL's click the 'Backup Custom URLS'
+		button and you will be presented with a file named 'ARTIO
+		JoomSEF_custom_urls.sql' to download.</p>
+		<p>If you want to import your urls browse to the file and click
+		the 'Import Custom URLS' button.</p>
+		</li>
+	</ol>
+	</li>
+	<li>
+	<h2><a title="exts" name="exts"></a>Supported Joomla! Components</h2>
+	<ol
+		style="list-style-type: upper-roman; list-style-image: none; list-style-position: outside">
+		<li>
+		<h3><a title="core" name="core"></a>Joomla! Built-in Components</h3>
+		<p>The support for Joomla! core components, such as banners,
+		content, contacts, news, newsfeeds, weblinks, etc. is already
+		integrated in the JoomSEF component. Optimization of URLs for these
+		components requires no further efforts.</p>
+		</li>
+		<li>
+		<h3><a title="ext" name="ext"></a>3rd Party Components</h3>
+		<p>The situation is slightly different for 3rd party components.
+		There exists many 3rd party components and modules for Joomla!, which
+		usually differ significantly in complexity and structure. This means
+		that for some of those (usually the simple ones), the SEO may
+		work fine, while for other, you can experience, problems such as
+		disfunctionality, insufficient SEO, or generation of duplicate URLs.
+		These can be either skipped in JoomSEF Control Panel, so no SEF URLs
+		will be generated for them, or will require a special "extensions".k
+		using the the default JoomSEF component handler. The others (usually
+		more complex ones) may cause problems when used with the default
+		handler. Such problems may include errors, loss of fun</p>
+		<p>Extensions are special pieces of code for JoomSEF, written with
+		particular 3rd party component in mind (e.g. VirtueMart, JoomlaBoard,
+		...}. Such extension can be either part of the component/module self
+		(provided by component/module author), may come as part of JoomSEF
+		installation package or be provided by 3rd parties. ARTIO offeres most
+		of such extensions available for free as part of the JoomSEF
+		distribution package. However, some of the extensions are provided
+		also under commercial licence. Bellow, you may find list of official
+		extensions available for JoomSEF.</p>
+		</li>
+		<li>
+		<h3><a title="list" name="list"></a>List of Official Extensions
+		Available</h3>
+		<p>To get the list of the <a
+			title="List of JoomSEF extensions available."
+			href="http://www.artio.net/en/joomsef/artio-joomsef-extensions">latest 
+		JoomSEF extensions available</a>, please, visit the JoomSEF official 
+		website.<br />
+		We hope this list will spread fast. Our priority is to add and
+		maintain support for the most popular extensions. If you haven't found
+		your favourite component here and it does not work with JoomSEF
+		correctly, please, let us know.</p>
+		</li>
+		<li>
+		<h3><a title="download_ext" name="download_ext"></a>Extension
+		Downloads</h3>
+		<p>JoomSEF extensions can be free or paid. Many free extensions
+		can be downloaded directly from ARTIO downloads section or from
+		authors' websites. ARTIO also publishes paid extensions that are
+		available from <a title="ARTIO On-line Store" 
+		href="http://www.artio.net/en/e-shop">ARTIO webshop</a>.</p>
+		</li>
+		<li>
+		<h3><a title="install_ext" name="install_ext"></a>Extension
+		Installation</h3>
+		<p>To install extra SEF extension for a component, use installer
+		accessible from the <strong>JoomSEF Control Panel</strong>.</p>
+		<ol>
+			<li>Click <strong>"Install"</strong> tool in the toolbar</li>
+			<li>Use "Upload file" box to select an extension installation
+			file and press "Upload and Install" button</li>
+			<li>If everything went ok, you should get an confirmation screen
+			with installation status; after clicking "Continue..." link, your new
+			SEF extension is ready to use</li>
+		</ol>
+		</li>
+		<li>
+		<h3><a title="upgrade_ext" name="upgrade_ext"></a>Extension
+		Upgrade</h3>
+		<p>If a new version of extension becomes available, you can update
+		it using <strong>JoomSEF Online Upgrade function</strong> (if released
+		by ARTIO) or by downloading the recent version and reinstalling it (by
+		uninstalling the old and reinstalling the new version; existing URLs
+		will be maintained).</p>
+		</li>
+		<li>
+		<h3><a title="extensions" name="extensions"></a>Extension
+		Parameters</h3>
+		<p>Since JoomSEF 2.0.0 each extension can have its own parameters
+		affecting resulting URLs - you can access them through main JoomSEF's
+		administration page using the Edit button in the toolbar or simply
+		clicking on extension's name.</p>
+		</li>
+	</ol>
+	</li>
+	<li>
+	<h2><a title="donate" name="donate"></a>Donate to JoomSEF</h2>
+	<p>ARTIO JoomSEF is a free software. However the development costs
+	are same as for any other software. If you are satisfied with this
+	software and you would like us to implement new features, fix the bugs
+	promptly and publish new releases regularly, you can send us a
+	donation and thus support the JoomSEF further development.</p>
+	<p>You may do so via PayPal service using your credit card or
+	transfer, or you can send us the payment directly.</p>
+	<form style="padding-left: 3em"
+		action="https://www.paypal.com/cgi-bin/webscr" method="post"><input
+		name="cmd" type="hidden" value="_s-xclick" /> <input
+		title="Support JoomSEF!" name="submit"
+		src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif"
+		type="image" /> <img
+		src="https://www.paypal.com/en_US/i/scr/pixel.gif" border="0" alt=""
+		width="1" height="1" /> <input name="encrypted" type="hidden"
+		value="-----BEGIN PKCS7-----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-----END PKCS7-----" />
+	</form>
+	<p><strong><span class="bold">Bank account
+	information:</span></strong><br />
+	Receiving Bank: Ceskoslovenska obchodni banka (CSOB)<br />
+	Address: Hollarova 5, Ostrava, Czech Republic<br />
+	Account No.: 199371035, Bank code: 0300<br />
+	SWIFT: CEKOCZPP<br />
+	IBAN: CZ1303000000000199371035</p>
+	</li>
+	<li>
+	<h2><a title="help" name="help"></a>Support &amp; Help</h2>
+	<p>If you need more help with the ARTIO JoomSEF component, visit
+	our webpages at <a href="http://www.artio.net">http://www.artio.net</a>
+	and check our FAQs &amp; support forums.</p>
+	</li>
+	<li>
+	<h2><a title="ads" name="ads"></a>Advertisement Notice</h2>
+	<p>Free edition of JoomSEF may add links pointing to websites of
+	JoomSEF authors (ARTIO s.r.o.) and/or to its sponsors. Such links
+	appear in page footers or meta tag fields of pages, where it is used.
+	This has no direct influence to functionality of your site and you will
+	NOT be penalized by search engines for it.</p>
+	<p>You may also purchase a commercial version of JoomSEF that DOES
+	NOT contain these advertisement links. This component is available from
+	<a title="ARTIO On-line Store" href="http://www.artio.net/en/e-shop">
+	ARTIO on-line store</a>.</p>
+	</li>
+	<li>
+	<h2><a title="credits" name="credits"></a>Credits</h2>
+	<p><span class="bold">ARTIO s.r.o.</span><br />
+	Mrstikova 840/6<br />
+	Ostrava - Marianske Hory<br />
+	709 00 Czech Republic<br />
+	<br />
+	<a onclick="javascript: window.open('http://www.artio.net'); return false;" 
+	 href="undefined">http://www.artio.net</a><br />
+	<a href="mailto:info@artio.net">info@artio.cz</a></p>
+	<p><span class="bold">Michal Unzeitig</span>, team leader<br />
+	<span class="bold">David Jozefov</span>, developer<br />
+	<span class="bold">Petr Vlasak</span>, developer</p>
+	</li>
+</ol>
+</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="trails">
+	<name>Trails - Add Trail Tags</name>
+	<author>Trail Tags</author>
+	<creationDate>April 5, 2010</creationDate>
+	<copyright>(C) 2010 ajay reddy. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>ajay@tripnaksha.com</authorEmail>
+	<authorUrl>http://www.tripnaksha.com</authorUrl>
+	<version>1.3</version>
+	<description>This plugin will show tags on trail pages.</description>
+	<files>
+		<filename plugin="trailTags2">trailTags2.php</filename>
+	</files>
+</install>

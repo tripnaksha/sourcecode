@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<install version="1.5.0" type="plugin" plugin="paste">
+	<name>Paste</name>
+	<version>1.5.6</version>
+	<creationDate>14 November 2009</creationDate>
+	<author>Ryan Demmer</author>
+	<authorEmail>ryandemmer@gmail.com</authorEmail>
+	<authorUrl>http://www.joomlacontenteditor.net/</authorUrl>
+	<copyright>Ryan Demmer</copyright>
+	<license>LGPL</license>
+	<description>Paste plugin for JCE 1.5.x</description>
+	<icon>pastetext,pasteword</icon>
+	<layout>paste</layout>
+	<params group="standard">
+		<param name="paste_dialog_width" type="text" size="5" default="450" label="PASTE PARAM WIDTH" description="PASTE PARAM WIDTH DESC" />
+		<param name="paste_dialog_height" type="text" size="5" default="400" label="PASTE PARAM HEIGHT" description="PASTE PARAM HEIGHT DESC" />
+        <param name="paste_strip_class_attributes" type="list" default="all" label="PASTE PARAM CLASSES" description="PASTE PARAM CLASSES DESC">
+            <option value="all">PASTE PARAM CLASSES ALL</option>
+            <option value="none">PASTE PARAM CLASSES NONE</option>
+            <option value="mso">PASTE PARAM CLASSES MSO</option>
+        </param>
+        <param name="paste_remove_spans" type="list" default="1" label="PASTE PARAM SPANS" description="PASTE PARAM SPANS DESC">
+            <option value="1">YES</option>
+			<option value="0">NO</option>
+        </param>
+		<param name="paste_retain_style_properties" size="50" type="text" default="" label="PASTE PARAM RETAIN STYLES" description="PASTE PARAM RETAIN STYLES DESC" />
+        <param name="paste_remove_styles" type="list" default="1" label="PASTE PARAM STYLES" description="PASTE PARAM STYLES DESC">
+            <option value="1">YES</option>
+			<option value="0">NO</option>           
+        </param>
+		<param name="paste_remove_empty_paragraphs" type="list" default="1" label="PASTE PARAM REMOVE PARAGRAPHS" description="PASTE PARAM REMOVE PARAGRAPHS DESC">
+            <option value="1">YES</option>
+			<option value="0">NO</option>           
+        </param>
+		<param name="paste_remove_styles_if_webkit" type="list" default="0" label="PASTE PARAM REMOVE STYLES WEBKIT" description="PASTE PARAM REMOVE STYLES WEBKIT DESC">
+            <option value="1">YES</option>
+			<option value="0">NO</option>           
+        </param>
+    </params>
+	<languages>
+		<language tag="en-GB">en-GB.com_jce_paste.ini</language>
+	</languages>
+</install>

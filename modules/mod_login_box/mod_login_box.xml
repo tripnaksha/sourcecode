@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+   <name>Login Box</name>
+   <author>Murat Erkenov &amp; modification MTP</author>
+   <creationDate>January 2009</creationDate>
+   <copyright>(C) WowJoomla! Project. All rights reserved. Polish version &amp; modifications Marek T.Purzyński</copyright>
+   <authorEmail>support@wowjoomla.com</authorEmail>
+   <authorUrl>www.wowjoomla.com</authorUrl>
+   <version>1.0.1</version>
+   <description>Login/Register Module For Joomla 1.5</description>
+   <files>
+      <filename module="mod_login_box">mod_login_box.php</filename>
+   </files>
+   <languages folder='lang'>
+      <language tag="en-GB">en-GB.mod_login_box.ini</language>
+	  <language tag="pl-PL">pl-PL.mod_login_box.ini</language>
+	  <language tag="de-DE">de-DE.mod_login_box.ini</language>
+	  <language tag="tr-TR">tr-TR.mod_login_box.ini</language>
+	  <language tag="nl-NL">nl-NL.mod_login_box.ini</language>
+   </languages>
+
+   <params>
+      <param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+   </params>
+
+</install>
+

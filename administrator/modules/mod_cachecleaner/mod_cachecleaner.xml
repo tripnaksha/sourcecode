@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/module-install.dtd">
+<install version="1.5.0" type="module">
+	<name>Cache Cleaner</name>
+	<description>Cache Cleaner - clean cache fast in Joomla!</description>
+	<version>1.1.1</version>
+	<creationDate>January 2010</creationDate>
+	<author>NoNumber! (Peter van Westen)</author>
+	<authorEmail>peter@nonumber.nl</authorEmail>
+	<authorUrl>http://www.nonumber.nl</authorUrl>
+	<copyright>Copyright (C) 2010 NoNumber! All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<files>
+		<filename module="mod_cachecleaner">mod_cachecleaner.php</filename>
+	</files>
+
+	<!-- Parameters -->
+	<params addpath="/plugins/system/nonumberelements/elements">
+		<param type="loadlanguage" extension="mod_cachecleaner" admin="1" />
+		<param name="license" type="license" extension="Cache Cleaner" />
+		<param type="dependency"
+			label="the Cache Cleaner system plugin"
+			file="/plugins/system/cachecleaner.php" />
+		<param type="title"
+			label="Cache Cleaner" description="With Cache Cleaner you can clean your cache fast and easily"
+			image="/administrator/modules/mod_cachecleaner/cachecleaner/images/logo.png"
+			image_w="60" image_h="80"
+			url="http://www.nonumber.nl/cachecleaner"
+			download_url="http://www.nonumber.nl/cachecleaner/download"
+			help_url="http://www.nonumber.nl/cachecleaner"
+			version="1.1.1"
+			version_url="http://www.nonumber.nl/versions"
+			version_file="version_cachecleaner" />
+		<param name="display_link" type="radio" default="both" label="Display link" description="Display link (description)">
+			<option value="icon">Icon only</option>
+			<option value="text">Text only</option>
+			<option value="both">Both</option>
+		</param>
+	</params>
+</install>

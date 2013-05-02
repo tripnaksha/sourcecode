@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0">
+ <name>Routes</name>
+ <!-- The following elements are optional and free of formatting constraints -->
+ <creationDate>2007-02-22</creationDate>
+ <author>John Doe</author>
+ <authorEmail>john.doe@example.org</authorEmail>
+ <authorUrl>http://www.example.org</authorUrl>
+ <copyright>Copyright Info</copyright>
+ <license>License Info</license>
+ <!--  The version string is recorded in the components table -->
+ <version>1.01</version>
+ <!-- The description is optional and defaults to the name -->
+ <description>Description of the component ...</description>
+ 
+ <!-- Site Main File Copy Section -->
+ <!-- Note the folder attribute: This attribute describes the folder
+      to copy FROM in the package to install therefore files copied
+      in this section are copied from /site/ in the package -->
+ <files folder="site">
+  <filename>index.html</filename>
+  <filename>controller.php</filename>
+  <filename>router.php</filename>
+  <filename>routes.php</filename>
+  <filename>models/index.html</filename>
+  <filename>models/traildisplay.php</filename>
+  <filename>models/map.php</filename>
+  <filename>views/index.html</filename>
+  <filename>views/map/index.html</filename>
+  <filename>views/map/view.html.php</filename>
+  <filename>views/map/tmpl/index.html</filename>
+  <filename>views/map/tmpl/default.php</filename>
+  <filename>views/traildisplay/index.html</filename>
+  <filename>views/traildisplay/view.html.php</filename>
+  <filename>views/traildisplay/tmpl/index.html</filename>
+  <filename>views/traildisplay/tmpl/default.php</filename>
+  <filename>assets/index.html</filename>
+  <filename>assets/geoplugin.class.php</filename>
+  <filename>assets/css/index.html</filename>
+  <filename>assets/css/map.css</filename>
+  <filename>assets/js/index.html</filename>
+  <filename>assets/js/epoly.js</filename>
+  <filename>assets/js/map.js</filename>
+  <filename>assets/js/markerlib_pack.js</filename>
+  <filename>assets/images/index.html</filename>
+  <filename>assets/images/black.png</filename>
+  <filename>assets/images/cancel.png</filename>
+  <filename>assets/images/copy.png</filename>
+  <filename>assets/images/create.png</filename>
+  <filename>assets/images/cycle.png</filename>
+  <filename>assets/images/end.gif</filename>
+  <filename>assets/images/hike.png</filename>
+  <filename>assets/images/read.png</filename>
+  <filename>assets/images/save.png</filename>
+  <filename>assets/images/star-blue.png</filename>
+  <filename>assets/images/star-purple.png</filename>
+  <filename>assets/images/star-red.png</filename>
+  <filename>assets/images/tip.png</filename>
+  <filename>assets/images/tracker.png</filename>
+  <filename>assets/images/undo.png</filename>
+  <filename>assets/images/view.png</filename>
+  <filename>assets/images/walker.png</filename>
+  <filename>assets/images/write.png</filename>
+  <filename>assets/images/yellow.png</filename>
+ </files>
+ 
+ <administration>
+  <!-- Administration Menu Section -->
+    <menu link="option=com_routes" admin_menu_link="">Routes</menu>
+ 
+  <!-- Administration Main File Copy Section -->
+  <files folder="admin">
+   <filename>routes.php</filename>
+   <filename>index.html</filename>
+  </files>
+ 
+ </administration>
+</install>

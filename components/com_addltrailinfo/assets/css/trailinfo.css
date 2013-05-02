@@ -1,0 +1,63 @@
+h3 {
+	text-align: center;
+}
+.detailrow{
+	background: #cfebff repeat-x;
+	border-bottom: 1px solid #d1d4c9;
+	border-right: 1px solid #d1d4c9;
+	border-left: 1px solid #d1d4c9;
+}
+
+.content{
+	padding: 10px;
+	font: 14px Arial, Helvetica, sans-serif;
+}
+
+#savediv {
+	background-color: red;
+	text-align: center;
+	font: #ffffff 14px Arial, Helvetica, sans-serif;
+}
+.detailrow span.title{
+	color: #3d3d3d;
+	font: bold 18px Arial, Helvetica, sans-serif;
+	padding-bottom: 8px;
+}
+
+.detailrow span.small-text{
+	color: #3d3d3d;
+	font: 14px Arial, Helvetica, sans-serif;
+}
+
+div.content input[type=text]{
+	width: 90px;
+	color: #3d3d3d;
+	font: 12px Arial, Helvetica, sans-serif;
+}
+input#days{
+	width: 80px;
+}
+input#calendar{
+	background: transparent url("../images/calendar.png") no-repeat top;
+}
+
+div.inputcon{
+	width: 180px;
+	float: left;
+}
+
+textarea {
+	height: 190px;
+	width: 500px;
+	border: 1px;
+	padding: 2px;
+	margin-top: 10px;
+	margin-left: 5px;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	cursor: auto;
+}
+input [type=submit]{
+	padding-top: 10px;
+}
+

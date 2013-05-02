@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/plugin-install.dtd">
+<install version="1.5.0" type="plugin" group="system">
+	<name>System - NoNumber! Elements</name>
+	<description>NoNumber! Elements - used by NoNumber! extensions</description>
+	<version>1.2.1</version>
+	<creationDate>January 2010</creationDate>
+	<author>NoNumber! (Peter van Westen)</author>
+	<authorEmail>peter@nonumber.nl</authorEmail>
+	<authorUrl>http://www.nonumber.nl</authorUrl>
+	<copyright>Copyright (C) 2010 - NoNumber! - All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<!-- Administration Files -->
+	<files>
+		<filename plugin="nonumberelements">nonumberelements.php</filename>
+		<folder>nonumberelements</folder>
+	</files>
+</install>

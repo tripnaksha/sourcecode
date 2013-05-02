@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/module-install.dtd">
+<install type="module" version="1.5.0">
+	<name>yvcomment</name>
+	<creationDate>2009-01-25</creationDate>
+	<author>Yuri Volkov</author>
+	<authorEmail>yvolksoft@yurivolkov.com</authorEmail>
+	<authorUrl>http://yurivolkov.com/Joomla/yvComment/index_en.html</authorUrl>
+	<copyright>(c) 2007-2009 yvolk (Yuri Volkov), http://yurivolkov.com. All rights reserved.</copyright>
+	<license>GPL</license>
+	<version>1.20.0</version>
+	<description>
+		Universal module for yvComment commenting solution (see yvComment Plugin for 
+		more information).
+	</description>
+
+	<files>
+		<filename module="mod_yvcomment">mod_yvcomment.php</filename>
+		<filename>helpers.php</filename>
+		<filename>index.html</filename>
+	</files>
+
+  <params addpath="/components/com_yvcomment/elements">
+ 		<param name="YVCOMMENT_DESCRIPTION" type="yvcommentspacer" default="" label="DESCRIPTION" description=""/>
+		<param name="view_name" type="list" default="list" label="VIEW_NAME" description="VIEW_NAME_DESC">
+			<option value="listofcomments">LIST_LAYOUT</option>
+			<option value="mostcommented">MOSTCOMMENTED_LAYOUT</option>
+			<option value="comment">COMMENT_LAYOUT</option>
+		</param>
+		<param name="layout_name" type="list" default="layout003" label="LAYOUT_NAME" description="LAYOUT_NAME_DESC">
+		  <option value="0">LAYOUT_NAME_CUSTOM</option>
+			<option value="default">default</option>
+			<option value="layout002">LAYOUT_002</option>
+			<option value="layout003">LAYOUT_003</option>
+		</param>
+		<param name="layout_name_custom" type="text" default="" label="LAYOUT_NAME_CUSTOM" description="" />
+ 		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="count" type="text" default="5" label="LIST_COUNT" description="LIST_COUNT_DESC" />
+		<param name="orderby_pri" type="list" default="rdate" label="PRIMARY_ORDER" description="PRIMARY_ORDER_DESC">
+			<option value="date">ORDER_OLDEST_FIRST</option>
+			<option value="rdate">ORDER_MOST_RECENT_FIRST</option>
+		</param>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		<param name="max_characters_list_row" type="text" size="6" default="" label="MAX_CHARACTERS_LIST_ROW" description="MAX_CHARACTERS_LIST_ROW_DESC" />
+ 		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="articlesectionidsfilter" type="textarea" default="" rows="3" cols="20" label="SECTIONS_OF_ARTICLES_FILTER" description="SECTIONS_OF_ARTICLES_FILTER_DESC"/>
+		<param name="articlecategoryidsfilter" type="textarea" default="" rows="3" cols="20" label="CATEGORIES_OF_ARTICLES_FILTER" description="CATEGORIES_OF_ARTICLES_FILTER_DESC"/>
+		<param name="articleidsfilter" type="textarea" default="" rows="3" cols="20" label="ARTICLES_FILTER" description="ARTICLES_FILTER_DESC"/>
+		<param name="articlesectionids_excludefilter" type="radio" default="0" label="SECTIONS_OF_ARTICLES_EXCLUDE" description="">
+		  <option value="0">NO</option>
+		  <option value="1">YES</option>
+		</param>
+		<param name="filterbycontext" type="list" default="autocategory" label="FILTER_BY_CONTEXT" description="FILTER_BY_CONTEXT_DESC">
+			<option value="all">FILTER_BY_CONTEXT_ALL</option>
+			<option value="section">FILTER_BY_CONTEXT_SECTION</option>
+			<option value="category">FILTER_BY_CONTEXT_CATEGORY</option>
+			<option value="article">FILTER_BY_CONTEXT_ARTICLE</option>
+			<option value="autosection">FILTER_BY_CONTEXT_AUTO_SECTION</option>
+			<option value="autocategory">FILTER_BY_CONTEXT_AUTO_CATEGORY</option>
+			<option value="auto">FILTER_BY_CONTEXT_AUTO</option>
+		</param>
+		<param name="module_title_is_dynamic" type="radio" default="1" label="MODULE_TITLE_IS_DYNAMIC" description="MODULE_TITLE_IS_DYNAMIC_DESC">
+		  <option value="0">NO</option>
+		  <option value="1">YES</option>
+		</param>
+		<param name="result_days" type="list" default="all" label="RESULT_DAYS" description="RESULT_DAYS_DESC">
+			<option value="all">ALL_RESULTS</option>
+			<option value="1day">1_DAY</option>
+			<option value="7days">7_DAYS</option>
+			<option value="2weeks">2_WEEKS</option>
+			<option value="1month">1_MONTH</option>
+			<option value="3months">3_MONTHS</option>
+			<option value="6months">6_MONTHS</option>
+			<option value="1year">1_YEAR</option>
+		</param>
+	</params>
+	<params group="advanced">
+	</params>
+</install>

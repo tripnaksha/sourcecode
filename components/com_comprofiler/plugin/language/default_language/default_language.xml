@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cbinstall version="1.0" type="plugin" group="language">
+	<name>default_language</name>
+	<author>MamboJoe and Beat</author>
+	<creationDate>2009-01-26</creationDate>
+	<copyright>(C) 2005 - 2009 joomlapolis.com</copyright>
+	<license>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL version 2</license>
+	<authorEmail>beat@joomlapolis.com</authorEmail>
+	<authorUrl>www.joomlapolis.com</authorUrl>
+	<version>1.2</version>
+	<description>Provides the default (English) language for Community Builder core functions.</description>
+	<files>
+		<filename plugin="default_language">default_language.php</filename>
+		<filename>index.html</filename>
+		<filename>cbteamplugins_language.php</filename>
+		<filename>calendar-locals.js</filename>
+        <filename>images/index.html</filename>
+		<filename>images/nophoto.jpg</filename>
+        <filename>images/pendphoto.jpg</filename>
+        <filename>images/tnnophoto.jpg</filename>
+        <filename>images/tnpendphoto.jpg</filename>
+	</files>
+    <params>
+    </params>
+	<database>
+	</database>
+</cbinstall>

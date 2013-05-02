@@ -1,0 +1,359 @@
+#container
+{
+    background-color: #99ccff;
+    font-family: tahoma, verdana, arial, sane;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    font-size:13px;
+}
+
+#year-container
+{
+    background-color: #6f6f6f;
+    text-align: center;
+    padding: 4px 0px 5px 0px;
+}
+
+#year-container .select
+{
+}
+
+#year-container .text
+{
+    font-weight: bold;
+    color: #ffffff;
+    padding: 2px 2px 3px 2px;
+}
+
+#year-container .navigation
+{
+    font-weight: bold;
+    color: #dedede;
+    background-color: #6f6f6f;
+    text-decoration: none;
+}
+
+#month-container
+{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#month-container .month
+{
+    width: 17%;
+    font-size: 13px;
+    color: #ffffff;
+    background-color: #9f9f9f;
+    text-align: center;
+}
+
+#month-container .month-hover
+{
+    font-size: 13px;
+    background-color: #ffcccc;
+    text-align: center;
+}
+
+#month-container .selected-month
+{
+    background-color: #ccffcc;
+    font-size: 13px;
+    color: #000000;
+    width: 17%;
+    text-align: center;
+}
+
+.day-names
+{
+    background-color: #ffcc33;
+    color: #000000;
+    font-weight: normal;
+    width: 14%;
+    text-align: center;
+}
+
+.day-currentmonth-weekday
+{
+    background-color: #e8e8e8;
+    color: black;
+    text-align: center;
+}
+
+.day-currentmonth-weekday-preselected
+{
+    background-color: #cc6666;
+    color: ffffff;
+    text-align: center;
+}
+
+.day-currentmonth-weekday-hover
+{
+    cursor: pointer;
+    background-color: #ffcccc;
+    color: black;
+    text-align: center;
+}
+
+.day-currentmonth-weekend
+{
+    background-color: #d8d8d8;
+    color: black;
+    text-align: center;
+}
+
+.day-currentmonth-weekend-preselected
+{
+    background-color: #cc6666;
+    color: ffffff;
+    text-align: center;
+}
+
+.day-currentmonth-weekend-hover
+{
+    cursor: pointer;
+    background-color: #ffcccc;
+    color: black;
+    text-align: center;
+}
+
+.day-currentmonth-currentday-weekday
+{
+    background-color: #e8e8e8;
+    color: red;
+    text-align: center;
+}
+
+.day-currentmonth-currentday-weekday-preselected
+{
+    background-color: #cc6666;
+    color: ffffff;
+    text-align: center;
+}
+
+.day-currentmonth-currentday-weekday-hover
+{
+    cursor: pointer;
+    background-color: #ffcccc;
+    color: red;
+    text-align: center;
+}
+
+.day-currentmonth-currentday-weekend
+{
+    background-color: #d8d8d8;
+    color: red;
+    text-align: center;
+}
+
+.day-currentmonth-currentday-weekend-preselected
+{
+    background-color: #cc6666;
+    color: ffffff;
+    text-align: center;
+}
+
+.day-currentmonth-currentday-weekend-hover
+{
+    cursor: pointer;
+    background-color: #ffcccc;
+    color: red;
+    text-align: center;
+}
+
+.day-currentmonth-weekday-disabled
+{
+    background-color: #e6e6e6;
+    color: #c6c6c6;
+    text-align: center;
+}
+
+.day-currentmonth-weekend-disabled
+{
+    background-color: #e6e6e6;
+    color: #c6c6c6;
+    text-align: center;
+}
+
+.day-previousmonth-weekday
+{
+    background-color: #efefef;
+    color: #979797;
+    text-align: center;
+}
+
+.day-previousmonth-weekday-preselected
+{
+    background-color: #cc6666;
+    color: ffffff;
+    text-align: center;
+}
+
+.day-previousmonth-weekday-hover
+{
+    cursor: pointer;
+    background-color: #ffcccc;
+    color: #979797;
+    text-align: center;
+}
+
+.day-previousmonth-weekend
+{
+    background-color: #efefef;
+    color: #979797;
+    text-align: center;
+}
+
+.day-previousmonth-weekend-preselected
+{
+    background-color: #cc6666;
+    color: ffffff;
+    text-align: center;
+}
+
+.day-previousmonth-weekend-hover
+{
+    cursor: pointer;
+    background-color: #ffcccc;
+    color: #979797;
+    text-align: center;
+}
+
+.day-nextmonth-weekday
+{
+    background-color: #efefef;
+    color: #979797;
+    text-align: center;
+}
+
+.day-nextmonth-weekday-preselected
+{
+    background-color: #cc6666;
+    color: ffffff;
+    text-align: center;
+}
+
+.day-nextmonth-weekday-hover
+{
+    cursor: pointer;
+    background-color: #ffcccc;
+    color: #979797;
+    text-align: center;
+}
+
+.day-nextmonth-weekend
+{
+    background-color: #efefef;
+    color: #979797;
+    text-align: center;
+}
+
+.day-nextmonth-weekend-preselected
+{
+    background-color: #cc6666;
+    color: ffffff;
+    text-align: center;
+}
+
+.day-nextmonth-weekend-hover
+{
+    cursor: pointer;
+    background-color: #ffcccc;
+    color: #979797;
+    text-align: center;
+}
+
+#timepicker-container
+{
+    background-color: #aabbcc;
+    text-align:right;
+    padding: 2px 3px 0px 0px;
+}
+
+#timepicker-container .select
+{
+}
+
+#time-container
+{
+    background-color:#767676;
+    padding: 2px;
+}
+
+#time-container .date
+{
+    font-weight: bold;
+    border: none;
+    text-align: center;
+    background-color: #767676;
+    width: 100%;
+    color: #dedede;
+}
+
+.clear-button
+{
+    width: 33%;
+    background-color: #767676;
+    font-size:13px;
+    color: #dedede;
+    text-align: center;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.clear-button-hover
+{
+    width: 33%;
+    background-color: #FFCC66;
+    font-size:13px;
+    color: #000000;
+    text-align: center;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.confirm-button
+{
+    width: 33%;
+    background-color: #3d3d3d;
+    font-size:13px;
+    color: #fdfdfd;
+    text-align: center;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.confirm-button-hover
+{
+    width: 33%;
+    background-color: #FFCC66;
+    font-size:13px;
+    color: #000000;
+    text-align: center;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.current-button
+{
+    width: 33%;
+    background-color: #767676;
+    font-size:11px;
+    color: #dedede;
+    text-align: center;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.current-button-hover
+{
+    width: 33%;
+    background-color: #FFCC66;
+    font-size:11px;
+    color: #000000;
+    text-align: center;
+    cursor: pointer;
+    padding: 3px;
+}

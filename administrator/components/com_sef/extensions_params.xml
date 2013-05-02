@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <params group="Common">
+    <param name="numberDuplicates" type="radio" default="2" label="Number duplicate URLs" description="You can choose to override the default behaviour of this option.">
+      <option value="2">Use global config</option>
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="autoCanonical" type="radio" default="2" label="Automatic canonical link generation" description="You can choose to override the default behaviour of this option.">
+      <option value="2">Use global config</option>
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="ignoreSource" type="radio" default="2" label="Ignore multiple sources" description="You can choose to override the default behaviour of this option.">
+      <option value="2">Use global config</option>
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="itemid" type="radio" default="0" label="Itemid handling" description="You can choose to override the default behaviour with your own Itemid.">
+      <option value="0">Use global config</option>
+      <option value="1">Override</option>
+    </param>
+    <param name="overrideId" type="text" size="10" default="" label="Override Itemid" description="Itemid to always use with this component. Leave blank to use the default one." />
+    <param name="useSitename" type="radio" default="1" label="Use site name" description="If set to No, the site name will not be shown in page title for this extension.">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="customSitename" type="text" size="40" default="" label="Custom site name" description="Here you can set custom site name to be used in page title for this extension. Leave blank for default." />
+    <param name="pageLimit" type="text" size="10" default="" label="Items per page" description="If you have problems with pagination, you can manually set number of items per page here." />
+    <param type="spacer" default="&lt;hr/&gt;" />
+    <param name="handling" type="list" default="0" label="Handling" description="&lt;b&gt;JoomSEF handler&lt;/b&gt;&lt;br/&gt;process normally through JoomSEF, if an SEF extension or router file is present it will be used&lt;br/&gt;&lt;b&gt;Default Joomla! router&lt;/b&gt;&lt;br/&gt;do not store in DB and create standard Joomla SEF URLs&lt;br/&gt;&lt;b&gt;Don't SEF&lt;/b&gt;&lt;br/&gt;do not make SEF urls for this component">
+      <option value="0">JoomSEF handler</option>
+      <option value="1">Default Joomla! router</option>
+      <option value="2">Don't SEF</option>
+    </param>
+    <param name="showMenuTitle" type="radio" default="1" label="Show Menu Title" description="If set to No, the menu title will not be present in SEF URL at all (except the direct link to component)">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="customMenuTitle" type="text" size="40" default="" label="Custom Menu Title" description="Overrides the default menu title (first part of SEF URL) in SEF URL; leave blank for default behaviour" />
+    <param type="spacer" default="&lt;hr/&gt;" />
+    <param name="customNonSef" type="textarea" cols="30" rows="4" default="" label="Custom non-SEF variables" description="Here you can specify custom non-SEF variables separated by semicolon." />
+    <param name="acceptVars" type="textarea" cols="30" rows="4" default="" label="Filter variables" description="Here you can specify variables known to be used by the component separated by &lt;b&gt;semicolon&lt;/b&gt;. You can specify custom filters for these variables on the left side." />
+    <param name="acceptStrict" type="radio" default="0" label="Accept only filtered variables" description="If set to yes, only variables specified in &lt;em&gt;Filter variables&lt;/em&gt; field will be accepted to SEF URL, others will be handled as non-SEF.">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="stopRule" type="text" size="40" default="" label="Do not SEF URLs matching regular expression" description="Here you can specify which URLs not to SEF using regular expression. URLs matching this expression will not be SEFed at all." />
+    <param name="varFilterFail" type="list" default="0" label="URLs that fail the variable filter test" description="Specify what to do when the URL fails the variable filter test.&lt;br/&gt;&lt;b&gt;Don't SEF variable&lt;/b&gt;&lt;br/&gt;Only the variable that failed the test will not be included in SEF URL.&lt;br/&gt;&lt;b&gt;Don't SEF URL&lt;/b&gt;&lt;br/&gt;The entire URL will not be SEFed.&lt;br/&gt;&lt;b&gt;Don't process at all&lt;/b&gt;&lt;br/&gt;URL won't be processed by Joomla! at all.">
+      <option value="2">Don't SEF variable</option>
+      <option value="0">Don't SEF URL</option>
+      <option value="1">Don't process at all</option>
+    </param>
+    <param type="spacer" default="&lt;hr/&gt;" />
+    <param name="downloadId" type="text" size="40" default="" label="Extension Download ID" description="You can set the Download ID of paid extensions here. It is needed for the automatic upgrade to work." />
+  </params>
+</metadata>

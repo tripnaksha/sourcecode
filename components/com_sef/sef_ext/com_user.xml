@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<install version="1.5" type="sef_ext">
+	<name>User</name>
+	<author>ARTIO s.r.o.</author>
+	<creationDate>7. December 2009</creationDate>
+	<copyright>ARTIO s.r.o.</copyright>
+	<license>Copyrighted - http://www.artio.net/joomsef/licence-ext</license>
+	<authorEmail>info@artio.net</authorEmail>
+	<authorUrl>www.artio.net</authorUrl>
+	<version>2.0.3</version>
+	<description>Adds SEO support for User component.</description>
+	<files>
+		<filename sef_ext="user">com_user.php</filename>
+	</files>
+</install>

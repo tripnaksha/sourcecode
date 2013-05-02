@@ -1,0 +1,53 @@
+img 
+{ 
+   border:1px solid #ffffff;
+}
+.trailcomponent
+{
+	padding-left:10px;
+	border-bottom: solid 1px #aeaeae;
+	width:98%;
+	color: #6a8f49;
+	font-size: 1.8em;
+}
+.category  {
+	color:#0F6700;
+}
+.trailtableentry1 td {
+	padding-left: 15px;
+	padding-bottom: 5px;
+	width: 75px;
+/*		border-bottom: 1px dashed;*/
+}
+td.detailcol {
+	padding-left: 10px;
+	width: 325px;
+}
+.trailtableentry1 td h3 a, .trailtableentry1 td h4{
+	color:#0F6700;
+	margin-bottom: 0px;
+}
+.trailtableentry1 td h3{
+	margin-bottom: 3px;
+}
+.trailtableentry1 td h4{
+	margin-top: 5px;
+	margin-bottom: 3px;
+}
+.trailtableentry1 td a:visited{
+	color:#829300;
+	border: 0;
+}
+trailtable .trailtableentry1 a.imga img{
+	border: 0;
+}
+.trailtableentry1 td a, .trailtableentry1 td a.imga:visited{
+	border: 0px;
+}
+.trailtableentry1 td a#like{
+	background: url("thumbs_up.png") top left no-repeat;
+}
+.trailtableentry1 td a#like:hover{
+	background: url("thumbs_upc.png") top left no-repeat;
+}
+

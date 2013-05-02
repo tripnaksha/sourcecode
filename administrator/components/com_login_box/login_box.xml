@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<install type="component" version="1.5.0">
+   <name>login_box</name>
+   <author>WowJoomla.com &amp; modification MTP</author>
+   <creationDate>March 2008</creationDate>
+   <copyright>(c) WowJoomla.com. All rights reserved. Polish version &amp; modifications Marek T.Purzynski</copyright>
+   <authorEmail>support@wowjoomla.com</authorEmail>
+   <authorUrl>www.wowjoomla.com</authorUrl>
+   <version>1.0.1</version>
+   <description>
+Login/Register Component For Joomla 1.5
+   </description>
+   <files>
+      <filename>controller.php</filename>
+      <filename>login_box.php</filename>
+      <filename>index.html</filename>
+
+      <filename>assets/index.html</filename>
+      <filename>assets/css/index.html</filename>
+      <filename>assets/css/style1.css</filename>
+
+      <filename>assets/images/index.html</filename>
+      <filename>assets/images/or.jpg</filename>
+
+      <filename>models/index.html</filename>
+      <filename>models/loginbox.php</filename>
+      <filename>models/remind.php</filename>
+      <filename>models/reset.php</filename>
+
+      <filename>views/index.html</filename>
+      <filename>views/loginbox/index.html</filename>
+      <filename>views/loginbox/view.php</filename>
+
+      <filename>views/loginbox/tmpl/index.html</filename>
+      <filename>views/loginbox/tmpl/default.php</filename>
+      <filename>views/loginbox/tmpl/default_logged.php</filename>
+      <filename>views/loginbox/tmpl/default_login.php</filename>
+      <filename>views/loginbox/tmpl/default_register.php</filename>
+      <filename>views/loginbox/tmpl/default_registered.php</filename>
+      <filename>views/loginbox/tmpl/default_remind.php</filename>
+      <filename>views/loginbox/tmpl/default_reset.php</filename>
+      <filename>views/loginbox/tmpl/default_success.php</filename>
+   </files>
+
+   <administration>
+      <files>
+         <filename>index.html</filename>
+      </files>
+   </administration>
+
+
+   <languages folder='lang'>
+      <language tag="en-GB">en-GB.com_login_box.ini</language>
+      <language tag="pl-PL">pl-PL.com_login_box.ini</language>
+      <language tag="fr-FR">fr-FR.com_login_box.ini</language>
+      <language tag="nl-NL">nl-NL.com_login_box.ini</language>
+   </languages>
+</install>
+

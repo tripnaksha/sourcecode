@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cbinstall version="1.0" type="plugin" group="user">
+	<name>CB Fireboard/Joomlaboard/Simpleboard Tab</name>
+	<author>JoomlaJoe and Beat</author>
+	<creationDate>2009-01-26</creationDate>
+	<copyright>(C) 2005-2009 joomlapolis.com</copyright>
+	<license>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL version 2</license>
+	<authorEmail>beat@joomlapolis.com</authorEmail>
+	<authorUrl>www.joomlapolis.com</authorUrl>
+	<version>1.2</version>
+	<description>Provides a User Tab that shows top Fireboard/Joomlaboard/Simpleboard posts as well as forum statistics for the user.</description>
+	<files>
+		<filename plugin="cb.simpleboardtab">cb.simpleboardtab.php</filename>
+		<filename>index.html</filename>
+	</files>
+    <params>
+    	<param name="forumType" type="list" default="0" label="Forum component" description="Choose the type of forum for integration. &lt;strong&gt;IMPORTANT: Fireboard/Joomlaboard/Simpleboard configuration integration with CB must be enabled and fields created from that same forum configuration integration tab.&lt;/strong&gt;">
+    		<option value="0">Auto-detect</option>
+    		<option value="1">Fireboard from www.bestofjoomla.com</option>
+    		<option value="2">Joomlaboard from www.tsmf.net</option>
+    		<option value="3">Simpleboard</option>
+    	</param>
+    	<param name="statDisplay" type="list" default="1" label="Display forum statistics" description="Display the forum statistics. &lt;strong&gt;IMPORTANT: Fireboard/Joomlaboard/Simpleboard configuration must also allow to show this!&lt;/strong&gt;">
+    		<option value="0">Hide</option>
+    		<option value="1">In User Profile Status</option>
+    		<option value="2">In Forum Tab</option>
+    	</param>
+    	<param name="TemplateRank" type="text" default="/template/default/images/english" label="Path Template rank" description="" /> 
+    	<param name="@spacer" type="spacer" default="Display Settings" label="Forum Status:" description="" />
+    	<param name="statRanking" type="radio" default="1" label="Show forum ranking in Profile Status" description="Display the forum ranking text. &lt;strong&gt;IMPORTANT: Fireboard/Joomlaboard/Simpleboard configuration must also allow to show this!&lt;/strong&gt;">
+	        <option value="0">Hide</option>
+	        <option value="1">Show</option>
+	    </param>
+		<param name="statRankingText" type="text" size="25" default="_UE_FORUM_FORUMRANKING" label="Ranking label" description="Default is the local translation of &quot;Forum Ranking&quot;" />
+	    <param name="statRankingImg" type="radio" default="1" label="Show forum ranking slider" description="Display the forum ranking graphic">
+	        <option value="0">Hide</option>
+	        <option value="1">Show Slider</option>
+	    </param>
+	    <param name="@spacer" type="spacer" default="" label="" description="" />
+    	<param name="statPosts" type="radio" default="1" label="Show forum total posts in Profile Status" description="Display the forum total posts. &lt;strong&gt;IMPORTANT: Fireboard/Joomlaboard/Simpleboard configuration must also allow to show this!&lt;/strong&gt;">
+	        <option value="0">Hide</option>
+	        <option value="1">Show if not 0</option>
+	        <option value="2">Show</option>
+	    </param>
+		<param name="statPostsText" type="text" size="25" default="_UE_FORUM_TOTALPOSTS" label="Total Posts label" description="Default is the local translation of &quot;Total Posts&quot;" />
+	    <param name="@spacer" type="spacer" default="" label="" description="" />
+    	<param name="statKarma" type="radio" default="1" label="Show forum Karma in Profile Status" description="Display the forum karma. &lt;strong&gt;IMPORTANT: Fireboard/Joomlaboard/Simpleboard configuration must also allow to show this!&lt;/strong&gt;">
+	        <option value="0">Hide</option>
+	        <option value="1">Show if not 0</option>
+	        <option value="2">Show</option>
+	    </param>
+		<param name="statKarmaText" type="text" size="25" default="_UE_FORUM_KARMA" label="Karma label" description="Default is the local translation of &quot;Karma&quot;" />
+	    <param name="@spacer" type="spacer" default="" label="" description="" />
+	    <param name="@spacer" type="spacer" default="List Settings: see tab configuration: parameters" label="Forum Posts:" description="" />
+	</params>
+	<tabs>
+		<tab name="_UE_FORUMTAB" description="" class="getForumTab" fields="0" position="cb_main" displaytype="tab">
+			<params>
+				<param name="@spacer" type="spacer" default="List Settings" label="Forum Posts:" description="" />
+				<param name="postsNumber" type="text" size="10" default="10" label="Number of posts to display" description="If showing all posts, this is the number of posts per page. If showing only last ones, this is the number of posts to show. Default is 10" />
+	    		<param name="pagingEnabled" type="radio" default="0" label="Show all forum posts with paging" description="If set to -show all- all forum posts will become visible in the user profile. Otherwise, only the last posts will be visible.">
+	     			<option value="0">Only last ones</option>
+	     			<option value="1">Show all</option>
+	   			</param>
+	    		<param name="searchEnabled" type="radio" default="0" label="Allow search function" description="IMPORTANT: Show all posts must also be set. Allows a search on posts from the user.">
+	     			<option value="0">Disabled</option>
+	     			<option value="1">Enabled</option>
+	   			</param>
+				<param name="@spacer" type="spacer" default="" label="" description="" />
+				<param name="@spacer" type="spacer" default="see plugin configuration: Forum: parameters" label="More settings:" description="" />
+			</params>
+			<fields>
+			</fields>
+		</tab>
+	</tabs>
+	<fieldtypes>
+		<field type="forumstats" label="Forum Status" unique="true">
+			<database version="1">
+				<table name="#__comprofiler" class="moscomprofiler" strict="false" drop="never" shared="true">
+					<columns>
+					</columns>
+				</table>
+			</database>
+			<params>
+			</params>
+		</field>
+	</fieldtypes>
+	<database>
+	</database>
+</cbinstall>

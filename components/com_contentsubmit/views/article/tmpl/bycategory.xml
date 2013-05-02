@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Submit to Category">
+		<message>
+			Submit an article to a specific category
+		</message>
+	</layout>
+	<state>
+		<name>Submit to Category Layout</name>
+		<description>Submit an article to a specific category</description>
+		<url addpath="/administrator/components/com_content/elements">
+			<param name="id" type="category" default="0" label="Select Category" description="A category" />
+		</url>
+		<params>
+		</params>
+	</state>
+</metadata>

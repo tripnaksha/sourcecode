@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cbxml version="1">
+	<views>
+		<view name="editlist" type="params" ui="admin">
+			<fieldset label="Multi-Criteria Searches" description="Users-lists can be searchable by multiple criterias, according to settings below, and the 'searchable' attribute of the listed fields.">
+				<param name="list_search" type="list" default="1" label="Searchable fields" description="Whether this list has user-searchable fields">
+					<option value="0">No</option>
+					<option value="1">Searchable fields, displayed ones only</option>
+					<option value="2">All searchable fields</option>
+				</param>
+				<param name="list_compare_types" type="list" default="0" label="Search crieteria" description="If users should be able to choose the type of comparison to be made (only standard 'is' and ranges can be optimized in mysql with proper indexes).">
+					<option value="0">Simple Exact match: Only 'is' and ranges</option>
+					<option value="2">Simple Any word match: Only 'any of' and ranges (WARNING: can be slow)</option>
+					<option value="1">Advanced: all possibilities (WARNING: can be slow)</option>
+				</param>
+			</fieldset>
+			<fieldset label="General list settings" description="">
+				<param name="list_limit" type="text" size="12" default="" label="Number of entries per page" description="Number of users appearing per page. Leave empty to use the default CB setting." />
+				<param name="list_paging" type="list" default="1" label="Show pagination" description="Whether this list shows links for paging or just displays entries from first page. Default is yes.">
+					<option value="0">_UE_NO</option>
+					<option value="1">_UE_YES</option>
+				</param>
+				<param name="hotlink_protection" type="list" default="0" label="Hot-linking protection for this users-list" description="Whether you want the links to the pages and searches in this list to not be permanent (we add a parameter which is valid for a few hours to all urls except first page and check it), so that except first page it's not hotlinkable and there are no permanent links on paging and on search criterias. Default is NO.">
+					<option value="0">_UE_NO</option>
+					<option value="1">_UE_YES</option>
+				</param>
+				<if name="hotlink_protection" type="showhide" operator="&gt;" value="0" valuetype="const:int">
+					<fieldset name="hotlink_warning_fieldset" label="WARNING" description="" class="cbFieldsetWarning">
+						<param name="hotlink_warning" type="spacer" label="WARNING" default="Setting hot-linking protection to 'Yes' will prevent all pages from this list (if everybody has allowed access to it), except first page of list, to be bookmarkable and indexable by slow-pace search bots and search engines such as google, making the user profiles not indexed in search engines (if they are publicly accessible). This may be desirable in some cases, but removes all users-pages from the search-engines indexing, except for the users of the first page." description="" />
+					</fieldset>
+				</if>
+				<param name="put_space" type="spacer" label=" " default =" " />
+			</fieldset>
+		</view>
+	</views>
+</cbxml>

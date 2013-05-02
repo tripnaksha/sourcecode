@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5.0" type="component">
+     <name>Trail Display</name>
+	 <author>Ajay Reddy</author>
+ 	 <creationDate>February 2009</creationDate>
+ 	 <copyright>Copyright (C) 2009 - 2008 Ajay Reddy. All rights reserved.</copyright>
+	 <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	 <authorEmail>ajyrds@gmail.com</authorEmail>
+	 <authorUrl></authorUrl>
+	 <version>1.0</version>
+     <description>
+	     Displays a google map which works with associated functions at the back-end.
+	     Order of installation -
+		 com_savetrail
+		 com_searchTrails - drops _trailReview, _trailList and then creates _trailList
+		 com_searchTrailReviews
+		 plgContentSearchReview - drops _trailReview and then creates _trailReview
+		 com_contentsubmit_mod - uses _trailReview
+		 com_trailDisplay - js functions use _trailReview and _trailList
+		 plgSearchTrailReviews - uses _trailReview
+     </description>
+
+	 <params>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		<param name="width" type="text" default="100%" label="Map Width" description="Width of the map." />
+		<param name="height" type="text" default="100%" label="Map Height" description="Height of the map." />
+	 </params>
+
+     <files>
+          <filename component="com_trailDisplay">traildisplay.php</filename>
+          <filename component="com_trailDisplay">js/map.js</filename>
+          <filename component="com_trailDisplay">js/labeledMarker.js</filename>
+          <filename component="com_trailDisplay">js/xmlWriter.js</filename>
+          <filename component="com_trailDisplay">css/map.css</filename>
+		<filename component="com_trailDisplay">images/add.png</filename>
+		<filename component="com_trailDisplay">images/bg.png</filename>
+		<filename component="com_trailDisplay">images/black.png</filename>
+		<filename component="com_trailDisplay">images/cancel.png</filename>
+		<filename component="com_trailDisplay">images/clickPanEnabledImage.gif</filename>
+		<filename component="com_trailDisplay">images/closelabel.gif</filename>
+		<filename component="com_trailDisplay">images/create.png</filename>
+		<filename component="com_trailDisplay">images/end.gif</filename>
+		<filename component="com_trailDisplay">images/find.png</filename>
+		<filename component="com_trailDisplay">images/gmwBtnClickPan.gif</filename>
+		<filename component="com_trailDisplay">images/gmwBtnScrollWheel.gif</filename>
+		<filename component="com_trailDisplay">images/gmwPanHrz.gif</filename>
+		<filename component="com_trailDisplay">images/gmwPanHrzSelected.gif</filename>
+		<filename component="com_trailDisplay">images/gmwPanVrt.gif</filename>
+		<filename component="com_trailDisplay">images/gmwPanVrtSelected.gif</filename>
+		<filename component="com_trailDisplay">images/gmwPushpinPinned.gif</filename>
+		<filename component="com_trailDisplay">images/gmwPushpinUnpinned.gif</filename>
+		<filename component="com_trailDisplay">images/gmwZoom.gif</filename>
+		<filename component="com_trailDisplay">images/gmwZoomSelected.gif</filename>
+		<filename component="com_trailDisplay">images/ind.gif</filename>
+		<filename component="com_trailDisplay">images/indicator.gif</filename>
+		<filename component="com_trailDisplay">images/ind.png</filename>
+		<filename component="com_trailDisplay">images/loading.gif</filename>
+		<filename component="com_trailDisplay">images/magnifier.png</filename>
+		<filename component="com_trailDisplay">images/marker_hex.png</filename>
+		<filename component="com_trailDisplay">images/mm_20_blue.png</filename>
+		<filename component="com_trailDisplay">images/read.png</filename>
+		<filename component="com_trailDisplay">images/save.png</filename>
+		<filename component="com_trailDisplay">images/start.gif</filename>
+		<filename component="com_trailDisplay">images/swMenuBg.gif</filename>
+		<filename component="com_trailDisplay">images/tip.png</filename>
+		<filename component="com_trailDisplay">images/tracker.png</filename>
+		<filename component="com_trailDisplay">images/turn.png</filename>
+		<filename component="com_trailDisplay">images/turn.xcf</filename>
+		<filename component="com_trailDisplay">images/undo.png</filename>
+		<filename component="com_trailDisplay">images/vertical.png</filename>
+		<filename component="com_trailDisplay">images/viewmag.png</filename>
+		<filename component="com_trailDisplay">images/view.png</filename>
+		<filename component="com_trailDisplay">images/walker.png</filename>
+		<filename component="com_trailDisplay">images/write.png</filename>
+		<filename component="com_trailDisplay">images/yellow.png</filename>
+     </files>
+     <administration>
+         <menu>Display trails</menu>
+         <files>
+              <filename component="admin.trailDisplay">admin.traildisplay.php</filename>
+         </files>
+     </administration>
+</install>

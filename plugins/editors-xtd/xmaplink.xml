@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="editors-xtd">
+	<name>Button - Xmap Link</name>
+	<author>Guillermo Vargas</author>
+	<creationDate>July 2009</creationDate>
+	<copyright>Copyright (C) 2005 - 2009 joomla.vargas.co.cr.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>guille@vargas.co.cr</authorEmail>
+	<authorUrl>joomla.vargas.co.cr</authorUrl>
+	<version>1.0</version>
+	<description>Add links from any component supported by Xmap to your content.</description>
+	<files>
+		<filename plugin="xmaplink">xmaplink.php</filename>
+	</files>
+	<params addpath="/administrator/components/com_xmap/elements">
+                <param name="sitemap" type="sitemap" default="0" label="Select Site Map" description="Select the Sitemap to use with this plugin" />
+    </params>
+</install>

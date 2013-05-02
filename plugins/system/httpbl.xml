@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system">
+	<name>System - HttpBL</name>
+	<author>Michiel Bijland</author>
+	<creationDate>9 Okt 2009</creationDate>
+	<copyright>(C) 2007 - 2009 Michiel Bijland. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>noreply@4theweb.nl</authorEmail>
+	<authorUrl>http://michiel.bijland.net</authorUrl>
+	<version>1.10</version>
+	<description>PLUGIN DESC</description>
+	<files>
+		<filename plugin="httpbl">httpbl.php</filename>
+	</files>
+	<languages folder="languages/">
+		<language tag="en-GB">en-GB.plg_system_httpbl.ini</language>
+	</languages>
+	<params>
+		<param name="key" type="text" default="" size="25" label="KEY" description="KEY DESC" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="age" type="text" default="30" size="25" label="AGE" description="AGE DESC" />
+		<param name="threat" type="text" default="25" size="25" label="THREAT" description="THREAT DESC" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="block_s " type="radio" default="1" label="SUSPECIOUS" description="SUSPECIOUS DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="block_h" type="radio" default="1" label="HARVESTER" description="HARVESTER DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="block_c" type="radio" default="1" label="COMMENTSPAM" description="COMMENTSPAM DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="usergroups" multiple="True" type="usergroup" default="29" label="USERGROUP" description="USERGROUP DESC" />
+	</params>
+	<params group="advanced">
+		<param name="redirect" type="text" default="" size="25" label="REDIRECT" description="REDIRECT DESC" />
+		<param name="log" type="radio" default="1" label="LOG" description="LOG DESC">
+			<option value="0">NOTHING</option>
+			<option value="1">BLOCKED ONLY</option>
+			<option value="2">EVERY REQUEST</option>
+		</param>
+	</params>
+</install>

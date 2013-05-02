@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5.0" type="component">
+     <name>Save POI</name>
+ 	 <author>Ajay Reddy</author>
+	 <creationDate>February 2009</creationDate>
+	 <copyright>Copyright (C) 2009 - 2008 Ajay Reddy. All rights reserved.</copyright>
+	 <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	 <authorEmail>ajyrds@gmail.com</authorEmail>
+	 <authorUrl></authorUrl>
+	 <version>1.0</version>
+     <description>
+ 	     Save the POIs created by user.
+     </description>
+
+     <files>
+          <filename component="com_savePOI">savepoi.php</filename>
+     </files>
+     <administration>
+         <files>
+              <filename component="admin.savepoi">admin.savepoi.php</filename>
+         </files>
+     </administration>
+</install>
+
+

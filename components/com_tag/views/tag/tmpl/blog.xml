@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Tags Blog Layout">
+		<message>
+			<![CDATA[TAGS BLOG LAYOUT DESC]]>
+		</message>
+	</layout>
+	<state>
+		<name>Tags Blog Layout</name>
+		<description>TAGS BLOG LAYOUT DESC</description>
+	<url>
+				<param name="tag" type="text" size="12" default="" label="Tag" description="Input tag name" />
+	</url>
+		<params>
+
+		</params>
+		
+	</state>
+</metadata>

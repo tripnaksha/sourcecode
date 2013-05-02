@@ -1,0 +1,556 @@
+<style type="text/css">
+h2 { color: #A1B754; }
+h3 { margin-bottom: 0.2em; }
+h1, h3, h4 { color: #666666; }
+div.docs,div.docs p,div.docs ul li,div.docs ol li {
+	text-align: left;
+	font-weight: lighter;
+	font-family: Tahoma, Arial, Verdana;
+}
+span.link { cursor: pointer; }
+div.docs p { padding-left: 3em; font-weight: lighter; }
+div.docs li p { padding-left: 0em; }
+div.docs .small { color: #666666; font-size: 90%; }
+div.docs ul { padding-left: 1.5em; }
+span.bold { font-weight: bold; }
+</style>
+<div class="docs">
+	<a name="top"></a>
+	<h2>JoomSEF Changelog</h2>
+	<p>version 3.5.5<br />
+	by <a href="http://www.artio.net" target="_blank">ARTIO s.r.o.</a><br />
+	last updated on 10. February 2010</p>
+	<h2><a name="changes"></a>Changelog</h2>
+	<h3>v3.5.5</h3>
+	<span class="small">10th February 2010</span>
+	<ul>
+	  <li>New - JoomSEF's cache now uses standard Joomla! cache system (you can use memcache to cache your URLs)</li>
+	  <li>New - Option to use only date/ID for article title</li>
+	  <li>Improved - Default meta tags values</li>
+	  <li>Improved - Main language is used for domain that is shared by several languages</li>
+	  <li>Improved - Purging of URLs is now confirmed by JavaScript</li>
+	  <li>Improved - URLs with tmpl=component not SEFed by default</li>
+	  <li>Fix - Saving of the same SEF URLs is now possible</li>
+	  <li>Fix - Itemid for 404 page is handled correctly now</li>
+	  <li>Fix - Areas of searching in Search component</li>
+	  <li>Fix - Quotes escaping in page title</li>
+	  <li>Fix - Characters escaping in extension parameters (fixes | handling in regular expressions)</li>
+	</ul>
+	<h3>v3.5.4</h3>
+	<span class="small">23rd January 2010</span>
+	<ul>
+	  <li>New - Automatic canonical link generation for URLs with nonSEF variables present</li>
+	  <li>New - Options to set layout handling in Content extension</li>
+	  <li>New - Option to add category to page title in Content extension</li>
+	  <li>Improved - Cache file locking mechanism</li>
+	  <li>Improved - Handling of duplicated Itemid records</li>
+	  <li>Improved - .htaccess redirects now accept relative URLs</li>
+	  <li>Fix - Trailing slash toleration for 301 redirects</li>
+	  <li>Fix - Problem with saving URLs after last upgrade</li>
+	</ul>
+	<h3>v3.5.3</h3>
+	<span class="small">21st December 2009</span>
+	<ul>
+	  <li>Fix - Parse error - missing argument</li>
+	</ul>
+	<h3>v3.5.2</h3>
+	<span class="small">21st December 2009</span>
+	<ul>
+	  <li>Improved - Translation of global configuration (sitename, global metatags etc.)</li>
+	  <li>Improved - Destination character in non-ASCII replacement can be empty, thus removing the character</li>
+	  <li>Improved - Compatibility with PHP 4 and PHP 5.3</li>
+	  <li>Fix - Content extension - links from mod_archive, links for blog layout</li>
+	  <li>Fix - User extension - forgotten password link</li>
+	  <li>Fix - RewriteBase option in .htaccess created during JoomSEF installation</li>
+	</ul>
+	<h3>v3.5.1</h3>
+	<span class="small">24th November 2009</span>
+	<ul>
+	  <li>New - Added JoomSEF plugin option to disable base href generation</li>
+	  <li>Improved - Variable filters management (just variables non matching filter can be forced non-sef)</li>
+	  <li>Improved - minor GUI improvements in extension management</li>
+	  <li>Fix - Problems when installing/upgrading via FTP layer</li>
+	  <li>Fix - Notice level messages fixes</li>
+	</ul>
+	<h3>v3.5.0</h3>
+	<span class="small">10th November 2009</span>
+	<ul>
+	  <li>New - URL variable filtering - increase your site security!</li>
+	  <li>New - Custom URL variables filters</li>
+	  <li>New - List of accepted SEF variables for better SEF results with complex extensions</li>
+	  <li>New - Unified extenstion management and upgrades, enhanced extension setting options</li>
+	  <li>New - Added optional &quot;stop filters&quot; to prevent specific URL SEF creation</li>
+	  <li>New - Optional URL source tracing for easier problems debugging</li>
+	  <li>New - Status of Joomla global SEO settings monitorable and changeable from JoomSEF Control Panel</li>
+	  <li>New - Online and easier free to paid version upgrade</li>
+	  <li>New - Online extension installation or purchase</li>
+	  <li>New - Filter by language in URL management option added</li>
+	</ul>
+	<h3>v3.4.3</h3>
+	<span class="small">23th October 2009</span>
+	<ul>
+	  <li>New - Language translations for FI and CZ added</li>
+	  <li>Improved - url_fopen is no longer needed for online upgrading</li>
+	  <li>Improved - Upgrage information shown before upgrade is attempted</li>
+	  <li>Fix - Added missing translations</li>
+	  <li>Fix - Problem prevention with long URLs</li>
+	  <li>Fix - Meta-data escaping problems fix</li>
+	</ul>
+	<h3>v3.4.2</h3>
+	<span class="small">20th October 2009</span>
+	<ul>
+	  <li>Improved - Further improved pagination handling</li>
+	  <li>Fix - Extensions uninstallation bug</li>
+	  <li>Fix - Wrapper SEF URLs not generated correctly bug fixed</li>
+	  <li>Fix - Canonical links generation bug fix</li>
+	</ul>
+	<h3>v3.4.1</h3>
+	<span class="small">19th October 2009</span>
+	<ul>
+	  <li>Fix - reduced number of submenu items</li>
+	  <li>Fix - Password field in configuration made non-clear text</li>
+	  <li>Fix - add missing files to installation XML</li>
+	</ul>
+	<h3>v3.4.0</h3>
+	<span class="small">15th October 2009</span>
+	<ul>
+	  <li>New - Automatic meta description and keywords generation for standard extensions (extra extensions will be added soon)</li>
+	  <li>New - Optional support of UTF-8 characters in SEF URLs</li>
+	  <li>New - Easy-to-use duplicates management</li>
+	  <li>New - JoomSEF can now easily import URLs from sh404SEF and AceSEF components</li>
+	  <li>New - You can now set Title/Alias usage on per extension basis</li>
+	  <li>New - .htaccess editor allowing you to create .htaccess redirects easily</li>
+	  <li>New - Added URLs Update function which automatically updates all URLs in database to match the current configuration</li>
+	  <li>New - Extensions can now contain any number of generic parameter groups (more intuitive)</li>
+	  <li>New - Extensions can now be installed directly from the Joomla Installer</li>	  
+	  <li>Improved - Control panel GUI and configuration layout improvement</li>
+	  <li>Improved - Further improved Content pagination</li>
+	  <li>Improved - Support of regular expressions filters in URLs administration</li>
+	  <li>Update - Cache file moved to standard Joomla! cache location</li>	  
+	  <li>Fix - Quotes replaced by HTML entities in meta tags</li>
+	  <li>Fix - Upgrade was not able to create new directories</li>
+	  <li>Fix - JoomSEF now correctly handles the case when no ASCII character replacements are set</li>
+	</ul>
+	<h3>v3.3.6</h3>
+	<span class="small">15th September 2009</span>
+	<ul>
+		<li>Fix - menu title / alias usage bugfix</li>
+		<li>Update - SEF extension framework will load parameters automatically now</li>
+	</ul>
+	<h3>v3.3.5</h3>
+	<span class="small">1st September 2009</span>
+	<ul>
+		<li>Fix - URL import/export compatibility</li>
+		<li>Update - documentation update</li>
+	</ul>
+	<h3>v3.3.4</h3>
+	<span class="small">25th August 2009</span>
+	<ul>
+		<li>Fix - redirection to index2.php with no params, caused 404 Page not found error (fixes bug e.g. with FacilieForms component)</li>
+	</ul>	
+	<h3>v3.3.3</h3>
+	<span class="small">7th August 2009</span>
+	<ul>
+		<li>Update - added menu parameters auto-loading new in Joomla 1.5 (relates to VirtueMart, Porflio and other components)</li>
+		<li>Fix - fixes cases when multiple menu items point to same target although such behaviour was not intended</li>
+	</ul>	
+	<h3>v3.3.2</h3>
+	<span class="small">17th June 2009</span>
+	<ul>
+		<li>Fix - broken page layout in administration</li>
+		<li>Fix - prevention of division by 0 when paginating</li>
+	</ul>	
+	<h3>v3.3.1</h3>
+	<span class="small">16th June 2009</span>
+	<ul>
+		<li>Fix - SEF URLs including non-SEF variables with &amp; are valid now</li>
+		<li>Fix - cacheFlock not defined bug fix</li>
+		<li>Update - automatic translation of page string when paginaiton is used</li>
+		<li>Update - improved pagination counter</li>
+	</ul>	
+	<h3>v3.3.0</h3>
+	<span class="small">18th May 2009</span>
+	<ul>
+		<li>New - Added possibility to define canonical links</li>
+		<li>New - Renamed table to remove sh404 incompatibility problems</li>
+		<li>New - Auto backuping tables on uninstall</li>
+	</ul>
+	
+	<h3>v3.2.12</h3>
+	<span class="small">13th May 2009</span>
+	<ul>
+		<li>Fix - Fixed base href issues causing problem with e.g. images dissapearing on subpages</li>
+	</ul>
+	<h3>v3.2.11</h3>
+	<span class="small">29th March 2009</span>
+	<ul>
+		<li>New - Free extension for SectionEx</li>
+		<li>Fix - Improved 3rd party extension compatibility</li>
+	</ul>
+	<h3>v3.2.10</h3>
+	<span class="small">18th March 2009</span>
+	<ul>
+		<li>New - Added option for specifying main site language on base domain</li>
+		<li>Fix - Joomla native SEO routing problems</li>
+		<li>Fix - POST variables overwriting problem</li>
+		<li>Fix - backlink plugin problem</li>
+		<li>Fix - Page separator in page title removal problem</li>
+	</ul>	
+	<h3>v3.2.9</h3>
+	<span class="small">18th February 2009</span>
+	<ul>
+		<li>New - Added parameters to set custom site name for each extension</li>
+		<li>New - Added Apply button to configuration and extension parameters pages</li>
+		<li>Update - Improved filtering of invalid URLs stored in database</li>
+		<li>Update - Improved links to homepage recognition</li>
+		<li>Fix - Fixed Breezing forms and JoomFish compatibility</li>
+	</ul>	
+	<h3>v3.2.8</h3>
+	<span class="small">18th February 2009</span>
+	<ul>
+		<li>Fix - Fixed IIS compatibility</li>
+	</ul>	
+	<h3>v3.2.7</h3>
+	<span class="small">16th February 2009</span>
+	<ul>
+		<li>Fix - Fixed compatibility problems with Breezing forms</li>
+	</ul>	
+	<h3>v3.2.6</h3>
+	<span class="small">9th February 2009</span>
+	<ul>
+		<li>New - Added support for meta tags and page title creation in VirtueMart extension</li>
+	</ul>
+	<h3>v3.2.5</h3>
+	<span class="small">8th February 2009</span>
+	<ul>
+		<li>Fix - Fixed compatibility with some PHP4 version broken in 3.2.2</li>
+		<li>Fix - Fixed links to RSS generation</li>
+	</ul>
+	<h3>v3.2.4</h3>
+	<span class="small">4th February 2009</span>
+	<ul>
+		<li>Update - Improved variables filtering options</li>
+		<li>Fix - Fixed links to RSS not working with some configurations</li>
+		<li>Fix - Fixed extension version comparison on Upgrade page</li>
+		<li>Fix - Fixed storing of invalid 404 links</li>
+	</ul>
+	<h3>v3.2.3</h3>
+	<span class="small">17th January 2009</span>
+	<ul>
+		<li>New - Added possibility of base href definition</li>
+		<li>New - Added configuration options for search extension v2.0.3</li>
+		<li>Update - Improved JoomFish compatibility (please, also check for JoomFish 2.0.1 patch at JoomFish site)</li>
+		<li>Update - Prevention of creation of invalid SEO links on redirection from non-SEF URLs</li>
+		<li>Update - Default index file set to empty string (nicer URLs)</li>
+		<li>Update - Checking id variable validity in content extenstion</li>
+		<li>Update - Code optimization</li>
+		<li>Fix - Added stronger cache file integrity checking (no more parse errors)</li>
+		<li>Fix - Fixed non-SEF to SEF redirect when variables were sent using POST method</li>
+		<li>Fix - Fixed JoomFish default language</li>
+	</ul>		
+	<h3>v3.2.2</h3>
+	<span class="small">6th January 2009</span>
+	<ul>
+		<li>New Feature - Added subdomains for different languages support</li>
+		<li>New Feature - Variables validity check (URLs with invalid option, id, task or view won't be stored)</li>
+		<li>New Feature - Added option to select file locking mechanism for cache saving</li>
+		<li>Update - Extensions parameters rewritten (custom nonSEF variables option in each extension)</li>
+		<li>Update - Improved homepage links recognition</li>
+		<li>Fix - Proper error page is now shown when database error encountered</li>
+	</ul>
+	<h3>v3.2.1</h3>
+	<span class="small">15th September 2008</span>
+	<ul>
+		<li>New Feature - Added option to set if default index file should be appended to sections and categories links</li>
+		<li>New Feature - Added option to determine new visitor's language according to his browser settings</li>
+		<li>New Feature - JoomSEF now creates the &lt;base&gt; tag similarly to Joomla's core SEO</li>
+		<li>New Feature - Added option to create 301 Redirect directly from 404 URL</li>
+		<li>Fix - Content extension uses pagetext for page numbers now</li>
+		<li>Fix - Fixed HTML entities in URL variables (fixes duplicate URLs for VM when diacritics used)</li>
+		<li>Fix - Fixed non-SEF to SEF URLs redirection</li>
+	</ul>
+	<h3>v3.2.0</h3>
+	<span class="small">5th August 2008</span>
+	<ul>
+		<li>New Feature - Added option to select custom ItemID for Default 404 Page</li>
+		<li>New Feature - Added option to set server's QUERY_STRING (fixes VM 1.1.2 redirection problem)</li>
+		<li>New Feature - Added Compatibility mode option to Content extension parameters</li>
+		<li>Fix - Notices not shown anymore when new component installed</li>
+		<li>Update - Improved Import/Export functionality (better control over URLs to export)</li>
+		<li>Update - Improved duplicities avoiding in Wrapper extension</li>
+		<li>Update - Added option to parse standard Joomla SEO links</li>
+	</ul>
+	<h3>v3.1.2</h3>
+	<span class="small">7th July 2008</span>
+	<ul>
+		<li>Improved compatibility with PHP4 running as CGI (fixes some warnings and fatal errors)</li>
+		<li>Improved handling of spaces in URLs ("+" can be used as replacement character now)</li>
+		<li>Fixed usage of title alias for menu items</li>
+	</ul>
+	<h3>v3.1.1</h3>
+	<span class="small">27th June 2008</span>
+	<ul>
+		<li>Fixed some bugs causing fatal errors under certain circumstances</li>
+		<li>Fixed search in VirtueMart</li>
+		<li>Improved compatibility with legacy components when using JoomFish</li>
+		<li>Improved performance with JoomFish by decreasing number of DB queries</li>
+		<li>Improved URLs to menu items to limit duplicities</li>
+		<li>Improved trailing slash toleration</li>
+		<li>Added option to generate numbers for Google News in articles to Content extension parameters</li>
+	</ul>
+	<h3>v3.1.0</h3>
+	<span class="small">30th May 2008</span>
+	<ul>
+		<li><strong>The 3.1.x version branch is meant for Joomla 1.5 in Native mode. It is not compatible with Joomla 1.0.x.</strong></li>
+		<li><strong>Extensions have been rewritten, every extension needs to be of version 2.0.0 or higher in order to work correctly.</strong></li>
+		<li>Many minor fixes and improvements have been made</li>
+	</ul>
+	<h3>v3.0.0</h3>
+	<span class="small">1st February 2008</span>
+	<ul>
+		<li><strong>The 3.x version branch is meant for Joomla 1.5 in Legacy mode. It is no longer compatible with Joomla 1.0.x.</strong></li>
+	</ul>
+	<h3>v2.2.6</h3>
+	<span class="small">15th January 2008</span>
+	<ul>
+		<li>Fix - v2.2.5 bug fix - patch for pagination bug e.g. with VirtueMart</li>
+	</ul>
+	<h3>v2.2.5</h3>
+	<span class="small">27th December 2007</span>
+	<ul>
+		<li>Fix - automatically clean cache on URL purge</li>
+		<li>Fix - SOBI2 warning messages (code update)</li>
+		<li>Fix - JoomFish causing duplicates with extra parameters</li>
+		<li>Fix - removing parts of SEO URL if it matches suffix</li>
+		<li>Fix - content pagination improvements</li>
+		<li>Fix - content Itemid estimation improved - prevents duplicates better</li>
+		<li>New extension - JEvents</li>
+	</ul>
+	<h3>v2.2.4</h3>
+	<span class="small">28th November 2007</span>
+	<ul>
+		<li>Fix - incorrect long URL truncation fix</li>
+		<li>Fix - wrapper extension default configuration updated to prevent unexpected behaviour problems</li>
+	</ul>
+	<h3>v2.2.3</h3>
+	<span class="small">20th November 2007</span>
+	<ul>
+		<li>Fix - metadata wrongly shown in administration after save if using UTF-8</li>
+	</ul>
+	<h3>v2.2.2</h3>
+	<span class="small">24th October 2007</span>
+	<ul>
+		<li>IMPORTANT Fix - possible security breach prevention</li>
+		<li>Fix - caching problems leading to file corruption and site stops working</li>
+		<li>Fix - 301 redirection problems</li>
+		<li>Fix - includes metabot 1.6.0 that fixes the problem of duplicite page titles including page and site name when they are same (e.g. on homepage)</li>
+	</ul>
+	<h3>v2.2.1</h3>
+	<span class="small">9th October 2007</span>
+	<ul>
+		<li>Fix - Fixes problems with automatic update from JoomSEF 1.x
+		versions.</li>
+	</ul>
+	<h3>v2.2.0</h3>
+	<span class="small">3rd October 2007</span>
+	<ul>
+		<li>New feature - possibility to stop generating further URLs</li>
+		<li>New feature - possibility to exclude first part of URL for
+		any component (e.g. /shop in VirtueMart)</li>
+		<li>New feature - easier access to editing homepage metadata</li>
+		<li>New extension - Zoom Media Gallery</li>
+		<li>New extension - RSGallery2</li>
+		<li>New extension - Portfolio</li>
+		<li>New extension - Seyret Video Directories</li>
+		<li>Fix - fixed problems with some 3rd party sef_ext files</li>
+		<li>Update - new configuration options added to VirtueMart
+		extension</li>
+		<li>Update - free version will allow direct upgrade to ad-free
+		version</li>
+	</ul>
+	<h3>v2.1.1</h3>
+	<span class="small">29th August 2007</span>
+	<ul>
+		<li>New feature - JoomFish support for extension texts (you can
+		now change texts like "viewlink", "search" etc. in URLs)</li>
+		<li>Improved 301 redirection - server doesn't get stuck with
+		index2.php URLs</li>
+		<li>Fixed Custom Titles functionality</li>
+		<li>Fixed meta title tag in MetaBot</li>
+		<li>Improved export and import of custom redirects</li>
+		<li>Improved upgrade script and fixed problem with directory
+		permissions</li>
+		<li>Updated Mosets Tree extension</li>
+	</ul>
+	<h3>v2.1.0</h3>
+	<span class="small">29th July 2007</span>
+	<ul>
+		<li>New feature - 301 redirection functionality</li>
+		<li>Bug fix - mambot PHP4 compatibility problems</li>
+	</ul>
+	<h3>v2.0.2</h3>
+	<span class="small">25th July 2007</span>
+	<ul>
+		<li>Bug fix - trailing slash toleration not working correctly</li>
+		<li>Bug fix - "save as custom redirect" not pre-checked on URL
+		customization</li>
+	</ul>
+	<h3>v2.0.1</h3>
+	<span class="small">24th July 2007</span>
+	<ul>
+		<li>Bug fix - unistalling plug-in extensions does not remove DB
+		information correctly</li>
+		<li>Bug fix - mambot does not rewrite meta data</li>
+	</ul>
+	<h3>v2.0.0</h3>
+	<span class="small">11th July 2007</span>
+	<ul>
+		<li>Improved searching for 3rd party sef_ext extensions</li>
+		<li>Added parameters to individual extensions</li>
+		<li>Added possibility to set your own extension title</li>
+		<li>Added option to ignore multiple Itemids pointing to same page</li>
+		<li>Added option to set your own Itemid to use with each
+		extension</li>
+		<li>Added Cache for mostly visited URLs</li>
+		<li>Added Patch system through mambot functionality</li>
+		<li>Rewritten the way how extensions are called</li>
+	</ul>
+	<h3>v1.5.1</h3>
+	<span class="small">16th May 2007</span>
+	<ul>
+		<li>New metabot features - define how should your page title be
+		composed and how to you meta tags</li>
+		<li>Optimized URLs for com_search</li>
+		<li>Optimized URLs for com_contact</li>
+		<li>Optimized URLs for com_registration</li>
+		<li>SEF form components for com_search and com_contact may be
+		disabled</li>
+		<li>Fixed problem with image not showing on 404 page</li>
+		<li>Fixed problem when frontpage is not detected if not first
+		item in mainmenu</li>
+		<li>Fixed issues caused by upper/lowercase URLs difference where
+		SEO should be off</li>
+	</ul>
+	<h3>v1.5.0</h3>
+	<span class="small">25th April 2007</span>
+	<ul>
+		<li>Added option to accept URLs both with/without trailing slash</li>
+		<li>Added option not to store 404 page hits records to decrease
+		number of SQL queries</li>
+		<li>Fixed some duplicate URLs issues (especially with VirtueMart)</li>
+	</ul>
+	<h3>v1.4.3</h3>
+	<span class="small">23rd April 2007</span>
+	<ul>
+		<li>Fixes further 3rd party extension problems and improves
+		compatibility</li>
+	</ul>
+	<h3>v1.4.2</h3>
+	<span class="small">16th April 2007</span>
+	<ul>
+		<li>Fixed upgrade error in PHP4 and added upgrade error messages
+		on write permission problems</li>
+		<li>Added polish language file, upgraded german language file</li>
+		<li>Fixed weblinks notice outputs</li>
+	</ul>
+	<h3>v1.4.1</h3>
+	<span class="small">12th April 2007</span>
+	<ul>
+		<li>Fixed XHTML compliance issues with some URIs</li>
+		<li>Basic SEF support for archive items added</li>
+		<li>Fixed problem with duplicating URLs in specific cases</li>
+	</ul>
+	<h3>v1.4.0</h3>
+	<span class="small">11th January 2007</span>
+	<ul>
+		<li>Option to exclude often varying variables from stored URLs to
+		reduce the DB size</li>
+		<li>Significant support improvement of OpenSEF and SEF Advance
+		compatible extensions</li>
+		<li>Added option to ignore link sources to reduce # of link to 1
+		target<br />
+		Please note that switching this feature on may affect Joomla
+		functionality</li>
+		<li>Added option to reappend source information as anchor<br />
+		Please note that switching this off when previous in on may affect
+		Joomla functionality</li>
+		<li>Fixed pagination problems when not possible to reach first
+		page</li>
+		<li>Other small fixes</li>
+	</ul>
+	<h3>v1.3.3</h3>
+	<span class="small">11th January 2007</span>
+	<ul>
+		<li>Higher user comfort (edited URLs are automatically saved as
+		"custom")</li>
+		<li>Protecting from unwanted URL list deletion on configuration
+		change</li>
+	</ul>
+	<h3>v1.3.2</h3>
+	<span class="small">10th January 2007</span>
+	<ul>
+		<li>Revised, retested and updated IIS support</li>
+		<li>Fixed problems when switching between http and https
+		(VirtueMart checkout problem)</li>
+		<li>Documentation updates</li>
+		<li>Several other small bugs fixes</li>
+	</ul>
+	<h3>v1.3.1</h3>
+	<span class="small">5th December 2006</span>
+	<ul>
+		<li>Upgrade module bugfix</li>
+		<li>Other small bug fixes</li>
+	</ul>
+	<h3>v1.3.0</h3>
+	<span class="small">28th November 2006</span>
+	<ul>
+		<li>Added upgrade capability</li>
+		<li>Added AlphaContent support</li>
+		<li>Added Mosets Tree support</li>
+		<li>Added VirtueMart component support (payed)</li>
+		<li>Added SMF Bridge v1.1 RC3 component support (payed)</li>
+		<li>Added URL filters in admin section</li>
+		<li>Added title, description and keywords metatags for individual
+		URLs</li>
+		<li>Fixed lower-case URL problem with components excluded from
+		JoomSEF processing</li>
+		<li>Duplicate home URL fix</li>
+		<li>Other small bug fixes</li>
+	</ul>
+	<h3>v1.2.5</h3>
+	<span class="small">18th September 2006</span>
+	<ul>
+		<li>Significantly updated JoomFish support</li>
+		<li>Added possibility to add language to URL as path or suffix</li>
+		<li>Added possibility to translate URLs using JoomFish</li>
+		<li>Removed duplicities in URLs (Google indexing optimizaiton)</li>
+		<li>Enabled defining of own non-ascii characters rewrite rules</li>
+		<li>Fixed number of minor bugs</li>
+	</ul>
+	<h3>v1.2.4</h3>
+	<span class="small">31st August 2006</span>
+	<ul>
+		<li>Documentation update.</li>
+		<li>Prevented loadClass error problem with older Joomla!
+		versions.</li>
+	</ul>
+	<h3>v1.2.3</h3>
+	<span class="small">29th August 2006</span>
+	<ul>
+		<li>Compatibility fix with URLs using numeric entities (e.g.
+		generated by JCE WYSIWG editor).</li>
+	</ul>
+	<h3>v1.2.2</h3>
+	<span class="small">28th August 2006</span>
+	<ul>
+		<li>Security fixes to match Joomla 1.0.11 requirements and minor
+		bugs coorections.</li>
+	</ul>
+	<h3>v1.2b</h3>
+	<span class="small">15th August 2006</span>
+	<ul>
+		<li>Fixed pagination problems.</li>
+		<li>Integrated JoomFish and DocMan support.</li>
+		<li>Ported from original version.</li>
+	</ul>
+</div>

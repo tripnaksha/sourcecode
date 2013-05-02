@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<install type="sef_ext" version="1.5">
+	<name>Community Builder</name>
+	<author>ARTIO s.r.o.</author>
+	<creationDate>5. June 2008</creationDate>
+	<copyright>ARTIO s.r.o.</copyright>
+	<license>Copyrighted - http://www.artio.net/joomsef/licence-ext</license>
+	<authorEmail>info@artio.net</authorEmail>
+	<authorUrl>www.artio.net</authorUrl>
+	<version>2.0.0</version>
+	<description>Adds SEO support for Community Builder component.</description>
+	<files>
+		<filename sef_ext="comprofiler">com_comprofiler.php</filename>
+	</files>
+	<params>
+ 		<param name="ignoreSource" type="radio" default="2" label="Ignore multiple sources" description="You can choose to override the default behaviour of this option.">
+ 			<option value="2">Use global config</option>
+ 			<option value="0">No</option>
+ 			<option value="1">Yes</option>
+ 		</param>
+ 		<param name="itemid" type="radio" default="0" label="Itemid handling" description="You can choose to override the default behaviour with your own Itemid.">
+ 			<option value="0">Use global config</option>
+ 			<option value="1">Override</option>
+ 		</param>
+ 		<param name="overrideId" type="text" default="" label="Override Itemid" description="Itemid to always use with this component. Leave blank to use the default one."></param>
+ 		<param name="addtitle" type="list" default="2" label="Add menu title" description="Controls when the Community Builder's menu title should be added to URL.">
+ 			<option value="0">No</option>
+ 			<option value="1">Except link to profile</option>
+ 			<option value="2">Always</option>
+ 		</param>
+ 		<param name="addsuffix" type="radio" default="1" label="Add suffix to profile link" description="If set to No, suffix won't be added to profile links.">
+ 			<option value="0">No</option>
+ 			<option value="1">Yes</option>
+ 		</param>
+ 		<param name="customNonSef" type="text" default="" label="Custom non-SEF variables" description="Here you can specify custom non-SEF variables separated by semicolon." />
+ 	</params>
+</install>

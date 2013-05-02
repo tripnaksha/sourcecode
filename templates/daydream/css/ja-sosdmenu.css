@@ -1,0 +1,78 @@
+#ja-mainnav {
+	font-family: "Trebuchet MS", Arial, san-serif;
+	height:42px;
+	position:relative;
+	font-size:11px;
+	margin: 0;
+	padding-left: 100px;
+	z-index: 9999;
+}
+
+#ja-mainnav ul li a {
+	display: block;
+	text-decoration:none;
+	color:#243515;
+	font-weight:bold;
+	width:81px; 
+	height:35px; 
+	text-align:center;
+	border-bottom: 0;
+	line-height:40px; 
+	font-size:12px; 
+	padding-left: 1px;
+	z-index:9999;
+}
+#ja-mainnav ul li.item1 a {
+	text-align: center;
+	z-index: 9999;
+}
+
+/* first and last tabs 
+#ja-mainnav .one {
+	background-image:url(../images/1a.png);
+	padding-left: 1px;
+	margin-right: -1px;
+}
+#ja-mainnav .three {
+	background-image:url(../images/3a.png);
+}
+*/
+#ja-mainnav ul {padding:0; margin:0; list-style: none; z-index: 9999;}
+#ja-mainnav ul li {float:left; position:relative; z-index: 9999;}
+#ja-mainnav ul li ul {display: none; z-index: 9999;}
+* html ul li ul {display: none; width:auto; z-index: 9999;}
+* html ul li ul {display: none; width:auto; z-index: 9999;}
+/*#ja-mainnav ul li ul a {display:block; color: #405501; background: url(../images/menu.png) no-repeat top left; background-position: 0 -258px; width: 152px; height: 202px;}*/
+
+/* button hover properties */
+#ja-mainnav ul li:hover a {color:#405501; background: url(../images/menu.png) no-repeat top left; background-position: 0 -166px; width: 82px; height: 35px; z-index: 9999;}
+#ja-mainnav ul li.item1 a {color:#405501; background: url(../images/menu.png) no-repeat top left; background-position: 0 0; width: 77px; height: 33px; z-index: 9999;}
+#ja-mainnav ul li.item1:hover a {color:red; background-position: 0 -83px; width: 77px; height: 33px; z-index: 9999;}
+/** html ul li:hover a { background-color: #bfd96f; font-size:10px; font-family:Tahoma, Arial, sans-serif; z-index: 9999;}*/
+#ja-mainnav ul li:hover ul, li.over ul {display:block; position:absolute; top:35px; left:0; margin: 0; padding: 0; z-index: 9999;}
+/*#ja-mainnav ul li:hover ul, li.over ul {display:block; position:absolute; background: url(../images/ddbbg.png) no-repeat; top:35px; left:0; width:152px; margin: 0; padding: 0; z-index: 9999;}*/
+#ja-mainnav ul li:hover ul li a.two {background:#6a3; color:#fff; z-index: 9999;}
+#ja-mainnav ul li:hover ul li:hover a.two {background:#6fc; color:#405501; z-index: 9999;}
+#ja-mainnav ul li:hover ul li ul {display: none; z-index: 9999;}
+
+/* dropdown properties */
+#ja-mainnav ul li:hover ul li a {background-image: none; display:block;height: 28px; line-height: 26px; color:#405501; width:142px; text-align:left; margin: 0; padding:0 0 0 11px;font-weight:normal; z-index: 9999; background: url(../images/menu.png) no-repeat top left; background-position: 0 -258px; width: 152px; height: 28px;}
+#ja-mainnav ul li:hover ul {
+	margin: 0 0 0 3px;
+	padding: 0;
+/*	background: url(../images/menu.png) no-repeat top left; background-position: 0 -258px; width: 152px; height: 202px;*/
+	background-repeat:no-repeat;
+	z-index:9999;
+}
+/*#ja-mainnav ul li:hover ul .hlight {
+	background-image: url(../images/hlight2.png);
+	margin-right: 1px;
+	z-index: 9999;
+}*/
+
+/* dropdown selected properties */
+#ja-mainnav ul li:hover ul li a:hover {color:#fff; background: url(../images/menu.png) no-repeat top left; background-position: 0 -344px; width: 152px; height: 28px; z-index: 9999;}
+
+#ja-mainnav ul li:hover ul li:hover ul {display:block; position:absolute; left:105px; top:0; z-index: 9999;}
+#ja-mainnav ul li:hover ul li:hover ul.left {left:-105px; z-index: 9999;}
+

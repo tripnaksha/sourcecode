@@ -1,0 +1,63 @@
+/*
+// JoomlaWorks "Disqus Comment System" Plugin for Joomla! 1.5.x - Version 2.1
+// Copyright (c) 2006 - 2009 JoomlaWorks Ltd.
+// Released under the GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
+// More info at http://www.joomlaworks.gr
+// Designed and developed by the JoomlaWorks team
+// ***Last update: May 30th, 2009***
+*/
+
+/* --- CSS specific to the Disqus comment form only --- */
+
+/* The box where a post is typed into. */
+textarea { }
+
+/* The form elements (Name, Email, Website). */
+input.form-text { }
+
+/* The submit button "Post". */
+input.submit { }
+
+/* Everything Disqus on your page is contained within this. */
+#disqus_thread { }
+
+/* The main wrapper for the comment system. */
+#disqus_thread #dsq-content { }
+
+/* "Add New Comment" and "# Comments" are enclosed in h3 tags. */
+#disqus_thread #dsq-content h3 { }
+
+/* The toggle button for the thread options. */
+#dsq-content #dsq-options-toggle { }
+
+/* The links within the thread Options */
+#dsq-content #dsq-extra-links { }
+
+/* The entire comment thread list. */
+#dsq-content #dsq-comments { }
+
+/* A single comment in the thread. */
+#dsq-content #dsq-comments .dsq-comment { }
+
+/* The comment rating arrows for posts. */
+#dsq-content #dsq-comments .dsq-comment-rate { }
+
+/* The header at the top of posts. */
+#dsq-content #dsq-comments .dsq-comment-header { }
+
+/* The avatar image for the registered. */
+#dsq-content #dsq-comments .dsq-header-avatar img { }
+
+/* This is the meta information about the post (time stamp and points). */
+#dsq-content #dsq-comments .dsq-header-meta { }
+
+/* The message body of a single comment post. */
+#dsq-content #dsq-comments .dsq-comment-body { }
+
+/* The footer contains the link to "reply." */
+#dsq-content #dsq-comments .dsq-comment-footer { }
+
+/* This contains and determines the style for the pagination links. */
+#disqus_thread #dsq-content #dsq-pagination { }
+
+/* END */

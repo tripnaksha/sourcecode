@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cbinstall version="1.0.0" type="plugin" group="user">
+	<name>cb Geocode Factory</name>
+	<author>Pelloquin Cédric</author>
+	<creationDate>VIII 2009</creationDate>
+	<copyright>(C) 2009 pelloquin.com</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>joomla@pelloquin.com</authorEmail>
+	<authorUrl>www.pelloquin.com</authorUrl>
+	<version>1.1</version>
+	<description>
+		<![CDATA[
+<p>This plugin is a free part of the <a href="http://www.pelloquin.com/index.php/Geocode-Factory-for-Community-Builder.html" target="_blank">Geocode Factory for Community Builder Component</a>  and exist in a <span style="color:green; font-weight:bold;">PRO</span> version, containing a silent geocode process during registration, and during profile update: <a href="http://www.pelloquin.com/index.php/Profile-map-and-geocode-plugin-for-Community-Builder.html" target="_blank">Update to the pro version</a>.</p>
+<p>The Geocode Factory CB plugin allows you to display a map in a user tab, and allows the user and admin to geocode the user position from the entered address (city, street, country, zipcode). Another feature from the PRO version is to geocode the user in silent mode, during registration process.</p>
+<p><img src="../components/com_comprofiler/plugin/user/plug_cbgeocodefactory/images/pec_logo.png" /></p>
+		]]>
+	</description>
+	<files>
+		<filename plugin="geocodefactory">geocodefactory.php</filename>
+		<filename>index.html</filename>
+		<filename>images/pec_logo.png</filename>
+	</files>
+	<params>
+		<param name="Infos" type="custom" class="getgeocodefactoryTab" method="getProductInfos" default="" label="Informations" description="" />
+
+		<param name="@spacer" type="spacer" label="Field assignation:" default="" description="" />
+		<param name="gfCity" type="text" size="25" label="City field name" default="city" />
+		<param name="gfAddress" type="text" size="25" label="Address field name" default="address" />
+		<param name="gfZip" type="text" size="25" label="Zip field name" default="zipcode" />
+		<param name="gfCountry" type="text" size="25" label="Country field name" default="country" />
+
+		<param	name="@spacer" type="spacer" label="Geocode options:" default="" description="" />
+		<param	name="geocodeAtReg" type="radio" label="Auto geocode during registration" default="1" description="Allows you to silent geocode the user durring the registration.">
+			<option value="0">No</option>
+			<option value="1">Yes, I have the pro version</option>
+		</param>
+
+		<param	name="geocodeAtEdit" type="radio" label="Auto geocode during edition" default="0" description="Allows you to silent geocode the user durring the profile edit process.">
+			<option value="0">No</option>
+			<option value="1">Yes, I have the pro version</option>
+		</param>
+
+		<param	name="geocodeBtn" type="radio" label="Add geocode button" default="1" description="Allow the user to use a button to get the coordinates during the profile edition.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+
+		<param	name="pickPoint" type="radio" label="User can pick point" default="1" description="Allow the user to pick a point on the map or move the marker to get the coordinates during the profile edition.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+
+		<param	name="@spacer" type="spacer" label="Google map parameters:" default="" description="" />
+		<param name="width"  size="10" type="text" default="500" label="Map Width" description="Width of the Google map (value in px)." />
+		<param name="height" size="10" type="text" default="250" label="Map Height" description="Height of the Google map (value in px)" />
+
+		<param name="overviewMapControl" type="list" default="0" label="Show Overview Map" description="Show the map overview control window." >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+
+		<param name="apiKey" size="50" type="text" default="" label="Your API Key (Get it from : code.google.com/maps...)." />
+		
+		<param name="mapControl" type="list" default="1" label="Google Maps Pan/Zoom Buttons" description="Show the Google Maps pan and zoom control buttons.">
+			<option value="0">None</option>
+			<option value="1">Small Map Controls</option>
+			<option value="2">Large Map Controls</option>
+		</param>
+		
+		<param name="doubleClickZoom" type="list" default="1" label="Double Click Zoom" description="Zoom the map on double click." >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+
+		<param name="mapTypeControl" type="list" default="1" label="Google Maps Type Buttons" description="Show the Google Maps type control buttons to switch between normal map, satellite or hybrid view." >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		
+		<param name="mapTypeOnStart" type="list" default="G_NORMAL_MAP" label="Map Type on Start" description="Setup the starting map type.">
+			<option value="G_NORMAL_MAP">Normal</option>
+			<option value="G_SATELLITE_MAP">Satellite</option>
+			<option value="G_HYBRID_MAP">Hybrid</option>
+			<option value="G_PHYSICAL_MAP">Relief</option>
+		</param>
+
+		<param name="mapsZoom" type="list" default="8" label="Zoom Level" description="Setup the starting zoom level.">
+			<option value="1">1</option><option value="2">2</option><option value="3">3</option>
+			<option value="4">4</option><option value="5">5</option><option value="6">6</option>
+			<option value="7">7</option><option value="8">8</option><option value="9">9</option>
+			<option value="10">10</option><option value="11">11</option><option value="12">12</option>
+			<option value="13">13</option><option value="14">14</option><option value="15">15</option>
+			<option value="16">16</option><option value="17">17</option>
+		</param>	
+
+		<param	name="@spacer" type="spacer" label="Migration tool" default="" description="" />
+		<param name="Migration tool" type="custom" class="getgeocodefactoryTab" method="migrationTool" default="" label="Migration tool" description="" />
+		<param name="gfOldLat" type="text" size="25" label="Existing latitude field" default="cb_latitude" />
+		<param name="gfOldLng" type="text" size="25" label="Existing longitude field" default="cb_longitude" />
+		<param	name="gfOkMigration" type="radio" label="Start migration now" default="0" description="If set to yes, the module migrate your existing coordinates to the new fields (old values are preserved).">
+			<option value="0">No</option>
+			<option value="1">Yes, I have the pro version</option>
+		</param>
+
+
+	</params>
+	<tabs>
+		<tab name="Location" description="This tab allows to get, show and save the user coordinates" class="getgeocodefactoryTab" fields="1" position="cb_tabmain" displaytype="tab">
+			<params>
+				<param name="hwTabMessage" type="text" label="CB Hello World Tab Text" default="Hello Joomlapolitans!" description="Actual hello world message to display in the tab (default: Hello Joomlapolitans!)." />
+			</params>
+			<fields>
+				<field title="Latitude" name="cb_plug_lat" Description="Plugin latitude" type="text" registration="0" profile="1" readonly="0" params="" />
+				<field title="Longitude" name="cb_plug_lng" Description="Plugin longitude" type="text" registration="0" profile="1" readonly="0" params="" />
+			</fields>
+		</tab>
+	</tabs>
+	<install>
+		<queries>
+		</queries>
+	</install>
+	<uninstall>
+	</uninstall>
+</cbinstall>

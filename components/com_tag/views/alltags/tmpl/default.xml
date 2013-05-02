@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="All Tags">
+		<message>
+			<![CDATA[TAGS DEFAULT LAYOUT DESC]]>
+		</message>
+	</layout>
+	<state>
+		<name>All Tags</name>
+		<description>Show All Tags</description>
+				<params>
+        <param name="title" type="text" size="12" default="All tags" label="Title" description="Title for the page." />
+		<param name="metaDescription" type="textarea" rows="5" cols="30" default="tag clouds" label="Meta Description" description="Customize meta description." />
+		<param name="metaKeywords" type="textarea" rows="5" cols="30" default="tag clouds" label="Meta Keywords" description="Customize meta keywords." />
+		<param name="tagOrder" type="list" default="random" label="Order" description="Order that the tags will be displayed in.">
+		        <option value="random">Random</option>
+		        <option value="date">Oldest first</option>
+				<option value="rdate">Most recent first</option>
+				<option value="alpha">Term Alphabetical</option>
+				<option value="ralpha">Term Reverse-Alphabetical</option>			
+				<option value="hits">Most Hits</option>
+				<option value="rhits">Least Hits</option>
+			    			
+		</param>
+		</params>
+	</state>
+</metadata>

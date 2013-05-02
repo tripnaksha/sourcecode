@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cbinstall version="1.0" type="plugin" group="user">
+	<name>pms.MyPMSPro</name>
+	<author>JoomlaJoe, Beat and Benjamin Zweifel</author>
+	<creationDate>2009-01-26</creationDate>
+	<copyright>(C) 2005-2009 joomlapolis.com</copyright>
+	<license>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL version 2</license>
+	<authorEmail>beat@joomlapolis.com</authorEmail>
+	<authorUrl>www.joomlapolis.com</authorUrl>
+	<version>1.2</version>
+	<description>Provides the myPMS, PMS Pro, PMS Enhanced, JIM and uddeIM 0.4/1.0 integration for Community Builder.</description>
+	<files>
+		<filename plugin="pms.mypmspro">pms.mypmspro.php</filename>
+		<filename>index.html</filename>
+	</files>
+    <params>
+		<param name="pmsType" type="list" default="1" label="PMS Component type" description="Choose type of component installed. &lt;strong&gt;IMPORTANT: Component configuration must also be done!&lt;/strong&gt;">
+			<option value="1">MyPMS Open Source</option>
+			<option value="2">PMS Pro</option>
+			<option value="5">PMS Enhanced 2.x</option>
+			<option value="3">uddeIM 0.4</option>
+			<option value="4">uddeIM 1.0</option>
+			<option value="6">JIM 1.0.1</option>
+		</param>
+	    <param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="pmsMenuText" type="text" size="25" default="_UE_PM_USER" label="PMS Send Menu/Link text" description="Default is _UE_PM_USER, the local translation of &quot;Send Private Message&quot;" />
+		<param name="pmsMenuDesc" type="text" size="25" default="_UE_MENU_PM_USER_DESC" label="PMS Send Menu/Link Description" description="Default is _UE_MENU_PM_USER_DESC, the local translation of &quot;Send a Private Message to this user&quot;" />
+	    <param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="pmsMenuInboxText" type="text" size="25" default="_UE_PM_INBOX" label="PMS Inbox Menu/Link text" description="Default is _UE_PM_INBOX, the local translation of &quot;Show Private Inbox&quot;" />
+		<param name="pmsMenuInboxDesc" type="text" size="25" default="_UE_MENU_PM_INBOX_DESC" label="PMS Menu/Link Description" description="Default is _UE_MENU_PM_INBOX_DESC, the local translation of &quot;Show Received Private Messages&quot;" />
+		<param name="@spacer" type="spacer" default="only for PMS Pro/uddeIM" label="Following parameters:" description="" />
+		<param name="pmsMenuOutboxText" type="text" size="25" default="_UE_PM_OUTBOX" label="PMS Outbox Menu/Link text" description="Default is _UE_PM_OUTBOX, the local translation of &quot;Show Private Outbox&quot;" />
+		<param name="pmsMenuOutboxDesc" type="text" size="25" default="_UE_MENU_PM_OUTBOX_DESC" label="PMS Outbox Menu/Link Description" description="Default is _UE_MENU_PM_OUTBOX_DESC, the local translation of &quot;Show Sent Private Messages&quot;" />
+	    <param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="pmsMenuTrashboxText" type="text" size="25" default="_UE_PM_TRASHBOX" label="PMS Trash Menu/Link text" description="Default is _UE_PM_TRASHBOX, the local translation of &quot;Show Trash&quot;" />
+		<param name="pmsMenuTrashboxDesc" type="text" size="25" default="_UE_MENU_PM_TRASHBOX_DESC" label="PMS Trash Menu/Link Description" description="Default is _UE_MENU_PM_TRASHBOX_DESC, the local translation of &quot;Show Trashed Private Messages&quot;" />
+	    <param name="@spacer" type="spacer" default="only for PMS Pro/uddeIM 0.5" label="Following parameters:" description="" />		
+		<param name="pmsMenuOptionsText" type="text" size="25" default="_UE_PM_OPTIONS" label="PMS Options Menu/Link text" description="Default is _UE_PM_OPTIONS, the local translation of &quot;Show PMS Options&quot;" />
+		<param name="pmsMenuOptionsDesc" type="text" size="25" default="_UE_MENU_PM_OPTIONS_DESC" label="PMS Options Menu/Link Description" description="Default is _UE_MENU_PM_OPTIONS_DESC, the local translation of &quot;Show PMS Options&quot;" />
+	    <param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="pmsUserDeleteOption" type="list" default="1" label="PMS User Deletion" description="Choose how you want PMS messages to be handled when a user is removed">
+			<option value="1">Keep all messages</option>
+			<option value="2">Remove all messages (received and sent)</option>
+			<option value="3">Remove received messages only</option>
+			<option value="4">Remove sent message only</option>
+		</param>
+		<param name="pmsUserFunction" type="list" default="1" label="PMS Deletion Function to use" description="Choose which function to be called when user is deleted (PMS component specific cleanup functions must be stored in cb_extra.php file in component root).">
+			<option value="1">Use CB Plugin Function</option>
+			<option value="2">Use PMS Component Function</option>
+		</param>
+		<param name="@spacer" type="spacer" default="see tab manager: MyPMSPro: parameters" label="More settings:" description="" />
+	</params>
+	<tabs>
+		<tab name="_UE_PMSTAB" description="" class="getmypmsproTab" fields="0" position="cb_right" displaytype="html">
+			<params>
+				<param name="@spacer" type="spacer" default="Quick Message Settings" label="" description="" />
+				<param name="showTitle" type="list" default="1" label="Show Tab title" description="Show the title of the tab inside this tab. The description is also shown, if present. &lt;strong&gt;IMPORTANT: The title is the tab title here.&lt;/strong&gt;">
+					<option value="0">Hide</option>
+					<option value="1">Show</option>
+				</param>
+				<param name="showSubject" type="list" default="1" label="Show Subject Field" description="Show the subject field. If hidden, subject will be &quot;Message from your profile view&quot; = _UE_PM_PROFILEMSG">
+					<option value="0">Hide</option>
+					<option value="1">Show</option>					
+				</param>
+				<param name="width" type="text" size="10" default="30" label="Width (chars)" description="" />
+				<param name="height" type="text" size="10" default="5" label="Height (lines)" description="" />
+				<param name="@spacer" type="spacer" default="" label="" description="" />
+				<param name="@spacer" type="spacer" default="see plugin manager: MyPMSPro: parameters" label="More settings:" description="" />
+			</params>
+			<fields>
+			</fields>
+		</tab>
+	</tabs>
+	<database>
+	</database>
+</cbinstall>

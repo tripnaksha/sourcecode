@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0">
+  <name>ContentSubmit</name>
+  <author>Dioscouri Design</author>
+  <creationDate>06/01/2008</creationDate>
+  <copyright>2008 Dioscouri.com</copyright>
+  <license>GNU General Public License v2</license>
+  <authorEmail>info@dioscouri.com</authorEmail>
+  <authorUrl>http://www.dioscouri.com</authorUrl>
+  <version>1.5</version>
+  <description>ContentSubmit allows Joomla! Administrators to create front-end article submission forms that are specific to an existing category or section.</description>
+  <files folder="site">
+    <file>contentsubmit.php</file>
+    <file>controller.php</file>
+    <file>helpers/icon.php</file>
+    <file>helpers/index.html</file>
+    <file>helpers/query.php</file>
+    <file>helpers/route.php</file>
+    <file>index.html</file>
+    <file>languages/english.php</file>
+    <file>languages/index.html</file>
+    <file>metadata.xml</file>
+    <file>models/article.php</file>
+    <file>models/category.php</file>
+    <file>models/index.html</file>
+    <file>models/section.php</file>
+    <file>router.php</file>
+    <file>view.php</file>
+    <file>views/article/index.html</file>
+    <file>views/article/tmpl/bycategory.php</file>
+    <file>views/article/tmpl/bycategory.xml</file>
+    <file>views/article/tmpl/bysection.php</file>
+    <file>views/article/tmpl/bysection.xml</file>
+    <file>views/article/tmpl/index.html</file>
+    <file>views/article/tmpl/pagebreak.php</file>
+    <file>views/article/tmpl/pagebreak.xml</file>
+    <file>views/article/view.html.php</file>
+    <file>views/index.html</file>
+  </files>
+  <administration>
+    <files folder="admin">
+      <file>index.html</file>
+      <file>install.contentsubmit.php</file>	  
+    </files>
+    <menu link="option=com_contentsubmit" admin_menu_link="">Content Submit</menu>
+  </administration>
+  <installfile>install.contentsubmit.php</installfile>
+  <uninstallfile/>
+  <params/>
+</install>

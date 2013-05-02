@@ -1,0 +1,137 @@
+/* SEARCH FORM */
+.ajaxsearch {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	position: relative;
+}
+
+.ajaxsearch .inputbox {
+	width: 156px;
+	height:15px;
+	padding: 3px 0 3px 20px;
+	margin: 0;
+	border: 1px solid #999999;
+	font-size: 10px;
+	background-image: url(modules/mod_ajaxsearch/img/search_loop.gif);
+	background-repeat: no-repeat;
+	background-position: 3px 5px;
+	float: left;
+}
+
+#suggestions{ 
+	width:290px; 
+	position: absolute; 
+	left: 0; 
+	top: 25px; 
+	display:none;
+	z-index: 11000;
+}
+
+#loading{
+    position: absolute;
+    top: 4px;
+    left: 155px;
+    z-index: 5000;
+	width: 16px;
+	height: 16px;
+	background-image: url(modules/mod_ajaxsearch/img/ajax-loader.gif);
+	background-repeat: no-repeat;
+}
+
+#loading-not{
+    position: absolute;
+    top: 6px;
+    left: 155px;
+    z-index: 5000;
+	width: 11px;
+	height: 11px;
+	display: block; 
+	cursor: pointer;
+	border: 0;
+	background-color: #FFF;
+	background-image: url(/modules/mod_ajaxsearch/img/close.gif);
+	background-repeat: no-repeat;
+}
+
+/* SEARCHRESULTS */
+#searchresults { 
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 11px;
+	z-index: 11000;
+}
+
+#searchresults li { 
+	width: 290px;
+	height: 60px;
+	line-height: 14px;
+	z-index: 11000;
+}
+
+#searchresults li .txt{ 
+	margin: 0;
+	padding: 0;
+	z-index: 11000;
+}
+
+#searchresults li a{ 
+	width: 280px;
+	height: 50px;
+	padding: 5px;
+	display: block;
+	text-decoration:none;
+	background-color:#e4e4e4; 
+	color: #555555;
+	
+	z-index: 11000;
+}
+
+#searchresults li a:hover{ 
+	background-color:#b7b7b7; 
+	color:#ffffff; 
+}
+
+#searchresults li span { 
+	font-weight:bold; 
+	color:#191919; 
+	z-index: 11000;
+}
+
+#searchresults li a:hover span { 
+	font-weight:bold; 
+	color:#FFF; 
+}
+
+#searchresults li.no_results { 
+	width: 280px;
+	padding: 5px; 
+	font-weight:bold; 
+	background-color:#b7b7b7; 
+	color:#ffffff; 
+	line-height: 60px;
+	z-index: 11000;
+}
+
+#searchresults li.advanced_search a { 
+	height: 20px;
+	padding: 5px;
+	background-image: url(modules/mod_ajaxsearch/img/shortcuts_arrow.gif);
+	background-repeat: no-repeat;
+	background-position: 270px center;
+	background-color: #a0a0a0;
+	color: #FFF;
+	line-height: 20px;
+	z-index: 11000;
+}
+
+#searchresults li.category { 
+	width: 280px;
+	height: 15px;
+	padding:5px; 
+	font-weight:bold; 
+	background-color:#b7b7b7; 
+	color:#ffffff;
+	line-height: 15px;	
+}

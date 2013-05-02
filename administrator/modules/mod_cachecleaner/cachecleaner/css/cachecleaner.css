@@ -1,0 +1,84 @@
+/**
+ * Cache Cleaner stylesheet
+ *
+ * @package    Cache Cleaner
+ * @version    1.1.1
+ * @since      File available since Release v0.1.0
+ *
+ * @author     Peter van Westen <peter@nonumber.nl>
+ * @link       http://www.nonumber.nl/cachecleaner
+ * @copyright  Copyright (C) 2010 NoNumber! All Rights Reserved
+ * @license    http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+
+#module-status {
+	background-image: none !important;
+}
+#module-status a#cachecleaner {
+	margin-right: 10px;
+	float: left;
+}
+#module-status a#cachecleaner span {
+	background: transparent url(../images/icon.png) no-repeat 3px 3px;
+	padding-right: 0px;
+	min-height: 16px;
+	cursor: pointer;
+	cursor: hand;
+}
+#module-status a#cachecleaner.no_icon span {
+	background: none;
+	padding-left: 0px;
+}
+#module-status a#cachecleaner.no_text {
+	text-decoration: none;
+}
+#module-status a#cachecleaner.no_text span {
+	padding-left: 0px;
+	width: 22px;
+}
+
+#cachecleaner_msg,
+#cachecleaner_msg.visible {
+	display: none;
+}
+body>#cachecleaner_msg {
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 5px 20px;
+	width: 100%;
+	height: 16px;
+	text-align: center;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #666666;
+	z-index: 200;
+}
+body>#cachecleaner_msg.visible {
+	display: inline;
+}
+body>#cachecleaner_msg.success {
+	background-color: #4e8858;
+}
+body>#cachecleaner_msg.warning {
+	background-color: #ba8045;
+}
+body>#cachecleaner_msg.failure {
+	background-color: #884e4e;
+}
+body>#cachecleaner_msg img {
+	vertical-align: sub;
+}
+
+/* APLite template */
+#module-status.ap-status a#cachecleaner {
+	float: none;
+	margin-right: 0px;
+}
+#module-status.ap-status a#cachecleaner span {
+	display: inline-block;
+	background-position: 0px 0px;
+}
+#module-status.ap-status a#cachecleaner.no_text span {
+	width: 16px;
+}

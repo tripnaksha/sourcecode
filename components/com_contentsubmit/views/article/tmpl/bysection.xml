@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Submit to Section">
+		<message>
+			Submit an article to a specific section
+		</message>
+	</layout>
+	<state>
+		<name>Submit to Section Layout</name>
+		<description>Submit an article to a specific section</description>
+		<url addpath="/administrator/components/com_content/elements">
+			<param name="id" type="section" default="0" label="Select Section" description="A section" />
+		</url>
+		<params>
+		</params>
+	</state>
+</metadata>

@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<joomfish type="contentelement">
+  <name>JoomSEF extension titles</name>
+  <author>David Jozefov</author>
+  <version>2.0</version>
+  <description>Definition for the JoomSEF component custom titles</description>
+  <reference type="Titles">
+  	<table name="sefexts">
+  		<field type="referenceid" name="id" translate="0">ID</field>
+  		<field type="titletext" name="title" translate="1">Title</field>
+  	</table>
+  </reference>
+</joomfish>

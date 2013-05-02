@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.9">
+	<name>ajaxsearch</name>
+	<version>1.5.9</version>
+	<author>Jan Sangill</author>
+	<creationDate>May 2009</creationDate>
+	<copyright>Jan Sangill 2009 . All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>admin@jansangill.dk</authorEmail>
+	<authorUrl>joomla.jansangill.dk</authorUrl>
+	<description>ajaxSearch</description>
+	<installfile>install.ajaxsearch.php</installfile>
+	<uninstallfile>uninstall.ajaxsearch.php</uninstallfile>
+	<administration>	  
+		<files folder="files">
+			<filename>install.ajaxsearch.php</filename>
+			<filename>uninstall.ajaxsearch.php</filename>
+			<filename>components/com_search/controller.php</filename>
+			<filename>components/com_search/models/ajax.php</filename>
+			<filename>components/com_search/views/index.html</filename>
+			<filename>components/com_search/views/ajax/view.html.php</filename>
+			<filename>components/com_search/views/ajax/index.html</filename>
+			<filename>components/com_search/views/ajax/tmpl/index.html</filename>
+			<filename>components/com_search/views/ajax/tmpl/default.php</filename>
+			<filename>modules/mod_ajaxsearch/helper.php</filename>
+			<filename>modules/mod_ajaxsearch/mod_ajaxsearch.php</filename>
+			<filename>modules/mod_ajaxsearch/index.html</filename>
+			<filename>modules/mod_ajaxsearch/mod_ajaxsearch.xml</filename>
+			<filename>modules/mod_ajaxsearch/img/ajax-loader.gif</filename>
+			<filename>modules/mod_ajaxsearch/img/close.gif</filename>
+			<filename>modules/mod_ajaxsearch/img/shortcuts_arrow.gif</filename>
+			<filename>modules/mod_ajaxsearch/img/search_loop.gif</filename>
+			<filename>modules/mod_ajaxsearch/js/jquery-1.3.2.min.js</filename>
+			<filename>modules/mod_ajaxsearch/js/script.js</filename>
+			<filename>modules/mod_ajaxsearch/css/search.css</filename>
+			<filename>modules/mod_ajaxsearch/tmpl/index.html</filename>
+			<filename>modules/mod_ajaxsearch/tmpl/default.php</filename>
+		</files>
+	</administration>
+</install>

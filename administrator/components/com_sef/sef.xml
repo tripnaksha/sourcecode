@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5.0">
+	<name>SEF</name>
+	<creationDate>10. February 2010</creationDate>
+	<author>ARTIO s.r.o.</author>
+	<authorEmail>info@artio.net</authorEmail>
+	<authorUrl>http://www.artio.net</authorUrl>
+	<copyright>ARTIO s.r.o.</copyright>
+	<license>http://www.artio.net/en/joomsef/artio-joomsef-license-and-pricing</license>
+	<version>3.5.5</version>
+	<description>ARTIO JoomSEF rewrites Joomla! URLs to be Search Engine Friendly together advanced
+	URL editing options, such as metatags definitions. It integrates JoomFish support with 
+	option of internationalized, multilingual URLs. The configuration is easy and straightforward.
+	Support for many further popular extensions is included!</description>
+	
+	<installfile>install.sef.php</installfile>
+	<uninstallfile>uninstall.sef.php</uninstallfile>
+
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">install.sql</file>
+		</sql>		
+	</install>
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">uninstall.sql</file>
+		</sql>
+	</uninstall>
+	
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>joomsef.php</filename>
+		<filename>sef.cache.php</filename>
+		<filename>sef.ext.php</filename>
+		<filename>sef.router.php</filename>
+		<filename>sef_ext/_com_example.txt</filename>
+		<filename>sef_ext/com_banners.php</filename>
+		<filename>sef_ext/com_banners.xml</filename>
+		<filename>sef_ext/com_contact.php</filename>
+		<filename>sef_ext/com_contact.xml</filename>
+		<filename>sef_ext/com_content.php</filename>
+		<filename>sef_ext/com_content.xml</filename>
+		<filename>sef_ext/com_mailto.php</filename>
+		<filename>sef_ext/com_mailto.xml</filename>
+		<filename>sef_ext/com_newsfeeds.php</filename>
+		<filename>sef_ext/com_newsfeeds.xml</filename>
+		<filename>sef_ext/com_search.php</filename>
+		<filename>sef_ext/com_search.xml</filename>
+		<filename>sef_ext/com_user.php</filename>
+		<filename>sef_ext/com_user.xml</filename>
+		<filename>sef_ext/com_weblinks.php</filename>
+		<filename>sef_ext/com_weblinks.xml</filename>
+		<filename>sef_ext/com_wrapper.php</filename>
+		<filename>sef_ext/com_wrapper.xml</filename>
+		<filename>sef_ext/index.html</filename>
+	</files>
+	
+	<administration>
+		<menu img="components/com_sef/assets/images/icon.png">ARTIO JoomSEF</menu>
+    	<submenu>
+      		<menu link="option=com_sef" img="components/com_sef/assets/images/icon-16-sefcpanel.png">Control Panel</menu>
+      		<menu link="option=com_sef&amp;controller=config&amp;task=edit" img="components/com_sef/assets/images/icon-16-sefconfig.png">Configuration</menu>
+      		<menu link="option=com_sef&amp;controller=extension" img="components/com_sef/assets/images/icon-16-sefplugin.png">Manage Extensions</menu>
+      		<menu link="option=com_sef&amp;controller=htaccess" img="components/com_sef/assets/images/icon-16-edit.png">Edit .htaccess</menu>
+      		<menu img="components/com_sef/assets/images/icon-10-blank.png" />
+      		<menu link="option=com_sef&amp;controller=sefurls&amp;viewmode=3" img="components/com_sef/assets/images/icon-16-url-edit.png">Manage SEF URLs</menu>
+      		<menu link="option=com_sef&amp;controller=movedurls" img="components/com_sef/assets/images/icon-16-301-redirects.png">Manage 301 Redirects</menu>
+      		<menu img="components/com_sef/assets/images/icon-10-blank.png" />
+	  		<menu link="option=com_sef&amp;task=showUpgrade" img="components/com_sef/assets/images/icon-16-update.png">Upgrade</menu>
+      		<menu link="option=com_sef&amp;controller=info&amp;task=help" img="components/com_sef/assets/images/icon-16-help.png">Support</menu>           
+    	</submenu>
+
+    <languages folder="language/admin">
+      <language tag="en-GB">en-GB.com_sef.ini</language>
+      <language tag="en-GB">en-GB.com_sef.menu.ini</language>
+      <language tag="en-GB">en-GB.plg_system_joomsef.ini</language>
+      <language tag="cs-CZ">cs-CZ.com_sef.ini</language>
+      <language tag="cs-CZ">cs-CZ.com_sef.menu.ini</language>
+      <language tag="cs-CZ">cs-CZ.plg_system_joomsef.ini</language>
+      <language tag="fi-FI">fi-FI.com_sef.ini</language>
+      <language tag="fi-FI">fi-FI.com_sef.menu.ini</language>
+      <language tag="fi-FI">fi-FI.plg_system_joomsef.ini</language>
+    </languages>
+    
+		<files folder="admin">
+			<filename>admin.sef.php</filename>
+			<filename>configuration.php</filename>
+			<filename>controller.php</filename>
+			<filename>extensions_params.xml</filename>
+			<filename>index.html</filename>
+			<filename>install.sef.php</filename>
+			<filename>install.sql</filename>
+			<filename>uninstall.sef.php</filename>
+			<filename>uninstall.sql</filename>
+			
+			<filename>adapters/index.html</filename>
+			<filename>adapters/sef_ext.php</filename>
+			
+			<filename>assets/index.html</filename>
+			<filename>assets/css/default.css</filename>
+			<filename>assets/css/index.html</filename>
+			<filename>assets/images/box.png</filename>
+			<filename>assets/images/cancel_f2.png</filename>
+			<filename>assets/images/delete_f2.png</filename>
+			<filename>assets/images/down.png</filename>
+			<filename>assets/images/download_f2.png</filename>
+			<filename>assets/images/edit_f2.png</filename>
+			<filename>assets/images/icon.png</filename>
+			<filename>assets/images/icon-10-blank.png</filename>
+			<filename>assets/images/icon-16-301-redirects.png</filename>
+			<filename>assets/images/icon-16-404-logs.png</filename>
+			<filename>assets/images/icon-16-sefconfig.png</filename>
+			<filename>assets/images/icon-16-sefcpanel.png</filename>
+			<filename>assets/images/icon-16-docs.png</filename>
+			<filename>assets/images/icon-16-edit.png</filename>
+			<filename>assets/images/icon-16-help.png</filename>
+			<filename>assets/images/icon-16-info.png</filename>
+			<filename>assets/images/icon-16-sefplugin.png</filename>
+			<filename>assets/images/icon-16-update.png</filename>
+			<filename>assets/images/icon-16-url-edit.png</filename>
+			<filename>assets/images/icon-16-url-user.png</filename>
+			<filename>assets/images/icon-48-301-redirects.png</filename>
+			<filename>assets/images/icon-48-404-logs.png</filename>
+			<filename>assets/images/icon-48-artio.png</filename>
+			<filename>assets/images/icon-48-clear.png</filename>
+			<filename>assets/images/icon-48-docs.png</filename>
+			<filename>assets/images/icon-48-edit.png</filename>
+			<filename>assets/images/icon-48-forum.png</filename>
+			<filename>assets/images/icon-48-help.png</filename>
+			<filename>assets/images/icon-48-info.png</filename>
+			<filename>assets/images/icon-48-support.png</filename>
+			<filename>assets/images/icon-48-update.png</filename>
+			<filename>assets/images/icon-48-url-delete.png</filename>
+			<filename>assets/images/icon-48-url-edit.png</filename>
+			<filename>assets/images/icon-48-url-update.png</filename>
+			<filename>assets/images/icon-48-url-user.png</filename>
+			<filename>assets/images/index.html</filename>
+			<filename>assets/images/install.png</filename>
+			<filename>assets/images/reload_f2.png</filename>
+			<filename>assets/images/uninstall.png</filename>
+			<filename>assets/images/up.png</filename>
+			<filename>assets/images/upgrade.png</filename>
+
+			<filename>classes/config.php</filename>
+			<filename>classes/index.html</filename>
+			<filename>classes/seftools.php</filename>
+
+			<filename>controllers/config.php</filename>
+			<filename>controllers/extension.php</filename>
+			<filename>controllers/htaccess.php</filename>
+			<filename>controllers/index.html</filename>
+			<filename>controllers/info.php</filename>
+			<filename>controllers/movedurls.php</filename>
+			<filename>controllers/sefurls.php</filename>
+			<filename>controllers/urls.php</filename>
+
+			<filename>models/config.php</filename>
+			<filename>models/extension.php</filename>
+			<filename>models/extensions.php</filename>
+			<filename>models/htaccess.php</filename>
+			<filename>models/import.php</filename>
+			<filename>models/index.html</filename>
+			<filename>models/movedurl.php</filename>
+			<filename>models/movedurls.php</filename>
+			<filename>models/sefurl.php</filename>
+			<filename>models/sefurls.php</filename>
+			<filename>models/upgrade.php</filename>
+			<filename>models/urls.php</filename>
+
+			<filename>tables/extension.php</filename>
+			<filename>tables/index.html</filename>
+			<filename>tables/movedurl.php</filename>
+			<filename>tables/sefurl.php</filename>
+
+			<filename>views/config/index.html</filename>
+			<filename>views/config/view.html.php</filename>
+			<filename>views/config/tmpl/default.php</filename>
+			<filename>views/config/tmpl/index.html</filename>
+			<filename>views/extension/index.html</filename>
+			<filename>views/extension/view.html.php</filename>
+			<filename>views/extension/tmpl/default.php</filename>
+			<filename>views/extension/tmpl/index.html</filename>
+			<filename>views/extensions/index.html</filename>
+			<filename>views/extensions/view.html.php</filename>
+			<filename>views/extensions/tmpl/default.php</filename>
+			<filename>views/extensions/tmpl/index.html</filename>
+			<filename>views/htaccess/index.html</filename>
+			<filename>views/htaccess/view.html.php</filename>
+			<filename>views/htaccess/tmpl/advanced.php</filename>
+			<filename>views/htaccess/tmpl/index.html</filename>
+			<filename>views/htaccess/tmpl/redirect.php</filename>
+			<filename>views/htaccess/tmpl/simple.php</filename>
+			<filename>views/importexport/index.html</filename>
+			<filename>views/importexport/view.html.php</filename>
+			<filename>views/importexport/tmpl/default.php</filename>
+			<filename>views/importexport/tmpl/importstats.php</filename>
+			<filename>views/importexport/tmpl/index.html</filename>
+			<filename>views/info/index.html</filename>
+			<filename>views/info/view.html.php</filename>
+			<filename>views/info/tmpl/doc.php</filename>
+			<filename>views/info/tmpl/help.php</filename>
+			<filename>views/info/tmpl/changelog.php</filename>			
+			<filename>views/info/tmpl/index.html</filename>
+			<filename>views/info/tmpl/readme.inc.html</filename>
+			<filename>views/info/tmpl/changelog.inc.html</filename>
+			<filename>views/install/index.html</filename>
+			<filename>views/install/view.html.php</filename>
+			<filename>views/install/tmpl/default.php</filename>
+			<filename>views/install/tmpl/index.html</filename>
+			<filename>views/install/tmpl/message.php</filename>
+			<filename>views/movedurl/index.html</filename>
+			<filename>views/movedurl/view.html.php</filename>
+			<filename>views/movedurl/tmpl/default.php</filename>
+			<filename>views/movedurl/tmpl/index.html</filename>
+			<filename>views/movedurls/index.html</filename>
+			<filename>views/movedurls/view.html.php</filename>
+			<filename>views/movedurls/tmpl/default.php</filename>
+			<filename>views/movedurls/tmpl/index.html</filename>
+			<filename>views/sef/index.html</filename>
+			<filename>views/sef/view.html.php</filename>
+			<filename>views/sef/tmpl/default.php</filename>
+			<filename>views/sef/tmpl/index.html</filename>
+			<filename>views/sefurl/index.html</filename>
+			<filename>views/sefurl/view.html.php</filename>
+			<filename>views/sefurl/tmpl/default.php</filename>
+			<filename>views/sefurl/tmpl/index.html</filename>
+			<filename>views/sefurls/index.html</filename>
+			<filename>views/sefurls/view.html.php</filename>
+			<filename>views/sefurls/tmpl/default.php</filename>
+			<filename>views/sefurls/tmpl/index.html</filename>
+			<filename>views/sefurls/tmpl/urlsupdated.php</filename>
+			<filename>views/templates/default_extslist.php</filename>
+			<filename>views/templates/index.html</filename>
+			<filename>views/upgrade/index.html</filename>
+			<filename>views/upgrade/view.html.php</filename>
+			<filename>views/upgrade/tmpl/default.php</filename>
+			<filename>views/upgrade/tmpl/index.html</filename>
+			<filename>views/upgrade/tmpl/message.php</filename>
+			<filename>views/urls/index.html</filename>
+			<filename>views/urls/view.html.php</filename>
+			<filename>views/urls/tmpl/confirm.php</filename>
+			<filename>views/urls/tmpl/index.html</filename>
+			
+			<filename>contentelements/sefexts.xml</filename>
+			<filename>contentelements/sefexttexts.xml</filename>
+			<filename>contentelements/translationJsextensionFilter.php</filename>
+
+			<filename>plugin/joomsef.php</filename>
+			<filename>plugin/joomsef.xml</filename>
+			
+		</files>
+	</administration>
+</install>

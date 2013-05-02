@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<install version="1.5.0" type="plugin" plugin="advlink">
+	<name>Advanced Link</name>
+	<version>1.5.1</version>
+	<creationDate>20 January 2009</creationDate>
+	<author>Ryan Demmer</author>
+	<authorEmail>ryandemmer@gmail.com</authorEmail>
+	<authorUrl>http://www.joomlacontenteditor.net/</authorUrl>
+	<copyright>Ryan Demmer</copyright>
+	<license>GPL</license>
+	<description><![CDATA[ 
+	<p>AdvLink 1.5.1</p>
+	<p>Changelog (from 1.5.0):
+	<ul>
+		<li>Fixed: Menu and Uncategorized links</li>
+		<li>Added: nofollow to rel list</li>
+	</ul>
+	</p>
+	<p>Changelog (from 1.5.0 RC1):
+	<ul>
+		<li>Fixed: Anchorlist error</li>
+		<li>Fixed: Anchorlist error</li>
+	</ul>
+	</p>
+	<p>Changelog (from 1.5.0 beta 2):
+	<ul>
+		<li>Fixed: ID and Style attribute using incorrect values</li>
+	</ul>
+	</p>
+	<p>Changelog (from 1.5.0 beta 1):
+	<ul>
+		<li>Added: Support for absolute urls</li>
+		<li>Fixed: Errors in JoomlaLinks extension</li>
+	</ul>
+	</p>
+	]]></description>
+	<icon>link</icon>
+	<layout>advlink</layout>
+	<elements></elements>
+	<files>
+		<filename>editor_plugin.js</filename>
+		<filename>advlink.php</filename>
+		<filename>classes/index.html</filename>
+		<filename>classes/advlink.php</filename>
+		<filename>extensions/index.html</filename>
+		<filename>extensions/links/index.html</filename>
+		<filename>extensions/links/joomlalinks.xml</filename>
+		<filename>extensions/links/joomlalinks.php</filename>
+		<filename>extensions/links/joomlalinks/index.html</filename>
+		<filename>extensions/links/joomlalinks/contact.php</filename>
+		<filename>extensions/links/joomlalinks/content.php</filename>
+		<filename>extensions/links/joomlalinks/weblink.php</filename>
+        <filename>css/advlink.css</filename>
+        <filename>css/index.html</filename>
+        <filename>img/advlink.gif</filename>
+        <filename>img/index.html</filename>
+        <filename>index.html</filename>
+        <filename>js/advlink.js</filename>
+        <filename>js/index.html</filename>
+        <filename>langs/en_dlg.js</filename>
+        <filename>langs/index.html</filename>
+	</files>
+	<variables></variables>
+	<params group="defaults">
+		<param name="advlink_target" type="list" default="default" label="PARAM DEFAULT TARGET" description="PARAM DEFAULT TARGET DESC">
+        	<option value="default">NOT SET</option>
+			<option value="_self">_self</option>
+			<option value="_blank">_blank</option>
+			<option value="_parent">_parent</option>
+			<option value="_top">_top</option>	
+		</param>
+	</params>
+	<extensions>
+		<extension name="joomlalinks" title="Joomla Links for AdvLink" folder="links" />
+	</extensions>
+	<languages>
+		<language tag="en-GB">en-GB.com_jce_advlink.ini</language>
+		<language tag="en-GB">en-GB.com_jce_advlink_joomlalinks.ini</language>
+	</languages>
+	<help>
+		<topic key="advlink.about" title="Help About" />
+		<topic key="advlink.interface" title="Help Interface" />
+		<topic key="advlink.content" title="Help Links" />
+		<topic key="advlink.events" title="Help Events" />
+		<topic key="advlink.advanced" title="Help Advanced" />
+		<topic key="advlink.insert" title="Help Insert" />
+		<topic key="advlink.email" title="Help Email" />
+	</help>
+</install>

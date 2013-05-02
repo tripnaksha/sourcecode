@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+	<name>Content - File Upload</name>
+	<author>Kim</author>
+	<creationDate>13/12/2009</creationDate>
+	<copyright>(c) 2008 Joomla Projects. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>administracion@joomlanetprojects.com</authorEmail>
+	<authorUrl>http://www.joomlanetprojects.com</authorUrl>
+	<version>1.6.3</version>
+	<description>JPDESCRIPTION</description>
+	<files>
+		<filename plugin="file_upload">file_upload.php</filename>
+		<filename>file_upload/file_upload.css</filename>
+		<filename>file_upload/dropbox.css</filename>
+		<filename>file_upload/DropboxUploader.php</filename>
+		<filename>file_upload/Equifax_Secure_Global_eBusiness_CA-1.cer</filename>
+		<filename>file_upload/images/upload.png</filename>
+                <filename>file_upload/images/download.png</filename>
+		<filename>file_upload/images/dropbox.png</filename>
+		<filename>file_upload/images/button.png</filename>
+		<filename>file_upload/images/alert-icon.gif</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_file_upload.ini</language>
+	</languages>
+	<params>
+                <param name="@spacer" type="spacer" default="&lt;div style=&quot;border-top:1px solid #06F;border-bottom:1px solid #06F;font-weight:normal;font-size:12px;color:#333;padding:4px;margin:0;background:#B6E1E4;text-align:center;&quot;&gt;General Settings&lt;/div&gt;" label="" description="" />
+		<param name="enabled" type="radio" default="1" label="ENABLED" description="ENABLEDDESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		<param name="admin_mail" type="radio" default="1" label="ENABLEDMAILS" description="ENABLEDMAILSDESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+                <param name="recipient" type="text" default="" label="ADDMAIL" description="ADDMAILDESC" />
+                <param name="ishtml" type="radio" default="1" label="ISHTML" description="ISHTMLDESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+                <param name="word" type="text" default="upload" label="WORD" description="WORDDESC" />
+                <param name="permisos" type="text" default="0777" label="FOLDER" description="FOLDERDESC" />
+		<param name="destino" type="text" default="files" label="PATH" description="PATHDESC" />
+		<param name="size" type="text" default="50" label="SIZE" description="SIZEDESC" />
+		<param name="button_name" type="text" default="Upload" label="BUTTON" description="BUTTONDESC" />
+		<param name="class" type="text" default="uploadbutton" label="CLASS" description="CLASSDESC" />
+		<param name="inputbox" type="text" default="inputbox" label="INPUTBOX" description="INPUTBOXCLASS" />
+		<param name="max_size" type="text" default="30" label="MAX" description="MAXDESC" />
+		<param name="type" type="text" default="zip" label="MIME" description="MIMEDESC"/>
+                <param name="manager" type="radio" default="1" label="UMANAGER" description="MANAGERDESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+                <param name="alerts" type="radio" default="0" label="Alert type" description="Choose if you would javascript alerts or joomla! system messages">
+			<option value="0">JS_ALERTS</option>
+			<option value="1">SYSTEM_MESSAGES</option>
+		</param>
+		</params>
+		<params group="advanced">
+                <param name="@spacer" type="spacer" default="&lt;div style=&quot;border-top:1px solid #06F;border-bottom:1px solid #06F;font-weight:normal;font-size:12px;color:#333;padding:4px;margin:0;background:#B6E1E4;text-align:center;&quot;&gt;Dropbox Integration&lt;/div&gt;" label="" description="" />
+		<param name="dropbox" type="radio" default="0" label="DROPBOX" description="DROPBOXDESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		<param name="dropuser" type="text" default="myusername" label="USER" description="USERDESC" />
+		<param name="droppass" type="text" default="mypassword" label="PASS" description="PASSDESC" />
+		<param name="dropdir" type="text" default="myfolder" label="DFOLDER" description="DFOLDERDESC" />
+		</params>
+</install>

@@ -1,0 +1,20 @@
+/* extravote.css */
+div.extravote-container{display:inline-block;line-height:25px;vertical-align:middle;}
+div.extravote-container-small{display:inline-block;line-height:22px;vertical-align:middle}
+div.extravote-container ul.extravote-stars{height:25px;width:125px;padding:0!important;margin:0!important;}
+div.extravote-container-small ul.extravote-stars-small{height:22px;width:110px;padding:0!important;margin:0!important;}
+div.extravote-container ul.extravote-stars, div.extravote-container ul.extravote-stars li a:hover, div.extravote-container ul.extravote-stars li.current-rating {background-image:url(star.gif);background-color:transparent;background-repeat:repeat-x;background-position:left -1000px;padding:0!important;margin:0!important;}
+div.extravote-container-small ul.extravote-stars-small, div.extravote-container-small ul.extravote-stars-small li a:hover, div.extravote-container-small ul.extravote-stars-small li.current-rating {background-image:url(star_small.gif);background-color:transparent;background-repeat:repeat-x;background-position:left -1000px;padding:0!important;margin:0!important;}
+div.extravote-container ul.extravote-stars,div.extravote-container-small ul.extravote-stars-small {background-position:left top;list-style-image:none;list-style-position:outside;list-style-type:none;margin:0pt;overflow:hidden;padding:0pt;position:relative;}
+div.extravote-container ul.extravote-stars li, div.extravote-container-small ul.extravote-stars-small li {background-image:none;display:inline;padding:0pt;}
+div.extravote-container ul.extravote-stars li a, div.extravote-container ul.extravote-stars li.current-rating,div.extravote-container-small ul.extravote-stars-small li a, div.extravote-container-small ul.extravote-stars-small li.current-rating {border:medium none;cursor:pointer;left:0pt;outline-color:-moz-use-text-color;outline-style:none;outline-width:medium;overflow:hidden;position:absolute;text-indent:-1000em;top:0pt;}
+div.extravote-container ul.extravote-stars li a, div.extravote-container ul.extravote-stars li.current-rating {height:25px;line-height:25px;}
+div.extravote-container-small ul.extravote-stars-small li a, div.extravote-container-small ul.extravote-stars-small li.current-rating {height:22px;line-height:22px;}
+div.extravote-container ul.extravote-stars li a:hover,div.extravote-container-small ul.extravote-stars-small li a:hover {background-position:left bottom;}
+div.extravote-container ul.extravote-stars li.current-rating,div.extravote-container-small  ul.extravote-stars-small li.current-rating {background-position:left center;z-index:1;}
+div.extravote-container ul.extravote-stars li a.one-star, div.extravote-container-small ul.extravote-stars-small li a.one-star {width:20%;padding:0;margin:0;z-index:6;}
+div.extravote-container ul.extravote-stars li a.two-stars, div.extravote-container-small ul.extravote-stars-small li a.two-stars {width:40%;padding:0;margin:0;z-index:5;}
+div.extravote-container ul.extravote-stars li a.three-stars, div.extravote-container-small ul.extravote-stars-small li a.three-stars {width:60%;padding:0;margin:0;z-index:4;}
+div.extravote-container ul.extravote-stars li a.four-stars, div.extravote-container-small ul.extravote-stars-small li a.four-stars {width:80%;padding:0;margin:0;z-index:3;}
+div.extravote-container ul.extravote-stars li a.five-stars, div.extravote-container-small ul.extravote-stars-small li a.five-stars {width:100%;padding:0;margin:0;z-index:2;}
+.extravote-count {vertical-align:middle;}

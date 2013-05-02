@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.0.0">
+	<name>ajaxsearch</name>
+	<author>Jan Sangill</author>
+	<creationDate>May 2009</creationDate>
+	<copyright>Copyright (C) 2009 jan sangill</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>admin@jansangill.dk</authorEmail>
+	<authorUrl>joomla.jansangill.dk</authorUrl>
+	<version>1.0.0</version>
+	<description>This module will display a ajax search box</description>
+	<files>
+		<filename module="mod_ajaxsearch">mod_ajaxsearch.php</filename>
+	</files>
+	<params>
+		<param name="text" type="text" size="100" default="Search the homepage..." label="Search box text" description="text displayed inside the search box"  />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="text_bottom" type="text" default="Nothing found? Go to the searchpage." label="Bottom text" description="text displayed at the bottom" size="100" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="no_results" type="text" default="No results found. Try another query." label="No results text" description="text displayed when no results found" size="100" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="category" type="list" default="1" label="Category" description="Select whether the category headlines should be present">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="amount" type="text" size="50" default="8" label="Amount of results" description="Amount of results displayed"  />
+		<param name="order_by" type="list" default="alpha" label="Order by" description="Select how the results should be ordered">
+			<option value="alpha">Alpha</option>
+			<option value="newest">Newest</option>
+			<option value="oldest">Oldest</option>
+			<option value="popular">Popular</option>
+		</param>
+	</params>
+</install>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>EventListQ Calendar module</name>
+	<creationDate>Jan 3rd 2009</creationDate>
+	<author>Toni Smillie</author>
+	<copyright>GNU General Public License 2</copyright>	 
+	<authorEmail>toni@qivva.com</authorEmail>
+	<authorUrl>http://www.qivva.com</authorUrl>
+	<version>0.92</version>
+	<description><![CDATA[
+	<h2>EventList Calendar Module for Joomla 1.5.x from http://extensions.qivva.com </h2>
+<p>Version 0.92</p>
+<p>Changes for v0.91:</p>
+<p>Fix for Go straight to Event</p>
+<p>Changes for v0.91:</p>
+<p>1. Fix for bug with Use Joomla language and starting week on Monday</p>
+<p>2. Better xml file for grouped parameters</p>
+<p>3. Another Joomfish fix for category and venue tooltip translation</p>
+ <p>* Changes for v0.9</p>	
+ <p>* 1. Fix for Joomfish translation of tooltips</p>
+ <p>* 2. Singular and Plural for Tooltips title in parameters</p>
+ <p>* 3. Choose whether to display tooltips title. (Default = On)</p>
+ <p>* 4. Go Straight To Details if there is only 1 event on a date (Default = On)</p>
+ <p>* 5. Display Category in Tooltips (Default = Off)</p>
+ <p>* 6. Display Venue in Tooltips (Default = Off)</p>
+ <p>* 7. Option to display archived events calendar (Default = Off) </p>
+ <p>* 8. Use the default Joomla language names for Days and Months (Default = On) </p> 
+ <p>* 9. Fix roll over year end bug for Offset calendar </p>
+ <p>* 10. Time offset parameter - Use ONLY if your server time seems to differ from your timezone.</p>
+ <p>* Changes for v0.8</p>
+ <p>* 1. Roll over year end bug fixed</p>
+ <p>* 2. Check for mb_substr</p>
+ <p>* 3. Remove hardcoded text align center (now uses stylesheet)</p> 	 
+ <p>* Changes for v0.7</p>
+ <p>* 1. Removed JDate - as it was causing too many date/time problems</p>
+ <p>* 2. Better tool tips</p>
+ <p>* From v0.6</p>
+ <p>* 2. XHTML validation fixes</p>
+ <p>* 3. Tests if mbstring functions are installed before using them, defaults to ucfirst if no mb_convert_case</p>
+ <p>* 4. Allows a calendar offset so can have multiple calendars displaying different months</p>
+ ]]></description>
+	<files>
+		<filename module="mod_eventlistcal15q">mod_eventlistcal15q.php</filename>
+		<filename>mod_eventlistcal15q.css</filename>
+		<filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>		
+	</files>
+	<params>
+		<param name="Show_Tooltips" type="radio" default="1" label="Show Tooltips?" description="Choose to show tooltips on mouse rollover on calendar dates.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="Show_Tooltips_Title" type="radio" default="1" label="Show Tooltips Title?" description="Choose to show the tooltips title.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="cal15q_tooltips_title" type="text" default="Event" label="ToolTips Title (Singular)" description="Define the tooltips title (Singular)" />	
+		<param name="cal15q_tooltipspl_title" type="text" default="Events" label="ToolTips Title (Plural)" description="Define the tooltips title (Plural)" />		
+        	<param name="DisplayCat" type="radio" default="0" label="Display Category in Tooltip?" description="Display the Category in the Tooltip">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="DisplayVenue" type="radio" default="0" label="Display Venue in Tooltip?" description="Display the Venue in the Tooltip">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="UseJoomlaLanguage" type="radio" default="1" label="Use Joomla Language for Days/Months?" description="Use the default Joomla language for Day and Month names">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="day_name_length" type="list" default="2" label="Length of the Dayname" description="Select if you want to display the full dayname or a short version">
+			<option value="0">Don't display days</option>
+			<option value="1">One letter</option>
+			<option value="2">Two letters</option>
+			<option value="3">Three letters</option>
+			<option value="4">Full name</option>
+		</param>
+		<param name="first_day" type="list" default="1" label="Start week" description="Start the week at sunday or monday">
+			<option value="0">Sunday</option>
+			<option value="1">Monday</option>
+		</param>
+		<param name="Year_length" type="radio" default="1" label="Year Length" description="Select to show 2 or 4 letters">
+			<option value="0">Two</option>
+			<option value="1">Four</option>
+		</param>
+		<param name="Month_length" type="radio" default="0" label="Short month name?" description="Select if you wish to display the full month name or not.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="Month_offset" type="text" default="0" label="Month Offset" description="Offset the month so enter 1 for a month ahear, -1 for a month behind etc" />
+		<param name="Time_offset" type="text" default="0" label="Time Offset (Hours)" description="Use this ONLY if you need to offset your time from the server settings" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="Remember" type="radio" default="1" label="Remember?" description="Remember which month/year is selected on page change, no jumping back to current day.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="ArchivedEvents" type="radio" default="0" label="Show Archived Events Only" description="Show events from the archive rather than current events">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="StraightToDetails" type="radio" default="1" label="Go Straight To Details?" description="Go straight to the details page when there is only one event to choose from">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+		<param name="locale_override" type="text" default="" label="Locale Override" description="Define the server locale you want the calendar to use to override the default - this can only be used if NOT using the default Joomla langauge" />
+		<param name="catid" type="text" default="" label="CATEGORY ID" description="Category ID - Display a calendar only for the categories chosen, separate IDs with commas e.g. 1,3" />
+		<param name="venid" type="text" default="" label="VENUE ID" description="Venue ID - Display a calendar only for the venue(s) chosen, separate IDs with commas e.g. 1,3" />
+	</params>
+</install>

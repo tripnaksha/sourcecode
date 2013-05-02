@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+  <name>Disqus Comment System for Joomla! (by JoomlaWorks)</name>
+  <author>JoomlaWorks</author>
+  <authorEmail>contact@joomlaworks.gr</authorEmail>
+  <authorUrl>www.joomlaworks.gr</authorUrl>
+  <creationDate>30/05/2009</creationDate>
+  <copyright>This extension in released under the GNU/GPL License - http://www.gnu.org/copyleft/gpl.html</copyright>
+  <license>GPL v2</license>
+  <version>2.1</version>
+  <description>Thank you for installing the DISQUS comment system for Joomla!</description>
+  <params addpath="/plugins/content/jw_disqus/includes/elements">
+    <param name="disqusSubDomain" type="text" default="" label="Your Disqus subdomain" description="Set the subdomain to what you registered with Disqus (without '.disqus.com')." />
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+ 		<param name="selectedCategories" type="categories" default="" label="Select categories to render the plugin" description="" />
+		<param name="selectedMenus" type="menus" default="" label="Select menu items to render the plugin" description="" />
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+    <!-- Listing view -->
+    <param name="disqusListingCounter" type="radio" default="1" label="Display a comments counter/anchor link in listings (e.g. blogcategory)" description="">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <!-- Article view -->
+    <param name="disqusArticleCounter" type="radio" default="1" label="Display a comments counter/anchor link in article view" description="">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+  </params>
+  <params group="advanced">
+  	<param name="disqusDevMode" type="radio" default="0" label="Test Disqus comments on a local/development server" description="This option will enable Disqus comments without having to upload your website on the actual domain associated with Disqus.">
+      <option value="0">Disabled</option>
+      <option value="1">Enabled</option>
+    </param>
+  	<param name="debugMode" type="radio" default="0" label="Debug mode" description="Enable this option to display possible errors or other warnings. Useful for debugging.">
+      <option value="0">Disabled</option>
+      <option value="1">Enabled</option>
+    </param>
+  </params>
+  <files>
+    <filename plugin="jw_disqus">jw_disqus.php</filename>
+    <folder>jw_disqus</folder>
+  </files>
+  <languages>
+    <language tag="en-GB">en-GB.plg_content_jw_disqus.ini</language>
+  </languages>
+</install>

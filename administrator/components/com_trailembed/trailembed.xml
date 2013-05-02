@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5.0" type="component">
+     <name>Trail Embed</name>
+	 <author>Ajay Reddy</author>
+ 	 <creationDate>August 2009</creationDate>
+ 	 <copyright>Copyright (C) 2009 Ajay Reddy. All rights reserved.</copyright>
+	 <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	 <authorEmail>ajyrds@gmail.com</authorEmail>
+	 <authorUrl></authorUrl>
+	 <version>1.0</version>
+     <description>
+	     Displays a google map which works on external websites.<br />\n
+	     Checking
+     </description>
+
+	 <params>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		<param name="width" type="text" default="100%" label="Map Width" description="Width of the map." />
+		<param name="height" type="text" default="100%" label="Map Height" description="Height of the map." />
+	 </params>
+
+     <files>
+          <filename component="com_trailEmbed">trailembed.php</filename>
+          <filename component="com_trailEmbed">js/map.js</filename>
+          <filename component="com_trailEmbed">js/labeledMarker.js</filename>
+          <filename component="com_trailEmbed">js/xmlWriter.js</filename>
+          <filename component="com_trailEmbed">css/map.css</filename>
+		<filename component="com_trailEmbed">images/copy.png</filename>
+		<filename component="com_trailEmbed">images/create.png</filename>
+		<filename component="com_trailEmbed">images/end.gif</filename>
+		<filename component="com_trailEmbed">images/ind.gif</filename>
+		<filename component="com_trailEmbed">images/ind.png</filename>
+		<filename component="com_trailEmbed">images/logo.png</filename>
+		<filename component="com_trailEmbed">images/marker_hex.png</filename>
+		<filename component="com_trailEmbed">images/read.png</filename>
+		<filename component="com_trailEmbed">images/save.png</filename>
+		<filename component="com_trailEmbed">images/start.gif</filename>
+		<filename component="com_trailEmbed">images/tip.png</filename>
+		<filename component="com_trailEmbed">images/tracker.png</filename>
+		<filename component="com_trailEmbed">images/turn.png</filename>
+		<filename component="com_trailEmbed">images/view.png</filename>
+		<filename component="com_trailEmbed">images/walker.png</filename>
+		<filename component="com_trailEmbed">images/write.png</filename>
+		<filename component="com_trailEmbed">images/yellow.png</filename>
+     </files>
+     <administration>
+         <menu>Embed trails</menu>
+         <files>
+              <filename component="admin.trailembed">admin.trailembed.php</filename>
+         </files>
+     </administration>
+</install>

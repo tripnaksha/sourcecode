@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Tell A Friend Module</name>
+	<author>www.chadtec.com</author>
+	<creationDate>June 2009</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>drmmr763@gmail.com</authorEmail>
+	<authorUrl>www.chadtec.com</authorUrl>
+	<version>4.0</version>
+	<description>Based off the widget by Tell-A-Friend by Social Twist. You need a user account to use this module.</description>
+	<files>
+		<filename module="mod_taf">mod_taf.php</filename>
+		<filename>index.html</filename>
+		<filename>taf.php</filename>
+		<filename>images/tafbutton_blue16.png</filename>
+<filename>images/tafbutton_blue21.png</filename>
+<filename>images/tafbutton_blue24.png</filename>
+<filename>images/tafbutton_darkgrey16.png</filename>
+<filename>images/tafbutton_darkgrey21.png</filename>
+<filename>images/tafbutton_darkgrey24.png</filename>
+<filename>images/tafbutton_green16.png</filename>
+<filename>images/tafbutton_green21.png</filename>
+<filename>images/tafbutton_green24.png</filename>
+<filename>images/tafbutton_red16.png</filename>
+<filename>images/tafbutton_red21.png</filename>
+<filename>images/tafbutton_red24.png</filename>
+<filename>images/tafbutton_yellow16.png</filename>
+<filename>images/tafbutton_yellow21.png</filename>
+<filename>images/tafbutton_yellow24.png</filename>
+<filename>images/tafbuttontxt_blue16.png</filename>
+<filename>images/tafbuttontxt_blue21.png</filename>
+<filename>images/tafbuttontxt_blue24.png</filename>
+<filename>images/tafbuttontxt_darkgrey16.png</filename>
+<filename>images/tafbuttontxt_darkgrey21.png</filename>
+<filename>images/tafbuttontxt_darkgrey24.png</filename>
+<filename>images/tafbuttontxt_green16.png</filename>
+<filename>images/tafbuttontxt_green21.png</filename>
+<filename>images/tafbuttontxt_green24.png</filename>
+<filename>images/tafbuttontxt_red16.png</filename>
+<filename>images/tafbuttontxt_red21.png</filename>
+<filename>images/tafbuttontxt_red24.png</filename>
+<filename>images/tafbuttontxt_yellow16.png</filename>
+<filename>images/tafbuttontxt_yellow21.png</filename>
+<filename>images/tafbuttontxt_yellow24.png</filename>
+<filename>images/tafdropdn_blue16.png</filename>
+<filename>images/tafdropdn_blue21.png</filename>
+<filename>images/tafdropdn_blue24.png</filename>
+<filename>images/tafdropdn_darkgrey16.png</filename>
+<filename>images/tafdropdn_darkgrey21.png</filename>
+<filename>images/tafdropdn_darkgrey24.png</filename>
+<filename>images/tafdropdn_green16.png</filename>
+<filename>images/tafdropdn_green21.png</filename>
+<filename>images/tafdropdn_green24.png</filename>
+<filename>images/tafdropdn_red16.png</filename>
+<filename>images/tafdropdn_red21.png</filename>
+<filename>images/tafdropdn_red24.png</filename>
+	</files>
+	<params>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		<param name="accountNumber" type="text" default="0000000000" label="Your Account Number" description="Create an account at http://tellafriend.socialtwist.com/ and insert your number member here. If you would like to use this module without an account, do not change the value in this box! The default value is: 0000000000">
+		</param>
+		<param name="image" type="radio" default="/modules/mod_taf/images/tafbutton_blue16.png" label="Select Image Style" description="Choose which image you want to be displayed with your tell-a-friend module.">
+<option value="/modules/mod_taf/images/tafbutton_blue16.png">&lt;img src=&quot;../modules/mod_taf/images/tafbutton_blue16.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafbutton_blue21.png">&lt;img src=&quot;../modules/mod_taf/images/tafbutton_blue21.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafbutton_blue24.png">&lt;img src=&quot;../modules/mod_taf/images/tafbutton_blue24.png&quot;&gt;&lt;br&gt;</option>
+
+<option value="/modules/mod_taf/images/tafbutton_darkgrey16.png">&lt;img src=&quot;../modules/mod_taf/images/tafbutton_darkgrey16.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafbutton_darkgrey21.png">&lt;img src=&quot;../modules/mod_taf/images/tafbutton_darkgrey21.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafbutton_darkgrey24">&lt;img src=&quot;../modules/mod_taf/images/tafbutton_darkgrey24.png&quot;&gt;&lt;br&gt;</option>
+
+<option value="/modules/mod_taf/images/tafbutton_green16.png">&lt;img src=&quot;../modules/mod_taf/images/tafbutton_green16.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafbutton_green21.png">&lt;img src=&quot;../modules/mod_taf/images/tafbutton_green21.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafbutton_green24.png">&lt;img src=&quot;../modules/mod_taf/images/tafbutton_green24.png&quot;&gt;&lt;br&gt;</option>
+
+<option value="/modules/mod_taf/images/tafbutton_red16.png">&lt;img src=&quot;../modules/mod_taf/images/tafbutton_red16.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafbutton_red21.png">&lt;img src=&quot;../modules/mod_taf/images/tafbutton_red21.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafbutton_red24.png">&lt;img src=&quot;../modules/mod_taf/images/tafbutton_red24.png&quot;&gt;&lt;br&gt;</option>
+
+<option value="/modules/mod_taf/images/tafbutton_yellow16.png">&lt;img src=&quot;../modules/mod_taf/images/tafbutton_yellow16.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafbutton_yellow21.png">&lt;img src=&quot;../modules/mod_taf/images/tafbutton_yellow21.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafbutton_yellow24.png">&lt;img src=&quot;../modules/mod_taf/images/tafbutton_yellow24.png&quot;&gt;&lt;br&gt;</option>
+
+<option value="/modules/mod_taf/images/tafbuttontxt_blue16.png">&lt;img src=&quot;../modules/mod_taf/images/tafbuttontxt_blue16.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafbuttontxt_blue21.png">&lt;img src=&quot;../modules/mod_taf/images/tafbuttontxt_blue21.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafbuttontxt_blue24.png">&lt;img src=&quot;../modules/mod_taf/images/tafbuttontxt_blue24.png&quot;&gt;&lt;br&gt;</option>
+
+<option value="/modules/mod_taf/images/tafbuttontxt_darkgrey16.png">&lt;img src=&quot;../modules/mod_taf/images/tafbuttontxt_darkgrey16.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafbuttontxt_darkgrey21.png">&lt;img src=&quot;../modules/mod_taf/images/tafbuttontxt_darkgrey21.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafbuttontxt_darkgrey24.png">&lt;img src=&quot;../modules/mod_taf/images/tafbuttontxt_darkgrey24.png&quot;&gt;&lt;br&gt;</option>
+
+<option value="/modules/mod_taf/images/tafbuttontxt_green16.png">&lt;img src=&quot;../modules/mod_taf/images/tafbuttontxt_green16.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafbuttontxt_green21.png">&lt;img src=&quot;../modules/mod_taf/images/tafbuttontxt_green21.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafbuttontxt_green24.png">&lt;img src=&quot;../modules/mod_taf/images/tafbuttontxt_green24.png&quot;&gt;&lt;br&gt;</option>
+
+<option value="/modules/mod_taf/images/tafbuttontxt_red16.png">&lt;img src=&quot;../modules/mod_taf/images/tafbuttontxt_red16.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafbuttontxt_red21.png">&lt;img src=&quot;../modules/mod_taf/images/tafbuttontxt_red21.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafbuttontxt_red24.png">&lt;img src=&quot;../modules/mod_taf/images/tafbuttontxt_red24.png&quot;&gt;&lt;br&gt;</option>
+
+<option value="/modules/mod_taf/images/tafbuttontxt_yellow16.png">&lt;img src=&quot;../modules/mod_taf/images/tafbuttontxt_yellow16.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafbuttontxt_yellow21.png">&lt;img src=&quot;../modules/mod_taf/images/tafbuttontxt_yellow21.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafbuttontxt_yellow24.png">&lt;img src=&quot;../modules/mod_taf/images/tafbuttontxt_yellow24.png&quot;&gt;&lt;br&gt;</option>
+
+<option value="/modules/mod_taf/images/tafdropdn_blue16.png">&lt;img src=&quot;../modules/mod_taf/images/tafdropdn_blue16.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafdropdn_blue21.png">&lt;img src=&quot;../modules/mod_taf/images/tafdropdn_blue21.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafdropdn_blue24.png">&lt;img src=&quot;../modules/mod_taf/images/tafdropdn_blue24.png&quot;&gt;&lt;br&gt;</option>
+
+<option value="/modules/mod_taf/images/tafdropdn_darkgrey16.png">&lt;img src=&quot;../modules/mod_taf/images/tafdropdn_darkgrey16.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafdropdn_darkgrey21.png">&lt;img src=&quot;../modules/mod_taf/images/tafdropdn_darkgrey21.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafdropdn_darkgrey24.png">&lt;img src=&quot;../modules/mod_taf/images/tafdropdn_darkgrey24.png&quot;&gt;&lt;br&gt;</option>
+
+<option value="/modules/mod_taf/images/tafdropdn_green16.png">&lt;img src=&quot;../modules/mod_taf/images/tafdropdn_green16.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafdropdn_green21.png">&lt;img src=&quot;../modules/mod_taf/images/tafdropdn_green21.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafdropdn_green24.png">&lt;img src=&quot;../modules/mod_taf/images/tafdropdn_green24.png&quot;&gt;&lt;br&gt;</option>
+
+<option value="/modules/mod_taf/images/tafdropdn_red16.png">&lt;img src=&quot;../modules/mod_taf/images/tafdropdn_red16.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafdropdn_red21.png">&lt;img src=&quot;../modules/mod_taf/images/tafdropdn_red21.png&quot;&gt;&lt;br&gt;</option>
+<option value="/modules/mod_taf/images/tafdropdn_red24.png">&lt;img src=&quot;../modules/mod_taf/images/tafdropdn_red24.png&quot;&gt;&lt;br&gt;</option>
+
+</param>
+<param name="position" type="radio" default="center" label="Select Image Position" description="Choose if you want the image to be positioned in the center, right, or left of the containing module area.">
+			<option value="center">Center</option>
+			<option value="left">Left</option>
+			<option value="right">Right</option>
+	</param>
+	</params>
+</install>

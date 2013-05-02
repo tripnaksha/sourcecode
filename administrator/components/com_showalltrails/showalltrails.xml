@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5.0" type="component">
+     <name>Show All Trails</name>
+	 <author>Ajay Reddy</author>
+	 <creationDate>September 2009</creationDate>
+	 <copyright>Copyright (C) 2009 - 2008 Ajay Reddy. All rights reserved.</copyright>
+	 <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	 <authorEmail>ajay@tripnaksha.com</authorEmail>
+	 <authorUrl></authorUrl>
+	 <version>1.0</version>
+     <description>Show all trails</description>
+
+     <files>
+          <filename component="com_showalltrails">showalltrails.php</filename>
+          <filename component="com_showalltrails">loading.gif</filename>
+          <filename component="com_showalltrails">map_icon.gif</filename>
+          <filename component="com_showalltrails">showall.css</filename>
+          <filename component="com_showalltrails">encoder.php</filename>
+          <filename component="com_showalltrails">showall.js</filename>
+          <filename component="com_showalltrails">fav.png</filename>
+          <filename component="com_showalltrails">favs.png</filename>
+          <filename component="com_showalltrails">thumbs_down.png</filename>
+          <filename component="com_showalltrails">thumbs_downc.png</filename>
+          <filename component="com_showalltrails">thumbs_up.png</filename>
+          <filename component="com_showalltrails">thumbs_upc.png</filename>
+     </files>
+
+    <!-- Optional parameters -->
+	<params>
+	        <!-- parameter to allow placement of a module class suffix for the module table / xhtml display -->
+	        <param name="page_title" type="text" default="" label="Page Title" description="Title of page" />
+		<param name="pageclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		<param name="show_pagination_limit" type="radio" default="1" label="Show Pagination" description="Show/Hide pagination">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+
+	</params>
+
+    <administration>
+       <menu>Show all trails</menu>
+       <files>
+              <filename component="admin.showAllTrails">admin.showalltrails.php</filename>
+       </files>
+     </administration>
+</install>

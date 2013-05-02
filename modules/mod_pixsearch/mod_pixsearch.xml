@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>PixSearch</name>
+	<author>Henrik Hussfelt</author>
+	<creationDate>20070911</creationDate>
+	<copyright>(C) PixPro AB</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>henrik@pixpro.net</authorEmail>
+	<authorUrl>http://pixpro.net</authorUrl>
+	<version>0.4.0</version>
+	<description>PixSearch performs an Ajax search with help of com_search, and displays it underneath a searchbox.</description>
+	<files>
+		<filename module="mod_pixsearch">mod_pixsearch.php</filename>
+		<filename module="mod_pixsearch">helper.php</filename>
+		<filename module="mod_pixsearch">index.html</filename>
+		<filename module="mod_pixsearch">tmpl/default.php</filename>
+		<filename module="mod_pixsearch">tmpl/index.html</filename>
+		<filename module="mod_pixsearch">js/pixsearch.js</filename>
+		<filename module="mod_pixsearch">css/pixsearch_default.css</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_pixsearch.ini</language>
+	</languages>
+	<params>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		<param name="pretext" type="textarea" cols="30" rows="5" default="" label="Pre-text" description="PARAMPRETEXT" />
+		<param name="posttext" type="textarea" cols="30" rows="5" label="Post-text" description="PARAMPOSTTEXT" />
+		<param name="search_page" type="text" default="index.php?option=com_search&amp;view=search" label="Searchpage URL (relative to domain)" description="Relative path to your searchpage. Example: index.php?option=com_search" />
+		<param name="@spacer" type="spacer" default="" label="Style options" description="" />
+		<param name="include_css" type="radio" default="1" label="To include PixSearch default CSS or not">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="offset_search_result" type="text" default="0" label="Offset in px, fix to get the results underneath the box" />
+		<param name="@spacer" type="spacer" default="" label="Advanced search" description="This part is for you to change to your needs. These will be the default search alternatives passed to com_search. Same options as on the com_search page." />
+		<param name="searchphrase" type="list" default="any" label="Searchphrase">
+			<option value="any">Any words</option>
+			<option value="all">All words</option>
+			<option value="exact">Exact phrase</option>
+		</param>
+		<param name="ordering" type="list" default="newest" label="Ordering">
+			<option value="alpha">Alphabetical</option>
+			<option value="category">Section/Category</option>
+			<option value="newest">Newest first</option>
+			<option value="oldest">Oldest first</option>
+			<option value="popular">Most popular</option>
+		</param>
+		<param name="limit" type="list" default="10" label="Limit">
+			<option value="5">5</option>
+			<option value="10">10</option>
+			<option value="15">15</option>
+			<option value="20">20</option>
+			<option value="25">25</option>
+			<option value="30">30</option>
+			<option value="50">50</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="Advanced settomgs" description="Here are some advance settings." />
+		<param name="hide_divs" type="text" default="" label="Hide div id(s)" description="If you want to hide one or more div tags on your page, input div ids here, seperate with space." />
+		<param name="include_link" type="radio" default="1" label="Link to all results" description="Set this option to yes, if you want a text to appear at the bottom of the result list that links to com_search page.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="show_description" type="radio" default="1" label="Show Description" description="Set this option to yes, if you want to show the description on each result item.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="include_category" type="radio" default="1" label="Include (Category/Section)" description="Set this option to yes, if you want category and section to show up under each title.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="show_readmore" type="radio" default="1" label="Show Read More link" description="Set this option to yes, if you want the read more link to show up under the description.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>
+</install>

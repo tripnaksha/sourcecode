@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5.0" type="component">
+     <name>Search Trails</name>
+	 <author>Ajay Reddy</author>
+	 <creationDate>February 2009</creationDate>
+	 <copyright>Copyright (C) 2009 - 2008 Ajay Reddy. All rights reserved.</copyright>
+	 <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	 <authorEmail>ajyrds@gmail.com</authorEmail>
+	 <authorUrl></authorUrl>
+	 <version>1.0</version>
+     <description>
+	     Search trails called from map.js.
+	     <br />Order of installation -
+		 com_savetrail
+		 com_searchTrails - drops _trailReview, _trailList and then creates _trailList
+		 com_searchTrailReviews
+		 plgContentSearchReview - drops _trailReview and then creates _trailReview
+		 com_contentsubmit_mod - uses _trailReview
+		 com_trailDisplay - js functions use _trailReview and _trailList
+		 plgSearchTrailReviews - uses _trailReview
+     </description>
+
+     <files>
+          <filename component="com_searchTrails">searchtrails.php</filename>
+     </files>
+
+	<!-- Install/Uninstall Database Section -->
+    <install>
+      <queries>
+	        <query>
+	        DROP TABLE IF EXISTS `#__trailReview`;
+	        </query>
+	        <query>
+	        DROP TABLE IF EXISTS `#__trailList`;
+	        </query>
+	        <query>
+	        CREATE TABLE #__trailList (
+	        `id` int(11) NOT NULL auto_increment,
+	        `name` varchar(40) NOT NULL,
+	        `routeXML` longtext NOT NULL,
+	        `routeStart` varchar(100) NOT NULL,
+	        `mapCenter` varchar(100) NOT NULL,
+	        `zoomLevel` int(11) NOT NULL,
+	        `userId` int(11) default NULL,
+	        `intro` varchar(200) default NULL,
+	        `length` int(11) NOT NULL,
+	        `private` tinyint(4) default '0',
+	        `createTime` datetime default NULL,
+	        PRIMARY KEY (`id`)
+	        )
+	        </query>
+			<query>
+				CREATE TABLE `#__trailReview`
+				(Trail_ID integer,
+				Content_ID integer,
+				Primary Key (Trail_ID, Content_ID),
+				Foreign Key (Trail_ID) references `#__trailList` (ID),
+				Foreign Key (Content_ID) references Content(ID)
+				)
+			</query>
+      </queries>
+    </install>
+    <uninstall>
+      <queries>
+			<query>
+				DROP TABLE IF EXISTS `# __trailReview`;
+			</query>
+	        <query>
+	        DROP TABLE IF EXISTS `#__trailList`;
+	        </query>
+      </queries>
+    </uninstall>
+
+    <administration>
+       <files>
+              <filename component="admin.searchtrails">admin.searchtrails.php</filename>
+       </files>
+     </administration>
+</install>

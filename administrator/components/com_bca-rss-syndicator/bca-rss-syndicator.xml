@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5.0">
+  <name>BCA-RSS-Syndicator</name>
+  <creationDate>2008 10 18</creationDate>
+  <author>HungLV</author>
+  <authorEmail>vhungxaz@gmail.com</authorEmail>
+  <authorUrl></authorUrl>
+  <copyright>Body Health Debate</copyright>
+  <license><![CDATA[ The Breast Cancer Awareness RSS Syndicator is free software; you can redistribute it and/or modify it under the terms of the <a href="http://www.gnu.org/licenses/gpl.html" target="_blank">General Public License</a> as published by the Free Software Foundation. ]]></license>
+  <version>1.5.5.4</version>
+  <description></description>
+  <installfile>install.bca-rss-syndicator.php</installfile>
+  <uninstallfile>uninstall.bca-rss-syndicator.php</uninstallfile>
+  
+  <files folder="site">
+  	<filename>index.html</filename>
+    <filename>bca-rss-syndicator.php</filename>
+	
+	<folder>assets/</folder>	
+	
+	<folder>controllers/</folder>	
+	<folder>feed/</folder>	
+	<folder>models/</folder>
+	<folder>views/</folder>
+	
+  </files>
+  	
+  <administration>
+    <menu>BCA RSS Syndicator</menu>
+	<submenu>
+ 		<menu task="info">About Breast Cancer Awareness RSS Syndicator</menu>
+		<menu task="feeds">Feeds</menu>
+		<menu task="buttonmaker">Button Maker</menu>
+		<menu task="config">Default Settings</menu>
+    </submenu>
+    <files folder="admin">     
+	<filename>index.html</filename>
+	<filename>admin.bca-rss-syndicator.php</filename>	
+	<filename>install.bca-rss-syndicator.php</filename>	
+	<filename>uninstall.bca-rss-syndicator.php</filename>	
+	
+	<folder>controllers/</folder>
+	
+	<folder>models/</folder>
+	
+	<folder>assets/</folder>
+
+    <folder>views/</folder>
+	
+    </files>
+  </administration>
+</install>

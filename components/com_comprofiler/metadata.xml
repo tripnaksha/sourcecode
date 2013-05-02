@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<author>JoomlaJoe and Beat</author>
+	<authorEmail>beat@joomlapolis.com</authorEmail>
+	<copyright>Copyright 2004-2009 Beat, MamboJoe/JoomlaJoe and CB team on joomlapolis.com .</copyright>
+	<authorUrl>www.joomlapolis.com</authorUrl>
+	<creationDate>2009-01-25</creationDate>
+	<menu>
+		<options var="task">
+			<default name="User Profile (mandatory!)" msg="This is the main menu item of Community Builder. Please create only one of them and make sure that this menu item is of public access and published." />
+			<option value="userslist" name="Users lists" msg="This is the menu item for accessing Community Builder Users lists." />
+			<option value="userdetails" name="User profile edit" msg="This is an optional menu item for accessing Community Builder User profile edit. Normally not needed, as Community Builder has its own menu system on the user profile for this action." />
+			<option value="lostpassword" name="Username/Password reminder" msg="This is an optional menu item for accessing Community Builder Username/Password reminder. Normally not needed, as you would normally use Community Builder login module for this so it adapts automatically to login state." />
+			<option value="registers" name="Registration page" msg="This is an optional menu item for accessing Community Builder Registration page. Normally not needed, as you would normally use Community Builder login module for this so it adapts automatically to login state." />
+			<option value="login" name="Login page" msg="This is an optional menu item for accessing Community Builder Login page. Normally not needed, as you would normally use Community Builder login module for this. This menu requires the CB Login module to be installed to work." />
+			<option value="logout" name="Logout action" msg="This is an optional menu item for directly loging out the user from Community Builder and Joomla. Normally not needed, as you would normally use Community Builder login module for this so it adapts automatically to login state." />
+		</options>
+	</menu>
+	<state switch="task" default="userprofile">
+		<userprofile>
+			<name>Community Builder User profile</name>
+			<description>This is a menu item for Community Builder User profile. Please create only one of them and make sure that this menu item is of public access and published.</description>
+		</userprofile>
+		<userslist>
+			<name>Community Builder Users-list</name>
+			<description>This is Community Builder Users List Menu item. It can be the default list of community builder if the list id parameter is left empty, or direct access to a users list. You can create multiple menu items here to access directly particular users-lists.</description>
+			<url addpath="/administrator/components/com_comprofiler">
+				<param name="listid" type="text" default="" label="List id" description="Here you could select directly a list by its id" />
+				<param name="searchmode" type="list" default="" label="Searchmode only" description="If the list should display directly, or only show the search fields">
+					<option value="">Show List</option>
+					<option value="1">Show Search only</option>
+				</param>
+			</url>
+		</userslist>
+		<userdetails>
+			<name>Community Builder User profile edit</name>
+			<description>This is an optional menu item for accessing Community Builder User profile edit. Normally not needed, as Community Builder has its own menu system on the user profile for this action.</description>
+		</userdetails>
+		<lostpassword>
+			<name>Community Builder Username/Password reminder</name>
+			<description>This is an optional menu item for accessing Community Builder Username/Password reminder. Normally not needed, as you would normally use Community Builder login module for this so it adapts automatically to login state.</description>
+		</lostpassword>
+		<registers>
+			<name>Community Builder Registration page</name>
+			<description>This is an optional menu item for accessing Community Builder Registration page. Normally not needed, as you would normally use Community Builder login module for this so it adapts automatically to login state.</description>
+		</registers>
+		<login>
+			<name>Community Builder Login page</name>
+			<description>This is an optional menu item for accessing Community Builder Login page. Normally not needed, as you would normally use Community Builder login module for this. This menu requires the CB Login module to be installed to work.</description>
+		</login>
+		<logout>
+			<name>Community Builder Logout action</name>
+			<description>This is an optional menu item for directly loging out the user from Community Builder and Joomla. Normally not needed, as you would normally use Community Builder login module for this so it adapts automatically to login state.</description>
+		</logout>
+	</state>
+</metadata>

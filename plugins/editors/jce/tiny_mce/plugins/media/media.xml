@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<install version="1.5.0" type="plugin" plugin="media">
+	<name>Object Support</name>
+	<version>1.5.1</version>
+	<creationDate>17 November 2008</creationDate>
+	<author>Ryan Demmer</author>
+	<authorEmail>ryandemmer@gmail.com</authorEmail>
+	<authorUrl>http://www.joomlacontenteditor.net</authorUrl>
+	<copyright>Ryan Demmer</copyright>
+	<license>LGPL</license>
+	<description><![CDATA[ 
+	<p>Object Support plugin for JCE 1.5.x</p>	
+	]]></description>
+	<icon></icon>
+	<layout></layout>
+	<params group="standard">
+        <param name="media_use_script" type="list" default="0" label="MEDIA PARAM SCRIPT" description="MEDIA PARAM SCRIPT DESC">
+            <option value="0">NO</option>
+            <option value="1">YES</option>
+		</param>
+		<param name="media_strict" type="list" default="1" label="MEDIA PARAM STRICT" description="MEDIA PARAM STRICT DESC">
+            <option value="0">NO</option>
+            <option value="1">YES</option>
+		</param>
+		<param name="media_version_flash" type="text" size="50" default="9,0,124,0" label="MEDIA VERSION FLASH" />
+		<param name="media_version_windowsmedia" type="text" size="50" default="5,1,52,701" label="MEDIA VERSION MPLAYER" />
+		<param name="media_version_quicktime" type="text" size="50" default="6,0,2,0" label="MEDIA VERSION QUICKTIME" />
+		<param name="media_version_realmedia" type="text" size="50" default="7,0,0,0" label="MEDIA VERSION REAL" />
+		<param name="media_version_shockwave" type="text" size="50" default="11,0,0,458" label="MEDIA VERSION SHOCKWAVE" />
+		<!--param name="media_extensions" type="textarea" rows="2" cols="50" default="windowsmedia=avi,wmv,wm,asf,asx,wmx,wvx;quicktime=mov,qt,mpg,mp3,mp4,mpeg;flash=swf,flv,xml;shockwave=dcr;real=rm,ra,ram;divx=divx" label="PARAM EXTENSIONS" description="PARAM EXTENSIONS DESC"/-->
+	</params>
+	<languages>
+		<language tag="en-GB">en-GB.com_jce_media.ini</language>
+	</languages>
+</install>

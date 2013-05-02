@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cbinstall version="1.0" type="plugin" group="user">
+	<name>CB Core</name>
+	<author>JoomlaJoe and Beat</author>
+	<creationDate>2009-01-26</creationDate>
+	<copyright>(C) 2005-2009 joomlapolis.com</copyright>
+	<license>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL version 2</license>
+	<authorEmail>beat@joomlapolis.com</authorEmail>
+	<authorUrl>www.joomlapolis.com</authorUrl>
+	<version>1.2</version>
+	<description>Core CB Tabs and Events.</description>
+	<files>
+		<filename plugin="cb.core">cb.core.php</filename>
+		<filename>index.html</filename>
+	</files>
+    <params>	
+    </params>
+	<tabs>
+		<tab name="_UE_CONTACT_INFO_HEADER" description="" class="getContactTab" fields="1" position="cb_main" displaytype="tab">
+			<params>
+			</params>
+			<fields>
+			</fields>
+		</tab>
+		<tab name="_UE_PORTRAIT" description="" class="getPortraitTab" fields="0" position="cb_head" displaytype="html">
+			<params>
+				<param name="portrait_help" type="spacer" description="" label="Display description" default="To display &quot;[edit photo]&quot;, type following into description: [menu style=&quot;color:green;&quot; caption=&quot;&amp;91;edit your photo&amp;93;&quot; img=&quot;&quot;] _UE_MENU_EDIT : _UE_UPDATEAVATAR [/menu]" />
+			</params>
+			<fields>
+			</fields>
+		</tab>
+		<tab name="_UE_PROFILE_PAGE_TITLE" description="" class="getPageTitleTab" fields="0" position="cb_head" displaytype="html">
+			<params>
+				<param name="title" type="text" size="25" default="_UE_PROFILE_TITLE_TEXT" label="User Profile Title text" description="Page title text. Enter text to be displayed as profile page title. %s will be replaced by user-name depending on global settings. Or use language-dependant _UE_PROFILE_TITLE_TEXT (default)" />
+			</params>
+			<fields>
+			</fields>
+		</tab>
+	</tabs>
+	<fieldtypes>
+		<field type="checkbox" label="Check Box (Single)">
+			<data name="" nametype="namesuffix" type="sql:tinyint(3)" unsigned="true" null="true" default="NULL" />
+			<params>
+			</params>
+		</field>
+		<field type="multicheckbox" label="Check Box (Multiple)">
+			<data name="" nametype="namesuffix" type="sql:mediumtext" />
+			<params>
+				<param name="field_display_style" type="list" default="0" label="Display on profiles as" description="How to display the values of this multi-valued field">
+					<option value="0">Comma ","-separated line</option>
+					<option value="1">Unnumbered list "ul"</option>
+					<option value="2">Ordered list "ol"</option>
+				</param>
+				<if name="field_display_style" type="showhide" operator="&gt;" value="0" valuetype="const:int">
+					<param name="field_display_class" type="text" size="40" default="" label="CSS class of the list" description="Enter the name of the list class (optional) for OL or UL tag" />
+				</if>
+			</params>
+		</field>
+		<field type="integer" label="Integer Number">
+			<database version="1">
+				<table name="#__comprofiler" class="moscomprofiler" maintable="true" strict="false" drop="never" shared="true">
+					<columns>
+						<column name="" nametype="namesuffix" type="sql:int(11)" unsigned="false" null="true" default="NULL" />
+					</columns>
+				</table>
+			</database>
+			<params>
+				<fieldset label="Field entry validation" description="">
+					<param name="integer_minimum" type="text" default="0" label="Minimum value allowed" description="Enter the minimum integer value allowed. Default is 0." />
+					<param name="integer_maximum" type="text" default="1000000" label="Maximum value allowed" description="Enter the maximum value allowed. Default is 1000000." />
+					<param name="fieldValidateForbiddenList_register" type="text" default="" label="Forbidden values at registration" description="You can set a list of values (separated by comma ,) which are not allowed in this field for registration." />
+					<param name="fieldValidateForbiddenList_profile" type="text" default="" label="Forbidden values in user profile edits" description="You can set a list of values (separated by comma ,) which are not allowed in this field when user updates his profile in profile edits." />
+					<param name="fieldValidateExpression" type="list" default="" label="Authorized input" description="Type of input authorized.">
+								<option value="">Any string ( /.*/ ) </option>
+								<option value="customregex">Custom PERL regular expression</option>
+					</param>
+					<if name="fieldValidateExpression" type="showhide" operator="=" value="customregex" valuetype="const:text">
+						<param name="pregexp" type="text" default="/^.*$/" label="Perl Regular Expression" description="Any string: /^.*$/ , only digits: /^[0-9]*$/, only a-z + A-Z + digits: /^[0-9a-z]*$/i" />
+					</if>
+					<if name="fieldValidateExpression" type="showhide" operator="!=" value="" valuetype="const:text">
+						<param name="pregexperror" type="text" default="Not a valid input" label="Error in case of invalid input" description="Enter a clear and helpful error message in case of validation pattern mismatch." />
+					</if>
+				</fieldset>
+			</params>
+		</field>
+		<field type="date" label="Date">
+			<data name="" nametype="namesuffix" type="sql:date" null="true" default="NULL" />
+			<params>
+				<param name="year_min" type="text" default="-110" label="Minimum Year shown" description="Type +0 for this year, type-in 4-digits year, for example 1923, or just a number prefixed with + or - sign, for example +25 or -110, to set a value relative to current year, e.g. -99 for maximum age of 99 years (or 190" />
+				<param name="year_max" type="text" default="+25" label="Maximum Year shown" description="Type +0 for this year, type-in 4-digits year, for example 1923, or just a number prefixed with + or - sign, for example +25 or -110, to set a value relative to current year, e.g. -12 for minimum age of 12 years" />
+				<param name="field_display_by" type="list" default="0" label="Display on profiles as" description="Whether you want users to see this date on profile as a date or as an age">
+					<option value="0">Full date</option>
+					<option value="1">Age in years</option>
+					<option value="2">time ago</option>
+					<option value="3">birthday only without year</option>
+				</param>
+				<if name="field_display_by" type="showhide" operator="=" value="1" valuetype="const:int">
+					<param name="field_display_years_text" type="list" default="1" label="Display N years text" description="Whether you want to display just number N of years (e.g. Age: 20), or add ' years' behind the age N (e.g. Age: 20 years). Uses language-string _UE_AGE_YEARS.">
+						<option value="0">Display just 'N'</option>
+						<option value="1">Display 'N years'</option>
+					</param>
+				</if>
+				<if name="field_display_by" type="showhide" operator="=" value="2" valuetype="const:int">
+					<param name="field_display_ago_text" type="list" default="1" label="Display T ago text" description="Whether you want to display just the time T ago (e.g. 3 months), or add ' ago' behind the time T (e.g. 3 months ago). Uses language-string _UE_ANYTHING_AGO.">
+						<option value="0">Display just 'T'</option>
+						<option value="1">Display 'T ago'</option>
+					</param>
+				</if>
+				<param name="field_search_by" type="list" default="0" label="If searchable, then search by" description="Whether you want users to search by date or by age">
+					<option value="0">Full date</option>
+					<option value="1">Age</option>
+				</param>
+				<param name="duration_title" type="text" default="" label="Alternate field title for age/time ago/birthday only display" description="Leave blank for using same title as in normal date display mode, or enter alternate text, e.g. 'Age' (multilinguale: type just: _UE_AGE) or 'Birthday' (_UE_Birthday) instead of normal birthdate title. CB translation strings, as well as fields-substitutions, e.g. '[name]'s age' can be used." />
+				<param name="show_date_time" type="list" default="0" label="Display Date and time" description="Whether you want to display date and time">
+					<option value="0">Yes date and also time if available</option>
+					<option value="1">Date only</option>
+					<option value="2">Date and time</option>
+				</param>
+			</params>
+		</field>
+		<field type="datetime" label="Date and time" unique="true">
+			<data name="" nametype="namesuffix" type="sql:datetime" null="false" default="0000-00-00 00:00:00" strict="true" />
+			<params>
+				<param name="year_min" type="text" default="-110" label="Minimum Year shown" description="Type +0 for this year, type-in 4-digits year, for example 1923, or just a number prefixed with + or - sign, for example +25 or -110, to set a value relative to current year, e.g. -99 for maximum age of 99 years (or 190" />
+				<param name="year_max" type="text" default="+25" label="Maximum Year shown" description="Type +0 for this year, type-in 4-digits year, for example 1923, or just a number prefixed with + or - sign, for example +25 or -110, to set a value relative to current year, e.g. -12 for minimum age of 12 years" />
+				<param name="field_display_by" type="list" default="0" label="Display on profiles as" description="Whether you want users to see this date on profile as a date or as an age">
+					<option value="0">Full date</option>
+					<option value="1">Age in years</option>
+					<option value="2">time ago</option>
+					<option value="3">birthday only without year</option>
+				</param>
+				<if name="field_display_by" type="showhide" operator="=" value="1" valuetype="const:int">
+					<param name="field_display_years_text" type="list" default="1" label="Display N years text" description="Whether you want to display just number N of years (e.g. Age: 20), or add ' years' behind the age N (e.g. Age: 20 years). Uses language-string _UE_AGE_YEARS.">
+						<option value="0">Display just 'N'</option>
+						<option value="1">Display 'N years'</option>
+					</param>
+				</if>
+				<if name="field_display_by" type="showhide" operator="=" value="2" valuetype="const:int">
+					<param name="field_display_ago_text" type="list" default="1" label="Display T ago text" description="Whether you want to display just the time T ago (e.g. 3 months), or add ' ago' behind the time T (e.g. 3 months ago). Uses language-string _UE_ANYTHING_AGO.">
+						<option value="0">Display just 'T'</option>
+						<option value="1">Display 'T ago'</option>
+					</param>
+				</if>
+				<param name="field_search_by" type="list" default="0" label="If searchable, then search by" description="Whether you want users to search by date or by age">
+					<option value="0">Full date</option>
+					<option value="1">Age</option>
+				</param>
+				<param name="duration_title" type="text" default="" label="Alternate field title for age/time ago/birthday only display" description="Leave blank for using same title as in normal date display mode, or enter alternate text, e.g. 'Age' (multilinguale: type just: _UE_AGE) or 'Birthday' (_UE_Birthday) instead of normal birthdate title. CB translation strings, as well as fields-substitutions, e.g. '[name]'s age' can be used." />
+				<param name="show_date_time" type="list" default="0" label="Display Date and time" description="Whether you want to display date and time">
+					<option value="0">Yes date and also time</option>
+					<option value="1">Date only</option>
+					<option value="2">Date and time</option>
+				</param>
+			</params>
+		</field>
+		<field type="select" label="Drop Down (Single Select)">
+			<data name="" nametype="namesuffix" type="sql:varchar(255)" null="true" default="NULL" strict="false" />
+			<params>
+			</params>
+		</field>
+		<field type="multiselect" label="Drop Down (Multi-select)">
+			<data name="" nametype="namesuffix" type="sql:mediumtext" null="true" default="NULL" />
+			<params>
+				<param name="field_display_style" type="list" default="0" label="Display on profiles as" description="How to display the values of this multi-valued field">
+					<option value="0">Comma ","-separated line</option>
+					<option value="1">Unnumbered list "ul"</option>
+					<option value="2">Ordered list "ol"</option>
+				</param>
+				<if name="field_display_style" type="showhide" operator="&gt;" value="0" valuetype="const:int">
+					<param name="field_display_class" type="text" size="40" default="" label="CSS class of the list" description="Enter the name of the list class (optional) for OL or UL tag" />
+				</if>
+			</params>
+		</field>
+		<field type="emailaddress" label="Email Address">
+			<data name="" nametype="namesuffix" type="sql:varchar(255)" null="true" default="NULL" />
+			<params>
+				<param name="field_check_email" type="list" default="0" label="Enable Email checker" description="Whether you want to feedback to user if email is valid or not.">
+					<option value="0">No: no ajax email checking</option>
+					<option value="1">Yes: Check email address and server</option>
+				</param>
+				<fieldset label="Field entry validation" description="">
+					<param name="fieldValidateExpression" type="list" default="" label="Authorized input" description="Type of input authorized.">
+								<option value="">Any string ( /.*/ ) </option>
+								<option value="customregex">Custom PERL regular expression</option>
+					</param>
+					<if name="fieldValidateExpression" type="showhide" operator="=" value="customregex" valuetype="const:text">
+						<param name="pregexp" type="text" default="/^.*$/" label="Perl Regular Expression" description="Any string: /^.*$/ , only digits: /^[0-9]*$/, only a-z + A-Z + digits: /^[0-9a-z]*$/i" />
+					</if>
+					<if name="fieldValidateExpression" type="showhide" operator="!=" value="" valuetype="const:text">
+						<param name="pregexperror" type="text" default="Not a valid input" label="Error in case of invalid input" description="Enter a clear and helpful error message in case of validation pattern mismatch." />
+					</if>
+				</fieldset>
+				<param name="fieldValidateForbiddenList_register" type="text" default="http:,https:,mailto:,//.[url],&lt;a,&lt;/a&gt;,&amp;#" label="Forbidden words at registration" description="You can set a list of bad words (separated by comma ,) which are not allowed in this field for registration. Use comma twice (,,) to add comma as bad character." />
+				<param name="fieldValidateForbiddenList_profile" type="text" default="" label="Forbidden words in user profile edits" description="You can set a list of bad words (separated by comma ,) which are not allowed in this field when user updates his profile in profile edits. Use comma twice (,,) to add comma as bad character." />
+			</params>
+		</field>
+		<field type="primaryemailaddress" label="Email address (main)" unique="true">
+			<database version="1">
+				<table name="#__users" class="mosUser" maintable="true" strict="false" drop="never" shared="true">
+					<columns>
+						<column name="email" type="sql:varchar(100)" null="false" strict="false" />
+					</columns>
+				</table>
+			</database>
+			<params>
+				<fieldset label="Field entry validation" description="">
+					<param name="fieldValidateExpression" type="list" default="" label="Authorized input" description="Type of input authorized.">
+								<option value="">Any string ( /.*/ ) </option>
+								<option value="customregex">Custom PERL regular expression</option>
+					</param>
+					<if name="fieldValidateExpression" type="showhide" operator="=" value="customregex" valuetype="const:text">
+						<param name="pregexp" type="text" default="/^.*$/" label="Perl Regular Expression" description="Any string: /^.*$/ , only digits: /^[0-9]*$/, only a-z + A-Z + digits: /^[0-9a-z]*$/i" />
+					</if>
+					<if name="fieldValidateExpression" type="showhide" operator="!=" value="" valuetype="const:text">
+						<param name="pregexperror" type="text" default="Not a valid input" label="Error in case of invalid input" description="Enter a clear and helpful error message in case of validation pattern mismatch." />
+					</if>
+				</fieldset>
+				<param name="fieldValidateForbiddenList_register" type="text" default="http:,https:,mailto:,//.[url],&lt;a,&lt;/a&gt;,&amp;#" label="Forbidden words at registration" description="You can set a list of bad words (separated by comma ,) which are not allowed in this field for registration. Use comma twice (,,) to add comma as bad character." />
+				<param name="fieldValidateForbiddenList_profile" type="text" default="" label="Forbidden words in user profile edits" description="You can set a list of bad words (separated by comma ,) which are not allowed in this field when user updates his profile in profile edits. Use comma twice (,,) to add comma as bad character." />
+			</params>
+		</field>
+		<field type="editorta" label="Editor Text Area">
+			<data name="" nametype="namesuffix" type="sql:mediumtext" null="true" default="NULL" strict="false" />
+			<params>
+				<param name="fieldMinLength" type="text" default="0" label="Minimum length" description="Minimum length of content (0 = no minimum)" />
+			</params>
+		</field>
+		<field type="textarea" label="Text Area">
+			<data name="" nametype="namesuffix" type="sql:mediumtext" null="true" default="NULL" strict="false" />
+			<params>
+				<param name="fieldMinLength" type="text" default="0" label="Minimum length" description="Minimum length of content (0 = no minimum)" />
+				<param name="fieldValidateForbiddenList_register" type="text" default="http:,https:,mailto:,//.[url],&lt;a,&lt;/a&gt;,&amp;#" label="Forbidden words at registration" description="You can set a list of bad words (separated by comma ,) which are not allowed in this field for registration. Use comma twice (,,) to add comma as bad character." />
+				<param name="fieldValidateForbiddenList_profile" type="text" default="" label="Forbidden words in user profile edits" description="You can set a list of bad words (separated by comma ,) which are not allowed in this field when user updates his profile in profile edits. Use comma twice (,,) to add comma as bad character." />
+			</params>
+		</field>
+		<field type="text" label="Text Field">
+			<data name="" nametype="namesuffix" type="sql:varchar(255)" null="true" default="NULL" strict="false" />
+			<params>
+				<param name="fieldMinLength" type="text" default="0" label="Minimum length" description="Minimum length of content (0 = no minimum)" />
+				<fieldset label="Field entry validation" description="">
+					<param name="fieldValidateExpression" type="list" default="" label="Authorized input" description="Type of input authorized.">
+								<option value="">Any string ( /.*/ ) </option>
+								<option value="singleword">Single word ( /^[a-z]*$/ )</option>
+								<option value="multiplewords">Multiple words with spaces ( /^([a-z]+ *)*$/ )</option>
+								<option value="singleaznum">Single a-z,A-Z,0-9,_ word ( /^[a-z]+[a-z0-9_]*$/i )</option>
+								<option value="atleastoneofeach">At least 6 chars, 1 a-z, 1 A-Z, 1 0-9, 1 special</option>
+								<option value="customregex">Custom PERL regular expression</option>
+					</param>
+					<if name="fieldValidateExpression" type="showhide" operator="=" value="customregex" valuetype="const:text">
+						<param name="pregexp" type="text" default="/^.*$/" label="Perl Regular Expression" description="Any string: /^.*$/ , only digits: /^[0-9]*$/, only a-z + A-Z + digits: /^[0-9a-z]*$/i" />
+					</if>
+					<if name="fieldValidateExpression" type="showhide" operator="!=" value="" valuetype="const:text">
+						<param name="pregexperror" type="text" default="Not a valid input" label="Error in case of invalid input" description="Enter a clear and helpful error message in case of validation pattern mismatch." />
+					</if>
+				</fieldset>
+				<param name="fieldValidateForbiddenList_register" type="text" default="http:,https:,mailto:,//.[url],&lt;a,&lt;/a&gt;,&amp;#" label="Forbidden words at registration" description="You can set a list of bad words (separated by comma ,) which are not allowed in this field for registration. Use comma twice (,,) to add comma as bad character." />
+				<param name="fieldValidateForbiddenList_profile" type="text" default="" label="Forbidden words in user profile edits" description="You can set a list of bad words (separated by comma ,) which are not allowed in this field when user updates his profile in profile edits. Use comma twice (,,) to add comma as bad character." />
+			</params>
+		</field>
+		<field type="radio" label="Radio Buttons">
+			<data name="" nametype="namesuffix" type="sql:varchar(255)" null="true" default="NULL" />
+			<params>
+			</params>
+		</field>
+		<field type="webaddress" label="Web Address">
+			<data name="" nametype="namesuffix" type="sql:varchar(255)" null="true" default="NULL" />
+			<params>
+				<fieldset label="Field entry validation" description="">
+					<param name="fieldValidateExpression" type="list" default="" label="Authorized input" description="Type of input authorized.">
+								<option value="">Any string ( /.*/ ) </option>
+								<option value="customregex">Custom PERL regular expression</option>
+					</param>
+					<if name="fieldValidateExpression" type="showhide" operator="=" value="customregex" valuetype="const:text">
+						<param name="pregexp" type="text" default="/^.*$/" label="Perl Regular Expression" description="Any string: /^.*$/ , only digits: /^[0-9]*$/, only a-z + A-Z + digits: /^[0-9a-z]*$/i" />
+					</if>
+					<if name="fieldValidateExpression" type="showhide" operator="!=" value="" valuetype="const:text">
+						<param name="pregexperror" type="text" default="Not a valid input" label="Error in case of invalid input" description="Enter a clear and helpful error message in case of validation pattern mismatch." />
+					</if>
+				</fieldset>
+				<param name="fieldValidateForbiddenList_register" type="text" default="http:,https:,mailto:,//.[url],&lt;a,&lt;/a&gt;,&amp;#" label="Forbidden words at registration" description="You can set a list of bad words (separated by comma ,) which are not allowed in this field for registration. Use comma twice (,,) to add comma as bad character." />
+				<param name="fieldValidateForbiddenList_profile" type="text" default="" label="Forbidden words in user profile edits" description="You can set a list of bad words (separated by comma ,) which are not allowed in this field when user updates his profile in profile edits. Use comma twice (,,) to add comma as bad character." />
+			</params>
+		</field>
+		<field type="predefined" label="Predefined name and username fields" unique="true">
+			<database version="1">
+				<table name="#__users" class="mosUser" maintable="true" strict="false" drop="never" shared="true">
+					<columns>
+						<column name="username" type="sql:varchar(100)" null="false" strict="false" />
+						<column name="name" type="sql:varchar(50)" null="false" strict="false" />
+					</columns>
+				</table>
+				<table name="#__comprofiler" class="moscomprofiler" maintable="true" strict="false" drop="never" shared="true">
+					<columns>
+						<column name="firstname" type="sql:varchar(100)" null="true" />
+						<column name="middlename" type="sql:varchar(100)" null="true" />
+						<column name="lastname" type="sql:varchar(100)" null="true" />
+					</columns>
+				</table>
+			</database>
+			<params>
+				<param name="fieldMinLength" type="text" default="" label="Minimum length" description="Minimum length of content (0 = no minimum, empty = default system minimum length)" />
+				<fieldset label="Field entry validation" description="">
+					<param name="fieldValidateExpression" type="list" default="" label="Authorized input" description="Type of input authorized.">
+								<option value="">Any string ( /.*/ ) </option>
+								<option value="singleword">Single word ( /^[a-z]*$/ )</option>
+								<option value="multiplewords">Multiple words with spaces ( /^([a-z]+ *)*$/ )</option>
+								<option value="singleaznum">Single a-z,A-Z,0-9,_ word ( /^[a-z]+[a-z0-9_]*$/i )</option>
+								<option value="atleastoneofeach">At least 6 chars, 1 a-z, 1 A-Z, 1 0-9, 1 special</option>
+								<option value="customregex">Custom PERL regular expression</option>
+					</param>
+					<if name="fieldValidateExpression" type="showhide" operator="=" value="customregex" valuetype="const:text">
+						<param name="pregexp" type="text" default="/^.*$/" label="Perl Regular Expression" description="Any string: /^.*$/ , only digits: /^[0-9]*$/, only a-z + A-Z + digits: /^[0-9a-z]*$/i" />
+					</if>
+					<if name="fieldValidateExpression" type="showhide" operator="!=" value="" valuetype="const:text">
+						<param name="pregexperror" type="text" default="Not a valid input" label="Error in case of invalid input" description="Enter a clear and helpful error message in case of validation pattern mismatch." />
+					</if>
+				</fieldset>
+				<param name="fieldValidateForbiddenList_register" type="text" default="http:,https:,mailto:,//.[url],&lt;a,&lt;/a&gt;,&amp;#" label="Forbidden words at registration" description="You can set a list of bad words (separated by comma ,) which are not allowed in this field for registration. Use comma twice (,,) to add comma as bad character." />
+				<param name="fieldValidateForbiddenList_profile" type="text" default="" label="Forbidden words in user profile edits" description="You can set a list of bad words (separated by comma ,) which are not allowed in this field when user updates his profile in profile edits. Use comma twice (,,) to add comma as bad character." />
+			</params>
+		</field>
+		<field type="password" label="Password">
+			<data name="" nametype="namesuffix" type="sql:varchar(100)" null="false" default="" />
+			<params>
+				<param name="fieldMinLength" type="text" default="6" label="Minimum length" description="Minimum length of password (0 = no minimum, empty = default system minimum length)" />
+				<fieldset label="Field entry validation" description="">
+					<param name="fieldValidateExpression" type="list" default="" label="Authorized input" description="Type of input authorized.">
+								<option value="">Any string ( /.*/ ) </option>
+								<option value="atleastoneofeach">At least 6 chars, 1 a-z, 1 A-Z, 1 0-9, 1 special</option>
+								<option value="customregex">Custom PERL regular expression</option>
+					</param>
+					<if name="fieldValidateExpression" type="showhide" operator="=" value="customregex" valuetype="const:text">
+						<param name="pregexp" type="text" default="/^.*$/" label="Perl Regular Expression" description="Any string: /^.*$/ , only digits: /^[0-9]*$/, only a-z + A-Z + digits: /^[0-9a-z]*$/i" />
+					</if>
+					<if name="fieldValidateExpression" type="showhide" operator="!=" value="" valuetype="const:text">
+						<param name="pregexperror" type="text" default="Not a valid input" label="Error in case of invalid input" description="Enter a clear and helpful error message in case of validation pattern mismatch." />
+					</if>
+				</fieldset>
+				<param name="fieldValidateForbiddenList_register" type="text" default="http:,https:,mailto:,//.[url],&lt;a,&lt;/a&gt;,&amp;#" label="Forbidden words at registration" description="You can set a list of bad words (separated by comma ,) which are not allowed in this field for registration. Use comma twice (,,) to add comma as bad character." />
+				<param name="fieldValidateForbiddenList_profile" type="text" default="" label="Forbidden words in user profile edits" description="You can set a list of bad words (separated by comma ,) which are not allowed in this field when user updates his profile in profile edits. Use comma twice (,,) to add comma as bad character." />
+			</params>
+		</field>
+		<field type="image" label="Image">
+			<database version="1">
+				<table name="#__comprofiler" class="moscomprofiler" maintable="true" strict="false" drop="never" shared="true">
+					<columns>
+						<column name="" nametype="namesuffix" type="sql:varchar(255)" null="true" />
+						<column name="approved" nametype="namesuffix" type="sql:tinyint(4)" null="false" default="1" />
+					</columns>
+				</table>
+			</database>
+			<params>
+				<fieldset label="Image limits" description="If left empty, the default settings from global Community Builder configuration will be taken. Other settings, like images-library, systematic resampling and so on is done in the CB global configuration.">
+					<param name="avatarHeight" type="text" default="" label="_UE_AVHEIGHT" description="TMaximum height in pixels to which the image on the profile will be resized" />
+					<param name="avatarWidth" type="text" default="" label="_UE_AVWIDTH" description="Maximum width in pixels to which the image on the profile will be resized" />
+					<param name="avatarSize" type="text" default="" label="_UE_AVSIZE" description="Maximum size of file upload in kilobytes: recommended: 4000 for modern cameras (if your server supports that)" />
+					<param name="thumbHeight" type="text" default="" label="_UE_TNHEIGHT" description="Maximum height in pixels to which the image on a users-list be resized" />
+					<param name="thumbWidth" type="text" default="" label="_UE_TNWIDTH" description="Maximum width in pixels to which the image on a users-list be resized" />
+					<param name="avatarModerationWarning" type="spacer" label="&lt;strong&gt;WARNING&lt;/strong&gt;" default="Only the main avatar is moderated for now, other image field types are not moderated in this release." />
+				</fieldset>
+			</params>
+		</field>
+		<field type="status" label="Online Status" unique="true">
+			<database version="1">
+				<table name="#__comprofiler" class="moscomprofiler" maintable="true" strict="false" drop="never" shared="true">
+					<columns>
+					</columns>
+				</table>
+			</database>
+			<params>
+			</params>
+		</field>
+		<field type="connections" label="Connections" unique="true">
+			<database version="1">
+				<table name="#__comprofiler" class="moscomprofiler" maintable="true" strict="false" drop="never" shared="true">
+					<columns>
+					</columns>
+				</table>
+			</database>
+			<params>
+			</params>
+		</field>
+		<field type="counter" label="Counter" unique="true">
+			<data name="" nametype="namesuffix" type="sql:int(11)" unsigned="false" null="false" default="0" />
+			<params>
+			</params>
+		</field>
+		<field type="formatname" label="Formatted name" unique="true">
+			<database version="1">
+			</database>
+			<params>
+			</params>
+		</field>
+		<field type="userparams" label="User parameters" unique="true">
+			<database version="1">
+				<table name="#__users" class="mosUser" maintable="true" strict="false" drop="never" shared="true">
+					<columns>
+						<column name="params" type="sql:text" null="false" strict="false" />
+					</columns>
+				</table>
+			</database>
+			<params>
+			</params>
+		</field>
+		<field type="delimiter" label="Fields delimiter">
+			<database version="1">
+				<table name="#__comprofiler" class="moscomprofiler" maintable="true" strict="false" drop="never" shared="true">
+					<columns>
+					</columns>
+				</table>
+			</database>
+			<params>
+			</params>
+		</field>
+	</fieldtypes>
+	<database>
+	</database>
+</cbinstall>

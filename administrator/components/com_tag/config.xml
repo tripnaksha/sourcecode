@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <params>
+    <param name="@spacer" type="spacer" default="&lt;h1&gt;General Parameters&lt;/h1&gt;" label="" description="" />
+    <param name="capitalize" type="list" default="0" label="Capitalize" description="Capitalize tags before showing to user.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+	</param>
+	    <param name="lowcase" type="list" default="1" label="Convert to Lowcase" description="To lowcase tags before storing to database.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+	</param>
+	<param name="autoMetaKeywordsExtractor" type="list" default="1" label="Auto extract meta keywords as tags" description="Auto extract meta keywords as tags, only applies to new created articles.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+	</param>
+	<param name="@spacer" type="spacer" default="&lt;h1&gt;Parameters for Backend&lt;/h1&gt;" label="" description="" />
+	 <param name="tag_page_limit" type="text"  default="30" label="Tag/Term Page Limit" description="How many tags/terms to show on each page.">
+		 </param>	
+    <param name="@spacer" type="spacer" default="&lt;h1&gt;Parameters for Frontend&lt;/h1&gt;" label="" description="" />
+		<param name="page_limit" type="text" size="20" default="10" label="Page Limit" description="How many articles to show on each page.">
+		</param>	
+		<param name="layout" type="list" default="default" label="Layout" description="Front Side Layout">
+			<option value="default">List</option>
+			<option value="blog">Blog</option>
+		</param>
+		<param name="onlyIntro" type="list" default="1" label="Blog Mode" description="If you use blog layout, you can select full text mode or introduction mode.">
+			<option value="0">Full Text</option>
+			<option value="1">Only Introduction</option>
+		</param>
+		<param name="description" type="list" default="1" label="Show Tag Description" description="Show Tag Description">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>	
+		<param name="contentMeta" type="list" default="1" label="Show Content Meta" description="Show Content Meta">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="ShowArchiveArticles" type="list" default="1" label="Show Archive Articles" description="Show Archive Articles">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>	
+		<param name="Order" type="list" default="" label="Order" description="Order that the articles will be displayed in.">
+				<option value="">Default</option>
+				<option value="date">Oldest first</option>
+				<option value="rdate">Most recent first</option>
+				<option value="alpha">Title Alphabetical</option>
+				<option value="ralpha">Title Reverse-Alphabetical</option>
+				<option value="author">Author Alphabetical</option>
+				<option value="rauthor">Author Reverse-Alphabetical</option>
+				<option value="hits">Most Hits</option>
+				<option value="rhits">Least Hits</option>				
+		</param>
+	
+		 <param name="topAds" type="textarea"  rows="5" cols="40" default="" label="Top Ads Code" description="Ads code, like adsense">
+		 </param>		
+		 <param name="bottomAds" type="textarea"  rows="5" cols="40" default="" label="Bottom Ads Code" description="Ads code, like adsense">
+		 </param>	
+		 <param name="@spacer" type="spacer" default="&lt;h1&gt;Parameters for Plugin&lt;/h1&gt;" label="" description="" />
+		 <param name="TagPosition" type="list" default="0" label="Tag Position" description="Tag positions, default is show at the bottom of the content.">
+			<option value="0">Bottom</option>
+			<option value="1">Top</option>
+			<option value="2">Both</option>
+		</param>
+		<param name="FrontPageTag" type="list" default="1" label="Show Tags For FrontPage" description="Show Tags For FrontPage, Default is Yes.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>			
+		</param>	
+		<param name="BlogTag" type="list" default="1" label="Show Tags For Blog Layout" description="Show Tags For Blog Layout, Default is Yes.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>			
+		</param>
+		<param name="ShowAddTagButton" type="list" default="1" label="Show Add Tag Button" description="Show Add Tag Button for the Author.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>			
+		</param>
+		<param name="SuppresseSingleTerms" type="list" default="0" label="Suppress Single Terms" description="Suppress those terms only having one article.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>			
+		</param>	
+		<param name="HitsNumber" type="list" default="0" label="Show Hits Number" description="Show Hits Number as prompt.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>			
+		</param>
+	   <param name="MaxTagsNumber" type="text" default="10" label="Max Tags Number" description="Show the number of tags at most. When having tags more than the number, we just ignore them.">
+			
+		</param>
+		<param name="RelatedArticlesByTags" type="list" default="0" label="Show Related Articles By Tags" description="Show Related Articles By Tags.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>			
+		</param>
+		<param name="RelatedArticlesCountByTags" type="text" default="10" label="Related Articles Count" description="The number of related articles by tags.">
+			
+		</param>	
+		<param name="RelatedArticlesTitleByTags" type="text" default="Related Articles" label="Related Articles Title" description="The related articles title.">
+			
+		</param>		
+	 <param name="@spacer" type="spacer" default="&lt;h1&gt;Parameters for Import&lt;/h1&gt;" label="" description="" />
+	 <param name="IgnoeNumericTags" type="list"  default="0" label="Ignoe numeric tags" description="Ignoe numeric tags, this option only applies to tags importing.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>		
+	 </param>	
+	  <param name="MinTagLength" type="text" default="1" label="Min Tag Length" description="Ignore those tags which have less characters than this number,this option only applies to tags importing.">
+	   </param>	
+    </params>
+</config>
+ 
+  
+ 
+ 

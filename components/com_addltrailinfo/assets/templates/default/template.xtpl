@@ -1,0 +1,265 @@
+<!-- BEGIN: main -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title>{languageStrings.strLang_windowTitle}</title>
+        <link rel="stylesheet" href="../templates/{PHP._POST.template}/style.css" type="text/css">
+        <script language="javascript" type="text/javascript">
+            function setclass(obj, classname)
+            {
+
+                obj.className = classname;
+
+            }
+
+            function setprevmonth()
+            {
+
+                document.datepicker.month.value = parseInt(document.datepicker.month.value) - 1;
+                document.datepicker.submit();
+
+            }
+
+            function setnextmonth()
+            {
+
+                document.datepicker.month.value = parseInt(document.datepicker.month.value) + 1;
+                document.datepicker.submit();
+
+            }
+            
+            function setcurrentdate()
+            {
+                document.datepicker.year.value = '{currentYearcurrentMonth}';
+                document.datepicker.month.value = '{currentMonth}';
+                document.datepicker.submit();
+            }
+
+            function setdate(date)
+            {
+
+
+                if (date == true) {
+
+                    if (document.getElementById('selectedDate').value.substring(0, '{languageStrings.strLang_selectADate}'.length) != '{languageStrings.strLang_selectADate}') {
+
+                        opener.document.getElementById('{PHP._POST.controlName}').value = document.getElementById('selectedDate').value;
+
+                    } else {
+
+                        opener.document.getElementById('{PHP._POST.controlName}').value = '';
+
+                    }
+
+                    window.close();
+
+                } else if (date != '' && date != '-1') {
+
+                    if (document.getElementById('hour') && document.getElementById('minute')) {
+
+                        delimiter = date.search(/\,\s+/);
+
+                        if (delimiter != -1) {
+
+                            date = date.substr(0, delimiter)
+
+                        }
+
+                        document.getElementById('selectedDate').value = date + ", " + (document.getElementById('hour').value.length == 1 ? "0" + document.getElementById('hour').value : document.getElementById('hour').value) + ":" + (document.getElementById('minute').value.length == 1 ? "0" + document.getElementById('minute').value : document.getElementById('minute').value);
+
+                    } else {
+
+                        document.getElementById('selectedDate').value = date;
+
+                    }
+
+                } else if (date == '-1') {
+
+                    opener.document.getElementById('{PHP._POST.controlName}').value = '';
+
+                    window.close();
+
+                } else {
+
+                    document.getElementById('selectedDate').value = '{languageStrings.strLang_selectADate}';
+
+                    if (document.getElementById('hour') && document.getElementById('minute')) {
+
+                        document.getElementById('selectedDate').value += ", " + (document.getElementById('hour').value.length == 1 ? "0" + document.getElementById('hour').value : document.getElementById('hour').value) + ":" + (document.getElementById('minute').value.length == 1 ? "0" + document.getElementById('minute').value : document.getElementById('minute').value);
+
+                    }
+
+                }
+
+            }
+        </script>
+    </head>
+    <body style="margin:0px" onload="<!-- BEGIN: defaults -->setdate('{preselectedDateFormatted}')<!-- END: defaults -->">
+        <form method="post" name="datepicker" action="{formAction}">
+        <input type="hidden" name="action" value="" />
+        <input type="hidden" name="preselectedDate" value="{PHP._POST.preselectedDate}" />
+        <input type="hidden" name="selectableDatesRange" value="{PHP._POST.selectableDatesRange}" />
+        <input type="hidden" name="selectableYearsRange" value="{PHP._POST.selectableYearsRange}" />
+        <input type="hidden" name="selectableTimesRange" value="{PHP._POST.selectableTimesRange}" />
+        <input type="hidden" name="enableTimePicker" value="{PHP._POST.enableTimePicker}" />
+        <input type="hidden" name="showGoToCurrentMonthYear" value="{PHP._POST.showGoToCurrentMonthYear}" />
+        <input type="hidden" name="month" value="{PHP._POST.month}" />
+        <input type="hidden" name="year" value="{PHP._POST.year}" />
+        <input type="hidden" name="controlName" value="{PHP._POST.controlName}" />
+        <input type="hidden" name="dateFormat" value="{PHP._POST.dateFormat}" />
+        <input type="hidden" name="firstDayOfWeek" value="{PHP._POST.firstDayOfWeek}" />
+        <input type="hidden" name="language" value="{PHP._POST.language}" />
+        <input type="hidden" name="template" value="{PHP._POST.template}" />
+        <table cellspacing="1" cellpadding="0" id="container">
+            <tr>
+                <td colspan="7" id="year-container">
+                    <a href="javascript:document.datepicker.action.value = 'dec'; document.datepicker.year.value = parseInt(document.datepicker.year.value) - 1; document.datepicker.submit()" class="navigation">&laquo;</a>
+                    <!-- BEGIN: years -->
+                    <select name="years_range" class="select" onchange="document.datepicker.year.value = this.value;document.datepicker.submit()">
+                        {years}
+                    </select>
+                    <!-- END: years -->
+                    <!-- BEGIN: year -->
+                    <span class="text">&nbsp;{PHP._POST.year}&nbsp;</span>
+                    <!-- END: year -->
+                    <a href="javascript:document.datepicker.action.value = 'inc'; document.datepicker.year.value = parseInt(document.datepicker.year.value) + 1; document.datepicker.submit()" class="navigation">&raquo;</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="7">
+                    <table cellspacing="1" cellpadding="0" id="month-container">
+                        <!-- BEGIN: months_row -->
+                        <tr>
+                            <!-- BEGIN: item -->
+                            <!-- BEGIN: month_selected -->
+                            <td class="selected-month">{monthLiteral}</td>
+                            <!-- END: month_selected -->
+                            <!-- BEGIN: month -->
+                            <td class="month" onclick="document.datepicker.month.value = '{monthNumeric}';document.datepicker.submit()" onmouseover="setclass(this, 'month-hover')" onmouseout="setclass(this, 'month')">{monthLiteral}</td>
+                            <!-- END: month -->
+                            <!-- END: item -->
+                        </tr>
+                        <!-- END: months_row -->
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <!-- BEGIN: day_names -->
+                <td class="day-names">{dayName}</td>
+                <!-- END: day_names -->
+            </tr>
+            <!-- BEGIN: days_row -->
+            <tr>
+                <!-- BEGIN: day -->
+                    <!-- BEGIN: previousMonth_weekday -->
+                    <td class="day-previousMonth-weekday" onmouseover="setclass(this, 'day-previousMonth-weekday-hover')" onmouseout="setclass(this, 'day-previousMonth-weekday')" onclick="setprevmonth()">{day}</td>
+                    <!-- END: previousMonth_weekday -->
+                    <!-- BEGIN: previousMonth_weekday_preselected -->
+                    <td class="day-previousMonth-weekday-preselected" onmouseover="setclass(this, 'day-previousMonth-weekday-hover')" onmouseout="setclass(this, 'day-previousMonth-weekday-preselected')" onclick="setprevmonth()">{day}</td>
+                    <!-- END: previousMonth_weekday_preselected -->
+                    <!-- BEGIN: previousMonth_weekend -->
+                    <td class="day-previousMonth-weekend" onmouseover="setclass(this, 'day-previousMonth-weekend-hover')" onmouseout="setclass(this, 'day-previousMonth-weekend')" onclick="setprevmonth()">{day}</td>
+                    <!-- END: previousMonth_weekend -->
+                    <!-- BEGIN: previousMonth_weekend_preselected -->
+                    <td class="day-previousMonth-weekend-preselected" onmouseover="setclass(this, 'day-previousMonth-weekend-hover')" onmouseout="setclass(this, 'day-previousMonth-weekend-preselected')" onclick="setprevmonth()">{day}</td>
+                    <!-- END: previousMonth_weekend_preselected -->
+                    <!-- BEGIN: currentMonth_weekday -->
+                    <td class="day-currentMonth-weekday" onmouseover="setclass(this, 'day-currentMonth-weekday-hover')" onmouseout="setclass(this, 'day-currentMonth-weekday')" onclick="setdate('{returnValue}')">{day}</td>
+                    <!-- END: currentMonth_weekday -->
+                    <!-- BEGIN: currentMonth_weekday_preselected -->
+                    <td class="day-currentMonth-weekday-preselected" onmouseover="setclass(this, 'day-currentMonth-weekday-hover')" onmouseout="setclass(this, 'day-currentMonth-weekday-preselected')" onclick="setdate('{returnValue}')">{day}</td>
+                    <!-- END: currentMonth_weekday_preselected -->
+                    <!-- BEGIN: currentMonth_weekday_disabled -->
+                    <td class="day-currentMonth-weekday-disabled">{day}</td>
+                    <!-- END: currentMonth_weekday_disabled -->
+                    <!-- BEGIN: currentMonth_currentDay_weekday -->
+                    <td class="day-currentMonth-currentDay-weekday" onmouseover="setclass(this, 'day-currentMonth-currentDay-weekday-hover')" onmouseout="setclass(this, 'day-currentMonth-currentDay-weekday')" onclick="setdate('{returnValue}')">{day}</td>
+                    <!-- END: currentMonth_currentDay_weekday -->
+                    <!-- BEGIN: currentMonth_currentDay_weekday_preselected -->
+                    <td class="day-currentMonth-currentDay-weekday-preselected" onmouseover="setclass(this, 'day-currentMonth-currentDay-weekday-hover')" onmouseout="setclass(this, 'day-currentMonth-currentDay-weekday-preselected')" onclick="setdate('{returnValue}')">{day}</td>
+                    <!-- END: currentMonth_currentDay_weekday_preselected -->
+                    <!-- BEGIN: currentMonth_weekend -->
+                    <td class="day-currentMonth-weekend" onmouseover="setclass(this, 'day-currentMonth-weekend-hover')" onmouseout="setclass(this, 'day-currentMonth-weekend')" onclick="setdate('{returnValue}')">{day}</td>
+                    <!-- END: currentMonth_weekend -->
+                    <!-- BEGIN: currentMonth_weekend_preselected -->
+                    <td class="day-currentMonth-weekend-preselected" onmouseover="setclass(this, 'day-currentMonth-weekend-hover')" onmouseout="setclass(this, 'day-currentMonth-weekend-preselected')" onclick="setdate('{returnValue}')">{day}</td>
+                    <!-- END: currentMonth_weekend_preselected -->
+                    <!-- BEGIN: currentMonth_weekend_disabled -->
+                    <td class="day-currentMonth-weekend-disabled">{day}</td>
+                    <!-- END: currentMonth_weekend_disabled -->
+                    <!-- BEGIN: currentMonth_currentDay_weekend -->
+                    <td class="day-currentMonth-currentDay-weekend" onmouseover="setclass(this, 'day-currentMonth-currentDay-weekend-hover')" onmouseout="setclass(this, 'day-currentMonth-currentDay-weekend')" onclick="setdate('{returnValue}')">{day}</td>
+                    <!-- END: currentMonth_currentDay_weekend -->
+                    <!-- BEGIN: currentMonth_currentDay_weekend_preselected -->
+                    <td class="day-currentMonth-currentDay-weekend-preselected" onmouseover="setclass(this, 'day-currentMonth-currentDay-weekend-hover')" onmouseout="setclass(this, 'day-currentMonth-currentDay-weekend-preselected')" onclick="setdate('{returnValue}')">{day}</td>
+                    <!-- END: currentMonth_currentDay_weekend_preselected -->
+                    <!-- BEGIN: nextMonth_weekday -->
+                    <td class="day-nextMonth-weekday" onmouseover="setclass(this, 'day-nextMonth-weekday-hover')" onmouseout="setclass(this, 'day-nextMonth-weekday')" onclick="setnextmonth()">{day}</td>
+                    <!-- END: nextMonth_weekday -->
+                    <!-- BEGIN: nextMonth_weekday_preselected -->
+                    <td class="day-nextMonth-weekday-preselected" onmouseover="setclass(this, 'day-nextMonth-weekday-hover')" onmouseout="setclass(this, 'day-nextMonth-weekday-preselected')" onclick="setnextmonth()">{day}</td>
+                    <!-- END: nextMonth_weekday_preselected -->
+                    <!-- BEGIN: nextMonth_weekend -->
+                    <td class="day-nextMonth-weekend" onmouseover="setclass(this, 'day-nextMonth-weekend-hover')" onmouseout="setclass(this, 'day-nextMonth-weekend')" onclick="setnextmonth()">{day}</td>
+                    <!-- END: nextMonth_weekend -->
+                    <!-- BEGIN: nextMonth_weekend_preselected -->
+                    <td class="day-nextMonth-weekend-preselected" onmouseover="setclass(this, 'day-nextMonth-weekend-hover')" onmouseout="setclass(this, 'day-nextMonth-weekend-preselected')" onclick="setnextmonth()">{day}</td>
+                    <!-- END: nextMonth_weekend_preselected -->
+                <!-- END: day -->
+            </tr>
+            <!-- END: days_row -->
+            <!-- BEGIN: timepicker -->
+            <tr>
+                <td colspan="7" id="timepicker-container">
+                    <table cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td>
+                                <img src="../templates/{PHP._POST.template}/img/time.jpg" style="margin: 0px 4px 0px 0px">
+                            </td>
+                            <td>
+                                <select name="hour" class="select" id="hour" onchange="setdate(document.datepicker.selectedDate.value)">
+                                    {hours}
+                                </select>
+                            </td>
+                            <td class="time">
+                            :
+                            </td>
+                            <td>
+                                <select name="minute" class="select" id="minute" onchange="setdate(document.datepicker.selectedDate.value)">
+                                    {minutes}
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- END: timepicker -->
+            <tr>
+                <td colspan="7" id="time-container">
+                    <input type="text" id="selectedDate" name="selectedDate" class="date" value="{PHP._POST.selectedDate}" readonly="readonly"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="7">
+                    <table cellspacing="0" cellpadding="0" style="height:100%;width:100%">
+                        <tr>
+                            <td class="confirm-button" onclick="setdate(true)" onmouseover="setclass(this, 'confirm-button-hover')" onmouseout="setclass(this, 'confirm-button')">
+                                {languageStrings.strLang_confirm}
+                            </td>
+                            <td class="clear-button" onclick="setdate('-1')" onmouseover="setclass(this, 'clear-button-hover')" onmouseout="setclass(this, 'clear-button')">
+                                {languageStrings.strLang_clearDate}
+                            </td>
+                            <!-- BEGIN: gotocurrent -->
+                            <td class="current-button" onclick="setcurrentdate()" onmouseover="setclass(this, 'current-button-hover')" onmouseout="setclass(this, 'current-button')">
+                                {languageStrings.strLang_gotoCurrent}
+                            </td>
+                            <!-- END: gotocurrent -->
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>
+<!-- END: main -->

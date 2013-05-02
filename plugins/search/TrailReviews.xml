@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="search">
+	<name>Search - Trail Reviews</name>
+	<author>Ajay Reddy</author>
+	<creationDate>February 2009</creationDate>
+	<copyright>Copyright (C) 2009 - 2008 Ajay Reddy. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>ajyrds@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0</version>
+	<description>
+		Allows searching for all trail reviews
+	     Order of installation -
+		 com_savetrail
+		 com_searchTrails - drops _trailReview, _trailList and then creates _trailList
+		 com_searchTrailReviews
+		 plgContentSearchReview - drops _trailReview and then creates _trailReview
+		 com_contentsubmit_mod - uses _trailReview
+		 com_trailDisplay - js functions use _trailReview and _trailList
+		 plgSearchTrailReviews - uses _trailReview
+	</description>
+	<files>
+		<filename plugin="TrailReviews">TrailReviews.php</filename>
+	</files>
+	<params>
+		<param name="search_limit" type="text" size="5" default="50" label="Search Limit" description="Number of Search items to return"/>
+	</params>
+</install>

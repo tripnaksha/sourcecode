@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin"  group="authentication">
+	<name>Authentication - GMail (Fixed by StudioAMK.com)</name>
+	<author>Joomla! Project / Studio AMK</author>
+	<creationDate>Oct 2008</creationDate>
+	<copyright>Copyright (C) StudioAMK 2008.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>studioamk@gmail.com</authorEmail>
+	<authorUrl>www.studioamk.com</authorUrl>
+	<version>1.0</version>
+	<description>Handles user authentication with a GMail account (someone@gmail.com or someone@googlemail.com). </description>
+	<files>
+		<filename plugin="studioamkgmail">studioamkgmail.php</filename>
+	</files>
+	<params />
+</install>

@@ -1,0 +1,86 @@
+<php_start_tag>
+/**
+ * SEF module for Joomla!
+ *
+ * This is an example file demonstrating how to write own extensions for Artio JoomSEF.
+ *
+ * @author      $Author: michal $
+ * @copyright   ARTIO s.r.o., http://www.artio.cz
+ * @package     JoomSEF
+ * @version     $Name$, ($Revision: 4994 $, $Date: 2005-11-03 20:50:05 +0100 (??t, 03 XI 2005) $)
+ */
+
+// Security check to ensure this file is being included by a parent file.
+if (!defined('_VALID_MOS')) die('Direct Access to this location is not allowed.');
+
+/**
+ * Note 1: This file shoud be named as com_YOUR-COMPONENT-NAME.php in order to work correctly.
+ */
+
+/**
+ * Use this to get variables from the original Joomla! URL, such as $task, $page, $id, $catID, ...
+ */
+extract($vars);
+
+/**
+ * Now compose your SEF path.
+ * Store the path parts in an array. Further named $fields in this example.
+ *
+ * To compose the path, you will probably need to call your module funcitons (methods) or connect
+ * to the tables used by your module.
+ */
+
+// This example loads category title from Joomlaboard forum (in case $catid is defined after export call).
+if (isset($catid)) {
+    $query = "
+		SELECT `name`
+		FROM `#__$message_cat_table_suffix`
+		WHERE `id` = $catid
+		";
+    $database->setQuery($query);
+    $catTitle = $database->loadResult();
+}
+
+// Now category title loaded from DB is added as the first part of the future SEF path.
+if (!empty($catTitle)) {
+    $title[] = $catTitle;
+    // Unset the original URL variable not to interfere anymore.
+    unset($vars['catid']);
+}
+
+// This example loads message title from Joomlaboard forum (in case $id is defined after export call).
+if (isset($id)) {
+    $query = "
+		SELECT `subject`
+		FROM `#__$message_table_suffix`
+		WHERE `id` = $id
+		";
+    $database->setQuery($query);
+    $msgTitle = $database->loadResult();
+}
+
+// Now message title read from DB is added as the next part of the SEF path.
+if (!empty($msgTitle)) {
+    $title[] = $msgTitle;
+    // Unset the original URL variable not to interfere anymore.
+    unset($vars['id']);
+}
+
+// ... further parts may be added here ... //
+
+/**
+ * Finally, at the end of this file, call JoomSEF::sefGetLocation method to generate and store resulting URL.
+ *
+ * $string  - original URL which comes automatically (do not change this)
+ * $title   - your SEF path (array of single parts)
+ * $task    - if not empty (null), the task string will be appended to resulting SEF URL,
+ *            e.g. if task=read, the result URL will be your/parts/read(suffix)
+ */
+if (count($title) > 0) {
+    $string = JoomSEF::sefGetLocation($string, $title, $task, (isset($limit) ? @$limit : null), (isset($limitstart) ? @$limitstart : null), (isset($lang) ? @$lang : null));
+}
+
+/**
+ * And that is all folks!
+ */
+<php_end_tag>

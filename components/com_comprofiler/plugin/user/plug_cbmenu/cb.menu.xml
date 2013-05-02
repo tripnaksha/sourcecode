@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cbinstall version="1.0" type="plugin" group="user">
+	<name>CB Menu</name>
+	<author>Beat</author>
+	<creationDate>2009-01-26</creationDate>
+	<copyright>(C) 2005-2009 joomlapolis.com and parts proprietary with Community Builder license</copyright>
+	<license>parts: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL version 2 and parts proprietary with Community Builder license</license>
+	<authorEmail>beat@joomlapolis.com</authorEmail>
+	<authorUrl>www.joomlapolis.com</authorUrl>
+	<version>1.2</version>
+	<description>Core CB Menu and User Status tabs.</description>
+	<files>
+		<filename plugin="cb.menu">cb.menu.php</filename>
+		<filename>index.html</filename>
+	</files>
+    <params>	
+		<param name="@spacer" type="spacer" default="Display Settings" label="User Profile Menu :" description="" />
+		<param name="menuFormat" type="list" default="menuBar" label="Menu display type" description="Menu can be displayed as a menubar, a list of menu links, or not displayed in this tab.">
+			<option value="menuBar">Menu Bar</option>
+			<option value="menuList">Menu List table 2 columns</option>
+			<option value="menuDivs">Menu List table 1 column</option>
+			<option value="menuUL">Menu List ul-li-spans</option>
+			<option value="no">No Display</option>
+		</param>
+		<param name="statusFormat" type="list" default="menuList" label="Status display type" description="Status can be displayed as a list or not displayed in this tab.">
+			<option value="menuList">Menu List table 2 columns</option>
+			<option value="menuDivs">Menu List table 1 column</option>
+			<option value="menuUL">Status List ul-li-spans</option>
+			<option value="no">No Display</option>
+		</param>
+    </params>
+	<tabs>
+		<tab name="_UE_MENU" description="" class="getMenuTab" fields="0" position="cb_head" displaytype="html" ordering="-6" enabled="1" sys="3">
+			<params>
+			    <param name="@spacer" type="spacer" default="see Plugins: Menu: Parameters" label="Menu Settings :" description="" />
+			    <param name="@spacer" type="spacer" default="" label="" description="" />
+			    <param name="@spacer" type="spacer" default="Settings" label="Heading Menu :" description="" />
+				<param name="firstMenuName" type="text" size="12" default="_UE_MENU_CB" label="First Menu Name" description="First menu name before &quot;Edit&quot;. Default is &quot;Community&quot; = _UE_MENU_CB. Leave empty to not appear." />
+				<param name="firstSubMenuName" type="text" size="12" default="_UE_MENU_ABOUT_CB" label="First Sub-Menu Name" description="First sub-menu name. Default is &quot;About Community Builder...&quot; = _UE_MENU_ABOUT_CB. Leave empty to not appear." />
+				<param name="firstSubMenuHref" type="text" size="20" default="index.php?option=com_comprofiler&amp;task=teamCredits" label="First Sub-Menu URL" description="First sub-menu URL. Default is index.php?option=com_comprofiler&amp;task=teamCredits" />
+				<param name="secondSubMenuName" type="text" size="12" default="" label="Second Sub-Menu Name" description="First sub-menu name. Leave empty to not appear." />
+				<param name="secondSubMenuHref" type="text" size="20" default="" label="Second Sub-Menu URL" description="Second sub-menu URL." />
+			</params>
+			<fields>
+			</fields>
+		</tab>
+		<tab name="_UE_USER_STATUS" description="" class="getStatusTab" fields="0" position="cb_right" displaytype="html" ordering="-5" enabled="1" sys="3">
+			<params>
+			    <param name="@spacer" type="spacer" default="Display Settings: Hits, Online, Member since, last online, last updated on have moved to core Community Builder fields, see fields management." label="User Profile Status :" description="" />
+			    <param name="@spacer" type="spacer" default="see Plugin: Connections: Parameters" label="Connections Settings :" description="" />
+				<param name="@spacer" type="spacer" default="see Field: Connections: Parameters" label="Connections Status Settings :" description="" />
+			</params>
+			<fields>
+			</fields>
+		</tab>
+	</tabs>
+	<database>
+	</database>
+</cbinstall>

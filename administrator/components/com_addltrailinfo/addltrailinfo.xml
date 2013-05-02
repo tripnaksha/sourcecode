@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5.0" type="component">
+     <name>Addl Trail Info</name>
+	 <author>Ajay Reddy</author>
+	 <creationDate>March 2010</creationDate>
+	 <copyright>Copyright (C) 2008 - 2010 Ajay Reddy. All rights reserved.</copyright>
+	 <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	 <authorEmail>ajay@tripnaksha.com</authorEmail>
+	 <authorUrl></authorUrl>
+	 <version>1.0</version>
+     <description>
+	     Save additional details of trail.
+     </description>
+
+     <files>
+          <filename>index.html</filename>
+          <filename>addltrailinfo.php</filename>
+          <filename>helper.php</filename>
+          <filename>assets/index.html</filename>
+          <filename>assets/class.datepicker.php</filename>
+          <filename>assets/css/index.html</filename>
+          <filename>assets/css/trailinfo.css</filename>
+          <filename>assets/images/index.html</filename>
+          <filename>assets/images/calendar.png</filename>
+          <filename>assets/includes/index.html</filename>
+          <filename>assets/includes/class.xtemplate.php</filename>
+          <filename>assets/includes/datepicker.php</filename>
+          <filename>assets/languages/index.html</filename>
+          <filename>assets/languages/english.php</filename>
+          <filename>assets/templates/index.html</filename>
+          <filename>assets/templates/default/style.css</filename>
+          <filename>assets/templates/default/index.html</filename>
+          <filename>assets/templates/default/template.xtpl</filename>
+          <filename>assets/templates/default/img/time.jpg</filename>
+     </files>
+
+    <install>
+      <queries>
+	        <!--query>
+	        DROP TABLE IF EXISTS `#__trailAddlInfo`;
+	        </query>
+	        <query>
+	        DROP TABLE IF EXISTS `#__trailType`;
+	        </query-->
+	        <query>
+			CREATE TABLE IF NOT EXISTS #__trailAddlInfo (
+			`id` int(11) NOT NULL auto_increment,
+			`type` varchar(40) NOT NULL,
+			`descr` longtext NOT NULL,
+			`difficulty` tinyint,
+			`planned` varchar(100) NOT NULL,
+			`startdate` TIMESTAMP NOT NULL,
+			`enddate` TIMESTAMP NOT NULL,
+			`duration` int(11) NOT NULL,
+			PRIMARY KEY (`id`)
+			)
+	        </query>
+		<query>
+			CREATE TABLE IF NOT EXISTS `#__trailType`(
+			`id` integer NOT NULL AUTO_INCREMENT,
+			`type` varchar(40) NOT NULL,
+			`description` varchar(200) NOT NULL,
+			`published` tinyint NOT NULL DEFAULT '1',
+			PRIMARY KEY (`id`)
+			)
+		</query>
+      </queries>
+    </install>
+
+    <administration>
+       <!--menu >Front Page 2</menu-->
+       <files>
+              <filename component="admin.addltrailinfo">admin.addltrailinfo.php</filename>
+       </files>
+     </administration>
+</install>

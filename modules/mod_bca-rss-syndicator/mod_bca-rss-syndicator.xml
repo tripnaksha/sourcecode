@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+  <name>BCA RSS Syndicator</name>
+  <creationDate>October 2008</creationDate>
+  <author>HungLV</author>
+  <copyright>Body Health Debate</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>vhungxaz@gmail.com</authorEmail>
+  <authorUrl></authorUrl>
+  <version>1.5.7.4</version>
+  <description>Use this module to display your feed buttons</description>
+  <files>
+    <filename module="mod_bca-rss-syndicator">mod_bca-rss-syndicator.php</filename>
+	<filename module="mod_bca-rss-syndicator">helper.php</filename>
+	<filename module="mod_bca-rss-syndicator">index.html</filename>
+	<folder module="mod_bca-rss-syndicator">tmpl/</folder>	
+  </files>
+  <params>
+    <param name="msg" type="text" size="50" default="" label="Message" description="Enter the header message for the module here." />
+    <param name="feedid" type="text" size="50" default="*" label="Feed id(s)" description="Feed id separated by a , without space. A * will display all feeds." />
+    <param name="align" type="list" default="left" label="Align" description="Alignment of the module.">
+      <option value="center">Center</option>
+      <option value="left">Left</option>
+      <option value="right">Right</option>
+    </param>
+    <param name="link_to_feed_icon" type="radio" default="1" label="Link to feed icon" description="Add the RSS feed icon to the header when module published.">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+    </param>
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+	<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+  </params>
+</install>
+

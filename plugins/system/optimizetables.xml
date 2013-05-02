@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system" method="upgrade">
+	<name>System - OptimizeTables</name>
+	<author>smart</author>
+	<creationDate>12/02/2009</creationDate>
+	<copyright>(C) 2006-2009, Joomlaportal.ru. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>joomlaportal.ru@gmail.com</authorEmail>
+	<authorUrl>http://joomlaportal.ru</authorUrl>
+	<version>2.0</version>
+	<description>Plugin runs daily optmization databse table</description>
+	<files>
+		<filename plugin="optimizetables">optimizetables.php</filename>
+	</files>
+	<params>
+		<param name="time" type="text" default="00:00:00" label="Optimization Time" description="Set time to start database optimization" />
+		<param name="nextOptimization" type="text" default="" label="Next Optimization" description="Don't set this parameter value - it updated automatically from plugin" />
+	</params>
+</install>

@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+/* File Upload CSS Document */
+
+.uploadbutton {
+    margin-right: 4px;
+    width: 126px;
+    height: 27px;
+    text-align: center;
+    line-height: 27px;
+    font-weight: bold;
+    color: #333;
+    background: url(images/button.png) 0 0 no-repeat;
+    border: none;
+    cursor: pointer;
+}
+.formUploadContainer {
+    background: #ffffcc url(images/upload.png) no-repeat 8px 12px;
+    margin:10px 0px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 10px 10px 40px;
+    color: #000;
+}
+.formUpload {
+    width: 100%;
+}
+div.alert {
+    background: #fff8cf url(images/alert-icon.gif) no-repeat 9px 8px;
+    border-top: 2px solid #e0ce62;
+    border-bottom: 2px solid #e0ce62;
+    margin:10px 0px;
+    padding: 10px 10px 10px 40px;
+    color: #64591b;
+    text-align: left;
+    font-weight: normal;
+}
+
+/* estilos del gestor de archivos */
+
+.Uploadmanager {
+    width: 100%;
+    border-top: 1px solid #ccc;
+}
+.Uploadmanagerfile {
+    color: #666;
+    width:50%;
+}
+.Uploadmanagersize {
+    color: #666;
+}
+.Uploadmanagericon {
+    text-align: right;
+}
+.Uploadrefresh {
+    margin-top: 10px;
+    margin-bottom:10px;
+    width:100%;
+    text-align:right;
+}

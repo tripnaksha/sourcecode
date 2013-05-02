@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system">
+	<name>System - Google Ajax library</name>
+	<author>JoeGuo</author>
+	<creationDate>July 2007</creationDate>
+	<copyright>Copyright http://www.eboga.org All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>Joeguo@gmail.com</authorEmail>
+	<authorUrl>http://eboga.org</authorUrl>
+	<version>1.2</version>
+	<description>Host your javascript lib on Google server, includes mootools, prototye,JQuery etc.</description>
+	<files>	
+     <filename plugin="GoogleAjaxLib">GoogleAjaxLib.php</filename>
+	</files>
+	<params>
+	  <param name="ReplaceMootools" type="radio" default="1" label="Replace Mootools" description="Use Mootools.js from Google.">
+  	    	<option value="0">No</option>
+  	    	<option value="1">Yes</option>
+    	</param>
+     <param name="MootoolsName" type="text" default="mootools.js" label="Mootools File Name" description="Default is mootools.js, your site may have a name of mootools.pack.js etc, please verify."/>
+      <param name="MootoolsVersion" type="text" default="1.11" label="Mootools Version" description="Which Mootools version to load from Google? Default is 1.11."/>  
+        
+      <param name="ReplaceJQuery" type="radio" default="0" label="Replace JQuery" description="Use jquery.js from Google.">
+  	    	<option value="0">No</option>
+  	    	<option value="1">Yes</option>
+    	</param>
+      <param name="JQueryVersion" type="text" default="1.2.6" label="JQuery Version" description="Which JQuery version to load from Google? Default is 1.2.6"/>    
+      <param name="JQueryName" type="text" default="jquery.js" label="JQuery File Name" description="Default is jquery.js, your site may have a name of jquery.1.2.6.js or jquery.min.js etc, please verify."/>
+  
+   
+    <param name="ReplacePrototype" type="radio" default="0" label="Replace Prototype" description="Use prototype.js from Google.">
+  	    	<option value="0">No</option>
+  	    	<option value="1">Yes</option>
+    </param>
+    <param name="PrototypeVersion" type="text" default="1.6.0.3" label="Prototype Version" description="Which Prototype version to load from Google? Default is 1.6.0.3"/>  
+   <param name="PrototypeName" type="text" default="prototype.js" label="Prototype File Name" description="Default is prototype.js, your site's prototye may have different name, please verify."/>
+   
+   <param name="ReplaceYUI" type="radio" default="0" label="Replace YUI" description="Use Yahoo! User Interface Library (YUI) from Google.">
+  	    	<option value="0">No</option>
+  	    	<option value="1">Yes</option>
+    </param>
+    <param name="YUIVersion" type="text" default="2.7.0" label="YUI Version" description="Which YUI version to load from Google? Default is 2.7.0"/>  
+    <param name="YUIName" type="text" default="yuiloader.js" label="YUI File Name" description="Default is yuiloader.js, your site's YUI may have different name, please verify."/>
+    
+   
+    <param name="ReplaceSWFObject" type="radio" default="0" label="Replace SWFObject" description="Use SWFObject from Google.">
+  	    	<option value="0">No</option>
+  	    	<option value="1">Yes</option>
+    </param>
+    <param name="SWFObjectVersion" type="text" default="2.2" label="SWFObject Version" description="Which SWFObject version to load from Google? Default is 2.2"/>  
+  <param name="SWFObjectName" type="text" default="swfobject.js" label="SWFObject File Name" description="Default is swfobject.js, your site's SWFObject may have different name, please verify."/>
+ 
+   </params>
+</install>

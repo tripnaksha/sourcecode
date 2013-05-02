@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<install version="1.5" type="sef_ext">
+	<name>Banners</name>
+	<author>ARTIO s.r.o.</author>
+	<creationDate>7. October 2009</creationDate>
+	<copyright>ARTIO s.r.o.</copyright>
+	<license>Copyrighted - http://www.artio.net/joomsef/licence-ext</license>
+	<authorEmail>info@artio.net</authorEmail>
+	<authorUrl>www.artio.net</authorUrl>
+	<version>2.0.2</version>
+	<description>Adds SEO support for Banners component.</description>
+	<files>
+		<filename sef_ext="banners">com_banners.php</filename>
+	</files>
+	<params>
+ 		<param name="banner_alias" type="list" default="global" label="Banner URL part" description="Banner URL part">
+ 		  <option value="global">Use global config</option>
+ 		  <option value="title">Title</option>
+ 		  <option value="alias">Alias</option>
+ 		</param>
+ 		<param name="banner_id" type="radio" default="0" label="Add banner ID to URL" description="Add banner ID to URL">
+ 		  <option value="0">No</option>
+ 		  <option value="1">Yes</option>
+ 		</param>
+	</params>
+</install>

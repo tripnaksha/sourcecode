@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system">
+  <name>System - ARTIO JoomSEF</name>
+  <author>ARTIO s.r.o.</author>
+  <creationDate>5. February 2010</creationDate>
+  <copyright>ARTIO s.r.o.</copyright>
+  <license>http://www.artio.net/en/joomsef/artio-joomsef-license-and-pricing</license>
+  <authorEmail>info@artio.net</authorEmail>
+  <authorUrl>www.artio.net</authorUrl>
+  <version>3.3.2</version>
+  <description></description>
+  <files>
+    <filename plugin="joomsef">joomsef.php</filename>
+  </files>
+  <params>
+     <param name="enable_metadata" type="radio" default="1" label="Enable MetaData generation" description="If enabled, JoomSEF will generate the metadata according to your custom URLs setting.">
+       <option value="1">Yes</option>
+       <option value="0">No</option>
+     </param>
+     <param name="prefer_joomsef_title" type="radio" default="1" label="Prefer JoomSEF titles" description="Prefer page title created by JoomSEF or the Joomla one.">
+       <option value="1">Yes</option>
+       <option value="0">No</option>
+     </param>
+     <param name="use_sitename" type="list" default="2" label="Use sitename in page titles" description="Defines how the sitename from global configuration is used in page titles.">
+       <option value="1">Yes - before page title</option>
+       <option value="2">Yes - after page title</option>
+       <option value="0">No</option>
+     </param>     
+     <param name="sitename_sep" type="text" default="-" label="Sitename separator" description="String used to separate page title and sitename." />
+     <param name="rewrite_keywords" type="radio" default="1" label="Rewrite keywords" description="Rewrite existing Joomla! keywords with the ones defined in JoomSEF or append them?">
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+     </param>
+    <param name="rewrite_description" type="radio" default="1" label="Rewrite description" description="Rewrite existing Joomla! description with the one defined in JoomSEF or append it?">
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+     </param>
+     <param name="prevent_dupl" type="radio" default="1" label="Prevent sitename duplicity" description="When sitename is same as pagename, prevent duplicity?">
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+     </param>
+     <param name="check_base_href" type="list" default="1" label="Set page base href value" description="Overwrite Joomla's base href setting value? Use e.g. when images dissapear with SEO URLs turned on.">
+       <option value="1">Yes - always use only base URL</option>
+       <option value="2">Yes - always use full SEO URL</option>
+       <option value="3">No - disable base href generation</option>
+       <option value="0">No - leave original</option>
+     </param>
+  </params>
+</install>

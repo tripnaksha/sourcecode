@@ -1,0 +1,108 @@
+@CHARSET "UTF-8";
+
+/** tagpanel settings **/
+#tagpanel div.icon {
+	text-align: center;
+	margin-right: 20px;
+	float: left;
+	margin-bottom: 15px;
+}
+
+#tagpanel div.icon a {
+	display: block;
+	float: left;
+	border: 1px solid #f0f0f0;
+	height: 107px;
+	width: 138px;
+	color: #666;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+#tagpanel div.icon a:hover {
+	border-left: 1px solid #eee;
+	border-top: 1px solid #eee;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: #f9f9f9;
+	color: #0B55C4;
+}
+
+#tagpanel img {
+	padding: 10px 0;
+	margin: 0 auto;
+}
+
+#tagpanel span {
+	display: block;
+	text-align: center;
+}
+
+#tagversion {
+	display: block;
+	text-align: center;
+	border: 1px solid #eee;
+	color: #666;
+	margin-top: 10px;
+}
+
+#tagversion th {
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #ccc;
+	font: normal;
+	color: #666;
+	height: 30px;
+}
+
+#tagversion td {
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #eee;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #ccc;
+	height: 25px;
+}
+
+/* For icons */
+.icon-48-tag {
+	background-image: url(../images/tag_logo48.png);
+}
+
+.icon-16-tag {
+	background-image: url(../images/icon-16-tag.png);
+}
+
+.icon-32-admin {
+	background-image: url(../images/tag_admin32.png);
+}
+
+/************************************** 
+*Warnings 
+***************************************/
+div.warning {
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+div.warning h1 {
+	line-height: normal;
+	font-size: 200%;
+	font-weight: bold;
+	text-align: center;
+	color: red;
+}
+
+div.warning h2 {
+	line-height: normal;
+	font-size: 150%;
+	font-weight: bold;
+}
+
+/***************************************************************
+*Add Tags
+*******************************************************************/
+.button2-left .add_Tags {
+	background: url(../images/addTags.png) 100% 0
+		no-repeat;
+}

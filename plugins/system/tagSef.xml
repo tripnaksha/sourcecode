@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system">
+	<name>System - Tag SEF</name>
+	<author>Joomla! Project</author>
+	<creationDate>December 2007</creationDate>
+	<copyright>Copyright (C) 2005 - 2008 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>joomlatags@gmail.com</authorEmail>
+	<authorUrl>www.joomlatags.org</authorUrl>
+	<version>1.3</version>
+	<description>TagSef will build a search engine friendly url, which is also human friendly.</description>
+	<files>
+		<filename plugin="tagSef">tagSef.php</filename>
+	</files>
+	<params/>
+</install>

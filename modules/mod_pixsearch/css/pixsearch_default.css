@@ -1,0 +1,68 @@
+.pixsearch{
+	float:right;
+	position:relative;
+	padding-top:5px;
+	padding-right:8%;
+	font-family: Tahoma, Arial, sans-serif;
+	line-height: 1.3em;
+}
+#ps_search_str{
+	width: 100px;
+	float:right;
+	background-color: #accd48;
+	color: #707070;
+}
+#ps_search_btn{
+	width: 30px;
+	float: right;
+	text-align: center;
+	background-color: #5d7021;
+	color: #CCCCCC;
+}
+#ps_results{
+	z-index: 10000;
+	position: absolute;
+	width: 300px;
+	float:right;
+	background-color: #FFF;
+	text-align: left;
+	visibility: hidden;
+	margin-right:500px;
+}
+.ps_results{
+	border: 4px #EEE solid;
+	float:right;
+}
+#ps_results #ps_link{
+	float: right;
+	padding-right: 5px;
+}
+#ps_results .ps_header{
+	font-weight: bold;
+	font-size: 14px;
+	background-color: #EEE;
+	padding: 4px;
+}
+#ps_results h3{
+	color: #000;
+	padding-bottom: 3px;
+}
+#ps_results span{
+	line-height: 100%;
+}
+#ps_results .ps_row_1{
+	border-top: 2px #EEE solid;
+	background-color: #FFF;
+	padding: 5px;
+}
+#ps_results .ps_row_2{
+	border-top: 2px #EEE solid;
+	background-color: #FFF;
+	padding: 5px;
+}
+#ps_results .ps_row_btm{
+	font-weight: bold;
+	font-size: 14px;
+	background-color: #EEE;
+	padding: 4px;
+}

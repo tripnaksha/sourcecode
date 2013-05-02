@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cbinstall version="1.0" type="plugin" group="user">
+	<name>CB Mambo Mapper Tab</name>
+	<author>ajyrds</author>
+	<creationDate>2009-10-12</creationDate>
+	<copyright>(C) 2005-2009 tripnaksha.com</copyright>
+	<license>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL version 2</license>
+	<authorEmail>ajay@tripnaksha.com</authorEmail>
+	<authorUrl>www.tripnaksha.com</authorUrl>
+	<version>1.2</version>
+	<description>Provides an User Tab that shows all trails mapped by the user.</description>
+	<files>
+		<filename plugin="cb.mappertab">cb.mappertab.php</filename>
+		<filename>index.html</filename>
+	</files>
+    <params>
+    </params>
+    <tabs>
+    	<tab name="_UE_MAPPERTAB" description="" class="getMapperTab" cbfields="0">
+			<params>
+			</params>
+			<fields>
+			</fields>
+		</tab>
+    </tabs>
+    <install>
+    	<queries>
+    	</queries>
+    </install>
+    <uninstall>
+        <queries>
+    	</queries>
+    </uninstall>
+	<database>
+	</database>
+</cbinstall>

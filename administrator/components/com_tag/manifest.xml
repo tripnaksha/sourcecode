@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5" method="upgrade">
+  <name>Tag</name>
+  <creationDate>2009-2-11</creationDate>
+  <author>joomlatags.org</author>
+  <copyright>This component is released under the GNU/GPL License</copyright>
+  <authorEmail>joomlatags@gmail.com</authorEmail>
+  <authorUrl>http://www.joomlatags.org</authorUrl>
+  <version>1.3.0</version>
+  <license>GNU/GPL</license>
+  <description><![CDATA[<h2>A real free tag system for joomla!</h2>]]> </description>
+
+  <installfile>install.joomlatags.php</installfile>
+ <uninstallfile>uninstall.joomlatags.php</uninstallfile>
+  <install>
+    <sql folder="component/admin/sql">
+      <file driver="mysql" charset="utf8">install.joomlatags.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <sql  folder="component/admin/sql">
+      <file driver="mysql" charset="utf8">uninstall.joomlatags.sql</file>
+    </sql>
+  </uninstall>
+
+	
+  <languages folder="component/site/language">
+		<language tag="en-GB">en-GB.com_tag.ini</language>
+		<language tag="zh-CN">zh-CN.com_tag.ini</language>
+	</languages>
+  <files folder="component/site">
+	<filename>controller.php</filename>		
+	<filename>index.html</filename>
+	<filename>router.php</filename>
+        <filename>tag.php</filename>
+        <folder>views</folder>
+	<folder>models</folder>	  
+        <folder>helper</folder>	
+	<folder>css</folder>		   
+	<folder>images</folder>	 
+  </files>
+   <administration>	
+    <menu img="components/com_tag/images/logo.png">Joomla Tags</menu> 
+    	<languages folder="component/admin/language">
+			<language tag="en-GB">en-GB.com_tag.ini</language>
+			<language tag="zh-CN">zh-CN.com_tag.ini</language>
+		</languages>
+    <files folder="component/admin">
+        <filename>controller.php</filename>
+      	<filename>admin.tag.php</filename>
+      	<filename>config.xml</filename>
+        <filename>index.html</filename>
+        <folder>views</folder>
+	<folder>models</folder>	  
+        <folder>controllers</folder>	
+	<folder>css</folder>		   
+	<folder>images</folder>	      
+    </files>
+	 <files folder="component/admin/sql">
+	    <filename>install.joomlatags.sql</filename>
+	    <filename>uninstall.joomlatags.sql</filename>
+    </files>
+</administration>
+
+  <params/>
+	
+  <modules>
+		<module module="mod_latestTags" title="Latest Tags" position='left' order="0" client="site">
+			<files folder="modules/mod_latestTags">
+				<folder>tmpl</folder>
+
+				<file>helper.php</file>
+				<file>index.html</file>
+				<file>mod_latestTags.php</file>
+				<file>mod_latestTags.xml</file>
+			</files>
+			  <languages/>
+			<media />
+		</module>
+		<module module="mod_mostPopularTags" title="Most Popular Tags"   position='left' order="0"  client="site">
+			<files folder="modules/mod_mostPopularTags">
+				<folder>tmpl</folder>
+				<file>helper.php</file>
+				<file>index.html</file>
+				<file>mod_mostPopularTags.php</file>
+				<file>mod_mostPopularTags.xml</file>
+			</files>
+                       <languages/>
+			<media />
+		</module>	
+		<module module="mod_mostReadTags" title="Most Read Tags"   position='left' order="0"  client="site">
+			<files folder="modules/mod_mostReadTags">
+				<folder>tmpl</folder>
+				<file>helper.php</file>
+				<file>index.html</file>
+				<file>mod_mostReadTags.php</file>
+				<file>mod_mostReadTags.xml</file>
+			</files>
+		   <languages/>
+			<media />
+		</module>	
+		<module module="mod_randomTags" title="Random Tags"   position='left' order="0"  client="site">
+			<files folder="modules/mod_randomTags">
+				<folder>tmpl</folder>
+				<file>helper.php</file>
+				<file>index.html</file>
+				<file>mod_randomTags.php</file>
+				<file>mod_randomTags.xml</file>
+			</files>
+		   <languages/>
+			<media />
+		</module>	
+		
+			<module module="mod_customTagsCloud" title="Custom Tags Cloud"   position='left' order="0"  client="site">
+			<files folder="modules/mod_customTagsCloud">
+				<folder>tmpl</folder>
+				<file>helper.php</file>
+				<file>index.html</file>
+				<file>mod_customTagsCloud.php</file>
+				<file>mod_customTagsCloud.xml</file>
+			</files>
+		   <languages/>
+			<media />
+		</module>					
+		
+	</modules>
+	<plugins>
+		<!-- system plugins -->
+		<plugin plugin="tagSef" order="0" group="system">
+			<files folder="plugins/plg_tagsSef_system">				
+				<file>tagSef.php</file>
+				<file>tagSef.xml</file>
+			</files>
+		</plugin>
+	  <!-- search plugins -->
+		<plugin plugin="searchTags" order="0" group="search">
+			<files folder="plugins/plg_tags_search">				
+				<file>searchTags.php</file>
+				<file>searchTags.xml</file>
+			</files>
+		</plugin>
+		<!-- content plugins -->
+		<plugin plugin="tags" order="0" group="content">
+			<files folder="plugins/plg_tags_content">				
+				<file>tags.php</file>
+				<file>tags.xml</file>
+			</files>
+		</plugin>
+	 <!-- Editors extension plugins -->
+		<plugin plugin="addTags" order="0" group="editors-xtd">
+			<files folder="plugins/plg_addTags_button">				
+				<file>addTags.php</file>
+				<file>addTags.xml</file>
+			</files>
+		</plugin>
+	</plugins>
+	
+	<check>
+		<directory>/modules</directory>
+		<directory>/plugins/content</directory>
+		<directory>/plugins/search</directory>
+		<directory>/plugins/system</directory>
+		<directory>/administrator/modules</directory>
+		<extension name="mod_latestTags"  type="modules" field="published" value="1">module='mod_latestTags'</extension>
+	 	<extension name="mod_mostPopularTags"  type="modules" field="published" value="1">module='mod_mostPopularTags'</extension>
+	 	<extension name="mod_mostReadTags"  type="modules" field="published" value="1">module='mod_mostReadTags'</extension>
+	</check>
+</install>

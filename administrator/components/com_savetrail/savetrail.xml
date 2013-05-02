@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5.0" type="component">
+     <name>Save Trail</name>
+ 	 <author>Ajay Reddy</author>
+	 <creationDate>February 2009</creationDate>
+	 <copyright>Copyright (C) 2009 - 2008 Ajay Reddy. All rights reserved.</copyright>
+	 <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	 <authorEmail>ajyrds@gmail.com</authorEmail>
+	 <authorUrl></authorUrl>
+	 <version>1.0</version>
+     <description>
+ 	     Save the trail created by user.
+ 	     Order of installation -
+		 com_savetrail
+		 com_searchTrails - drops _trailReview, _trailList and then creates _trailList
+		 com_searchTrailReviews
+		 plgContentSearchReview - drops _trailReview and then creates _trailReview
+		 com_contentsubmit_mod - uses _trailReview
+		 com_trailDisplay - js functions use _trailReview and _trailList
+		 plgSearchTrailReviews - uses _trailReview
+     </description>
+
+     <files>
+          <filename component="com_trailDisplay">savetrail.php</filename>
+     </files>
+     <administration>
+         <files>
+              <filename component="admin.savetrail">admin.savetrail.php</filename>
+         </files>
+     </administration>
+</install>

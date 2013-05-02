@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system">
+	<name>System - CssJsCompress</name>
+	<author>JoomlaTags</author>
+	<creationDate>February 2009</creationDate>
+	<copyright>Copyright (C) 2009 Joomla Tags. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>joomlatags@gmail.com</authorEmail>
+	<authorUrl>www.joomlatags.org</authorUrl>
+	<version>3.3</version>
+	<description>CSSJSCOMPRESS_DESCRIPTION</description>
+	<files>
+		<filename plugin="CssJsCompress">CssJsCompress.php</filename>
+                <filename>CssJsCompress/js_merge_php4.php</filename>          
+                <filename>CssJsCompress/index.html</filename>
+                <filename>CssJsCompress/js.php</filename>
+                <filename>CssJsCompress/css.php</filename>             
+	</files>
+  <languages folder="language">
+	  <language tag="en-GB">en-GB.plg_system_CssJsCompress.ini</language>
+          <language tag="zh-CN">zh-CN.plg_system_CssJsCompress.ini</language>
+  </languages>
+
+
+	<params>	
+		<param name="css" type="list" default="1" label="CSS_LABEL" description="CSS_DESCRIPTION">
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+
+		<param name="javascript" type="list" default="1" label="JAVASCRIPT_LABEL" description="JAVASCRIPT_DESCRIPTION">
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="gzip" type="list" default="0" label="GZIP_LABEL" description="GZIP_DESCRIPTION">
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+      <param name="@spacer" type="spacer" default="" label="ADVANCED_SETTINGS"></param>
+      <param name="excludeCss" type="textarea"  rows="2" cols="40" default="" label="EXCLUDE_CSS_LABEL" description="EXCLUDE_CSS_DESCRIPTION"></param>
+      <param name="excludeJs" type="textarea" rows="2" cols="40" default="" label="EXCLUDE_JS_LABEL" description="EXCLUDE_CSS_DESCRIPTION"></param>
+      <param name="excludeComponents" type="textarea" rows="2" cols="40" default="" label="EXCLUDE_COMPONENTS_LABEL" description="EXCLUDE_COMPONENTS_DESCRIPTION"></param>
+		<param name="jqueryNoConflict" type="list" default="1" label="JQUERY_NO_CONFLICT_LABEL" description="JQUERY_NO_CONFLICT_DESCRIPTION">
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+      <param name="jquery" type="text" default="jquery.js" label="JQUERY_LABEL"></param>
+      <param name="customOrder" type="textarea" rows="3" cols="40" default="mootools.js,jquery.js,jquery.innerfade.js" label="JS_CUSTOM_ORDER_LABEL" description="JS_CUSTOM_ORDER_DESCRIPTON"></param>
+      
+	</params>
+
+</install>

@@ -1,0 +1,159 @@
+.wrapper {
+	height:auto;
+}
+.header {
+        color: black;
+	clear:both;
+	font: 13px Arial, Helvetica, sans-serif;
+	border-bottom: .05em solid #5d7021;
+}
+.headertext {
+        color: gray;
+	clear:both;
+	padding-top:5px;
+	font: 10px Arial, Helvetica, sans-serif;
+}
+.cont {
+	position:absolute;
+        text-align:left;
+	overflow: hidden;
+        height:auto;
+        width:70%;
+        white-space:-moz-pre-wrap;
+	padding-bottom:5px;
+	font: normal 12px Arial, Helvetica, sans-serif;
+	border-bottom: .05em solid #5d7021;
+}
+.icons {
+	position:relative;
+        width: 25%;
+        height:auto;
+        float:right;
+        padding-bottom:5px;
+}
+.footer {
+	padding-top:5px;
+	clear:both;
+	font: normal 12px Arial, Helvetica, sans-serif;
+}
+.leftcol {
+	position:relative;
+        float:left;
+        width:100%;
+	overflow-x: hidden;
+	overflow-y: visible;
+        white-space:-moz-pre-wrap;
+	font: normal 12px Arial, Helvetica, sans-serif;
+}
+.rightcol {
+	position:relative;
+        float:right;
+	padding-top:2px;
+	padding-right:2px;
+	font: normal 12px Arial, Helvetica, sans-serif;
+}
+
+div.markerLabel {
+        display: block;
+        padding-top: 9px;
+        text-align: center;
+        color: black;
+        width: 32px;
+        letter-spacing: 0px;
+        font-size: 10px;
+        font-family: Arial;
+        font-weight: bold;
+}
+#infoDiv {
+	background: transparent url("../images/yellow.png") left top repeat;
+/*	background-color: beige;*/
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+	padding: 7px;
+	font: bold 11px/14px Arial, Helvetica, sans-serif;
+}
+#infoDiv span {
+	display: block;
+	padding: 5px 10px 5px 5px;
+	text-decoration: none;
+	line-height: 16px;
+	color: #000;
+	width: 120px;
+}
+#infoDiv span img{
+	margin: 0 4px 0 0;
+	padding: 0;
+	width: 16px;
+	height: 16px;
+}
+#disDiv, #mesDiv {
+	background: transparent url("../images/yellow.png") left top repeat;
+	-moz-border-radius-bottomleft: 7px;
+	-moz-border-radius-bottomright: 7px;
+	-webkit-border-radius-bottomleft: 7px;
+	-webkit-border-radius-bottomright: 7px;
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+	padding: 1px;
+	font: bold 11px/14px Arial, Helvetica, sans-serif;
+	color: black;
+	text-align: center;
+	border-left: 1px solid;
+	border-right: 1px solid;
+	border-bottom: 1px solid;
+}
+#disDiv, #mesDiv #disStat{
+	font: bold 14px Arial, Helvetica, sans-serif;
+	color: white;
+}
+#mesDiv h3{
+	font: bold 14px Arial, Helvetica, sans-serif;
+	color: black;
+	text-align: center;
+	vertical-align: top;
+	line-height: 14px;
+	margin-top: 0px;
+}
+#pheader a:link, a:visited {
+	text-decoration: underline;
+	font: 10px Arial, Helvetica, sans-serif;
+}
+#pheader a:hover {
+	text-decoration: none;
+	font: 10px Arial, Helvetica, sans-serif;
+}
+#ScreenTypeConDiv, #CreditConDiv {
+	border-bottom: 2px solid black;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	border-top: 1px solid black;
+	position: absolute;
+	background-color: #fa9c22;
+	text-align: center;
+	width: 5em;
+	right: 0em;
+	cursor: pointer;
+}
+#ScreenTypeDiv, #CreditDiv {
+	border: border-style: solid;
+	border-color: rgb(52, 86, 132) rgb(108, 157, 223) rgb(108, 157, 223) rgb(52, 86, 132);
+	border-width: 1px;
+	font-size: 12px;
+	font-color: #ffffff;
+	padding-top:1px;
+	padding-bottom:0px;
+}
+#CreditConDiv {
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+	background-color: #ffffff;
+	border: 0px;
+	width: 10em;
+}
+#CreditDiv {
+	font-size: 0.7em;
+	font-color: #000000;
+	border: 0px;
+}

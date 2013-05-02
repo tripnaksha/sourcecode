@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cbinstall version="1.0" type="plugin" group="user">
+	<name>CB Mambo Author Tab</name>
+	<author>JoomlaJoe</author>
+	<creationDate>2009-01-26</creationDate>
+	<copyright>(C) 2005-2009 joomlapolis.com</copyright>
+	<license>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL version 2</license>
+	<authorEmail>beat@joomlapolis.com</authorEmail>
+	<authorUrl>www.joomlapolis.com</authorUrl>
+	<version>1.2</version>
+	<description>Provides an User Tab that shows all articles written by the user.</description>
+	<files>
+		<filename plugin="cb.authortab">cb.authortab.php</filename>
+		<filename>index.html</filename>
+	</files>
+    <params>	
+    </params>	
+    <tabs>
+    	<tab name="_UE_AUTHORTAB" description="" class="getAuthorTab" cbfields="0">
+			<params>
+			</params>
+			<fields>
+			</fields>
+		</tab>
+    </tabs>   
+    <install>
+    	<queries>
+    	</queries>
+    </install>
+    <uninstall>
+        <queries>
+    	</queries>
+    </uninstall>
+	<database>
+	</database>
+</cbinstall>

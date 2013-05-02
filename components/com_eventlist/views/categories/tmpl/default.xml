@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="CATEGORIES LAYOUT">
+		<message>
+			<![CDATA[CATEGORIES LAYOUT DESC]]>
+		</message>
+	</layout>
+	<state>
+		<name>CATEGORIES LAYOUT</name>
+		<description>CATEGORIES LAYOUT DESC</description>
+	</state>
+</metadata>

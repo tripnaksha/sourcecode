@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://dev.joomla.org/xml/1.5/template-install.dtd">
+<install version="1.5" type="template">
+	<name>daydream</name>
+	<creationDate>23/11/2008</creationDate>
+	<author>ActiView Media</author>
+	<authorEmail>info@cybergrafie.de</authorEmail>
+	<authorUrl>http://www.cybergrafie.de</authorUrl>
+	<copyright>ActiView</copyright>
+	<license>NA</license>
+	<version>1.0.2</version>
+	<description>Daydreamer Blog.</description>
+	<files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>favicon.ico</filename>
+		<filename>css/template.css</filename>
+		<filename>css/ie6.css</filename>
+		<filename>css/ja-sosdmenu.css</filename>
+		<filename>images/1b.jpg</filename>
+		<filename>images/1b.png</filename>
+		<filename>images/1b1.jpg</filename>
+		<filename>images/1b1.png</filename>
+		<filename>images/2bg.jpg</filename>
+		<filename>images/2bg.png</filename>
+		<filename>images/bullet2.jpg</filename>
+		<filename>images/contbg.jpg</filename>
+		<filename>images/content_lefttop_border.jpg</filename>
+		<filename>images/content_topbg.jpg</filename>
+		<filename>images/ddbgg.jpg</filename>
+		<filename>images/ddbgg.png</filename>
+		<filename>images/ddbgg1.png</filename>
+		<filename>images/dreamin1.jpg</filename>
+		<filename>images/dreaming2.jpg</filename>
+		<filename>images/folia.jpg</filename>
+		<filename>images/footer.jpg</filename>
+		<filename>images/headanim.gif</filename>
+		<filename>images/hlight.jpg</filename>
+		<filename>images/hlight.png</filename>
+		<filename>images/hover.gif</filename>
+		<filename>images/left_column_bg.jpg</filename>
+		<filename>images/left_column_bottom.jpg</filename>
+		<filename>images/left_column_header.jpg</filename>
+		<filename>images/navline.jpg</filename>
+		<filename>images/navline1.jpg</filename>
+		<filename>images/opaque.png</filename>
+
+	</files>
+	<positions>
+		<position>breadcrumbs</position>
+		<position>left</position>
+		<position>right</position>
+		<position>top</position>
+		<position>user1</position>
+		<position>user2</position>
+		<position>user3</position>
+		<position>user4</position>
+		<position>footer</position>
+		<position>debug</position>
+		<position>syndicate</position>
+	</positions>
+</install>

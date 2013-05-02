@@ -1,0 +1,65 @@
+<?php
+JHTML::_('behavior.mootools');
+$document = JFactory::getDocument();
+$document->addStyleSheet(JURI::base() . 'media/system/css/modal.css');
+$document->addScript(JURI::base() . 'media/system/js/modal.js');
+//echo "<script type='text/javascript'>alert('".JURI::base(). 'media/system/js/modal.js'."');</script>";
+$document->addScriptDeclaration("window.addEvent('domready', function() {SqueezeBox.initialize({});});");
+$user = & JFactory::getUser();
+
+$uri = JFactory::getURI();
+$url = $uri->toString();
+$return = base64_encode($url);
+
+?>
+<!--div id="lbframeid" style="position:absolute;top:1px;left:1px;height:0px;overflow:hidden">
+<a href="http://www.wowjoomla.com/"><h1>Joomla Login LightBox powered by WowJoomla.com</h1> </a>
+</div-->
+<?php if ($user->get('guest')) :?>
+   <div id="login-box" style="float:right"><a href="<?php echo JRoute::_('index.php?option=com_login_box&login_only=1')?>" 
+      onclick="SqueezeBox.fromElement(this); return false;"  
+      rel="{handler: 'iframe', size: {x: 400, y: 390}}"><?php echo JText::_('TEXT_LOGIN')  ?></a>
+   <font style="color:white">/</font>
+   <a href="<?php echo JRoute::_('index.php?option=com_login_box&register_only=1')?>" 
+      onclick="SqueezeBox.fromElement(this); return false;"  
+      rel="{handler: 'iframe', size: {x: 400, y: 405}}"><?php echo JText::_('TEXT_SIGNUP')?></a>
+   <br />
+   <!--a href="<?php //echo JRoute::_('index.php?option=com_login_box&login_only=1')?>" 
+      onclick="SqueezeBox.fromElement(this); return false;"  
+      rel="{handler: 'iframe', size: {x: 400, y: 390}}"><img alt="Login with Gmail" src="<?php //echo (JURI::base() . 'media/system/images/gmail-logo.png');?>"/></a> 
+   </div-->
+	  
+<?php else: ?>
+   <div id="login-box-out" style="float:right; color: #ffffff"><?php echo JText::sprintf( 'HINAME', $user->get('name') ); ?>
+   <br>
+   <a href="javascript:void(0);" onclick="LB_onLogout(); return false;"><?php echo JText::_('LOGOUT')?></a></div>
+<?php endif; ?>
+<script type="text/javascript">
+function LB_onLogout() {
+   var form = new Element('form');
+   form.setProperty('method', 'POST');
+   form.setProperty('target', '_self');
+   form.setProperty('action', 'index.php');
+   
+   var input = new Element('input');
+   input.setProperty('type', 'hidden');
+   input.setProperty('name', 'option');
+   input.setProperty('value', 'com_user');
+   form.appendChild(input);
+   
+   var input = new Element('input');
+   input.setProperty('type', 'hidden');
+   input.setProperty('name', 'task');
+   input.setProperty('value', 'logout');
+   form.appendChild(input);
+   
+   var input = new Element('input');
+   input.setProperty('type', 'hidden');
+   input.setProperty('name', 'return');
+   input.setProperty('value', '<?php echo $return; ?>');
+   form.appendChild(input);
+   
+   $E('body').appendChild(form);
+   form.submit();
+}
+</script>

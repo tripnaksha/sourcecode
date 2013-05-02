@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cbinstall version="1.0" type="plugin" group="user">
+	<name>Yanc Integration</name>
+	<author>Beat</author>
+	<creationDate>2009-01-26</creationDate>
+	<copyright>(C) 2005-2009 joomlapolis.com</copyright>
+	<license>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL version 2</license>
+	<authorEmail>beat@joomlapolis.com</authorEmail>
+	<authorUrl>www.joomlapolis.com</authorUrl>
+	<version>1.2</version>
+	<description>Provides integration between CB and Yanc.</description>
+	<files>
+		<filename plugin="yanc">yanc.php</filename>
+		<filename>index.html</filename>
+	</files>
+    <params>
+    	<param name="newslettersRegList" type="custom" class="getNewslettersTab" method="loadNewslettersList" default="" label="_UE_NEWSLETTERSREGLIST" description="_UE_NEWSLETTERSREGLIST_DESC" />
+	    <param name="@spacer" type="spacer" default="This tab only appears in User profile EDIT mode." label="Important:" description="" />
+    </params>
+    <tabs>
+    	<tab name="_UE_NEWSLETTER_HEADER" description="_UE_NEWSLETTER_INTRODCUTION" class="getNewslettersTab" fields="0">
+			<params>
+			    <param name="@spacer" type="spacer" default="This tab only appears in User profile EDIT mode." label="Important:" description="" />
+			</params>
+			<fields>
+			</fields>
+		</tab>
+    </tabs>   
+    <install>
+    	<queries>
+    	</queries>
+    </install>
+    <uninstall>
+        <queries>
+    	</queries>
+    </uninstall>
+	<database>
+	</database>
+</cbinstall>

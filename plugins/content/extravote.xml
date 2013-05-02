@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+	<name>Content - ExtraVote</name>
+	<author>Jesus Vargas</author>
+	<creationDate>July 2008</creationDate>
+	<copyright>Copyright (C) 2005 - 2008 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>jesus@vargas.co.cr</authorEmail>
+	<authorUrl>joomla.vargas.co.cr</authorUrl>
+	<version>1.4</version>
+	<description>Provides Ajax Voting functionality to Articles and their Content</description>
+	<files>
+		<filename plugin="extravote">extravote.php</filename>
+        <filename>extravote/index.html</filename>
+        <filename>extravote/ajax.php</filename>
+        <filename>extravote/backup.php</filename>
+        <filename>extravote/extravote.js</filename>
+        <filename>extravote/extravote.css</filename>
+        <filename>extravote/loading.gif</filename>
+        <filename>extravote/star.gif</filename>
+        <filename>extravote/star_small.gif</filename>
+	</files>
+	<params>
+		<param name="display" type="list" default="0" label="Main Content Rating" description="Display Rating Stars After the Title or After the Content">
+  	    	<option value="0">afterTitle</option>
+  	    	<option value="1">afterContent</option>
+  	    	<option value="2">none</option>
+    	</param>
+		<param name="extra" type="list" default="1" label="{extravote #} Code" description="Extra Vote for Content">
+  	    	<option value="0">Don't use</option>
+  	    	<option value="1">Replace Allways</option>
+  	    	<option value="2">Hide in Blog Views</option>
+    	</param>
+		<param name="main" type="list" default="1" label="{mainvote} Code" description="Special Code for Main Content Rating">
+  	    	<option value="0">Don't use</option>
+  	    	<option value="1">Replace Allways</option>
+  	    	<option value="2">Hide in Blog Views</option>
+    	</param>
+		<param name="counter" type="list" default="1" label="Votes Counter" description="Show/Hide Votes Counter">
+  	    	<option value="0">Hide</option>
+  	    	<option value="1">Show All</option>
+  	    	<option value="2">Show only on Mainvote</option>
+  	    	<option value="3">Show only on Extravotes</option>
+    	</param>
+		<param name="unrated" type="radio" default="1" label="Show/Hide (0 Votes)" description="Show/Hide (0 Votes) for Unrated Items">
+  	    	<option value="1">Show</option>
+  	    	<option value="0">Hide</option>
+    	</param>
+		<param name="access" type="radio" default="0" label="Rating Access" description="Public or Registered Rating Access">
+  	    	<option value="0">Public</option>
+  	    	<option value="1">Registered</option>
+    	</param>
+		<param name="css" type="radio" default="1" label="Call ExtraVote Style" description="Call ExtraVote Style Sheet">
+  	    	<option value="0">No</option>
+  	    	<option value="1">Yes</option>
+    	</param>
+    </params>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_extravote.ini</language>
+	</languages>
+</install>

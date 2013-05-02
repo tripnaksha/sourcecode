@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+	<name>Content - Tags</name>
+	<author>www.joomlatags.org</author>
+	<creationDate>18 Feb 2009</creationDate>
+
+	<copyright>GNU/GPLv2</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>joomlatags@gmail.com</authorEmail>
+	<authorUrl>www.joomlatags.org</authorUrl>
+	<version>2.1</version>
+    <description>
+    1.Show tags at the bottom of the articles.
+    2.Show Related articles by tags at the bottom of the artilces.
+    3.Auto extract meta keywords as tags.
+	</description>
+	<files>
+		<filename plugin="tags">tags.php</filename>    
+	</files>	
+	
+</install>

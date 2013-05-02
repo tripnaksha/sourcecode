@@ -1,0 +1,77 @@
+div.icons h2 {
+	font-family: Tahoma, Arial, Verdana;
+	font-size: 110%;
+}
+
+.icon-32-install {
+  background-image: url('../images/install.png');
+}
+
+.icon-32-uninstall {
+  background-image: url('../images/uninstall.png');
+}
+
+.icon-32-upgrade {
+  background-image: url('../images/upgrade.png');
+}
+
+.icon-32-delete_f2 {
+  background-image: url('../images/delete_f2.png');
+}
+
+.icon-32-import {
+  background-image: url('../images/reload_f2.png');
+}
+
+.icon-32-export {
+  background-image: url('../images/download_f2.png');
+}
+
+.icon-48-artio {
+    background-image: url('../images/icon-48-artio.png');
+}
+
+.icon-48-edit {
+    background-image: url('../images/icon-48-edit.png');
+}
+
+.icon-48-update {
+    background-image: url('../images/icon-48-update.png');
+}
+
+.icon-48-docs {
+    background-image: url('../images/icon-48-docs.png');
+}
+
+.icon-48-help {
+    background-image: url('../images/icon-48-help.png');
+}
+
+.icon-48-info {
+    background-image: url('../images/icon-48-info.png');
+}
+
+.icon-48-301-redirects {
+    background-image: url('../images/icon-48-301-redirects.png');
+}
+
+.icon-48-url-edit {
+    background-image: url('../images/icon-48-url-edit.png');
+}
+
+.icon-48-url-delete {
+    background-image: url('../images/icon-48-url-delete.png');
+}
+
+.icon-48-url-user {
+    background-image: url('../images/icon-48-url-user.png');
+}
+
+.icon-48-404-logs {
+    background-image: url('../images/icon-48-404-logs.png');
+}
+
+.icon-48-url-update {
+    background-image: url('../images/icon-48-url-update.png');
+}
+

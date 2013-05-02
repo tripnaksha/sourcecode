@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system">
+	<name>System - Redirect Logout</name>
+	<author>Ajay Reddy</author>
+	<creationDate>April 2009</creationDate>
+	<copyright>Copyright (C) 2009 Ajay Reddy. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>ajyrds@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.00</version>
+	<description>Redirects to another page after logout.</description>
+	<files>
+		<filename plugin="redirect_logout">redirect_logout.php</filename>
+	</files>
+	<params>
+		<param name="redirect_destination" type="text" size="50" default="" label="Redirect to this URL" description="URL (http://www....) where you want to redirect failed login attempts. Leave blank for no redirection." />
+  		<param name="redirect_message" type="text" size="50" default="" label="Redirection Message" description="Optional - give a message upon redirection. "/>
+  		<param name="time_delay" type="text" size="10" default="10" label="Delay (seconds)" description="Delay after a failed login, to discourage brute force login attacks. Set to 0 for no delay."/>
+		<param name="clear_cache" type="radio" default="0" label="Clear page cache (system cache plugin) on login failure" description="Normally set to No. Set to Yes if your Redirection Message does not appear after a failed login attempt.">
+		<option value="0">No</option>
+		<option value="1">Yes</option>
+		</param>
+	</params>
+</install>

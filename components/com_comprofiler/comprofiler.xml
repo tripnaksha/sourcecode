@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mosinstall type="component">
+	<name>comprofiler</name>
+	<creationDate>2009-01-26</creationDate>
+	<author>Beat and JoomlaJoe</author>
+	<authorEmail>beat@joomlapolis.com</authorEmail>
+	<copyright>Copyright 2004-2009 Beat, MamboJoe/JoomlaJoe and CB team on joomlapolis.com . This component is released under the GNU/GPL version 2 License and parts under Community Builder Free License. All copyright statements must be kept and derivate work must prominently duly acknowledge original work on web interface and on website where downloaded.</copyright>
+	<authorUrl>www.joomlapolis.com</authorUrl>
+	<version>1.2</version>
+	<description>Joomla/Mambo Community Builder 1.2 native for Joomla! 1.0.0 - 1.0.15, 1.5.3 - 1.5.9 and Mambo 4.5.0 - 4.6.5.</description>
+	<files>
+		<filename>comprofiler.php</filename>
+		<filename>comprofiler.html.php</filename>
+		<filename>index.html</filename>
+		<filename>images/updateprofile.gif</filename>
+		<filename>images/search.gif</filename>
+		<filename>images/arrow.png</filename>
+		<filename>images/unban.png</filename>
+		<filename>images/ban.png</filename>
+		<filename>images/reject.png</filename>
+		<filename>images/approve.png</filename>
+		<filename>images/profiles.gif</filename>
+		<filename>images/noprofiles.gif</filename>
+		<filename>images/required.gif</filename>
+		<filename>images/smcblogo.gif</filename>
+		<filename>images/cbconfig.gif</filename>
+		<filename>images/cbfield.gif</filename>
+		<filename>images/cblist.gif</filename>
+		<filename>images/cbtool.gif</filename>
+		<filename>images/cbuser.gif</filename>
+		<filename>images/cbtab.gif</filename>
+		<filename>images/publish_x.png</filename>
+		<filename>images/publish_g.png</filename>
+		<filename>images/tick.png</filename>
+		<filename>images/pending.png</filename>
+		<filename>images/appReport.gif</filename>
+		<filename>images/newavatar.gif</filename>
+		<filename>images/delavatar.gif</filename>
+		<filename>images/offline.gif</filename>
+		<filename>images/online.gif</filename>
+		<filename>images/email.gif</filename>
+		<filename>images/pm.gif</filename>
+		<filename>images/licenseagreement.pdf</filename>
+		<filename>images/wait.gif</filename>
+		<filename>images/index.html</filename>
+		<filename>images/english/nophoto.jpg</filename>
+		<filename>images/english/pendphoto.jpg</filename>
+		<filename>images/english/tnnophoto.jpg</filename>
+		<filename>images/english/tnpendphoto.jpg</filename>
+		<filename>images/english/index.html</filename>
+		<filename>images/gallery/airplane.gif</filename>
+		<filename>images/gallery/ball.gif</filename>
+		<filename>images/gallery/butterfly.gif</filename>
+		<filename>images/gallery/car.gif</filename>
+		<filename>images/gallery/dog.gif</filename>
+		<filename>images/gallery/duck.gif</filename>
+		<filename>images/gallery/fish.gif</filename>
+		<filename>images/gallery/frog.gif</filename>
+		<filename>images/gallery/guitar.gif</filename>
+		<filename>images/gallery/kick.gif</filename>
+		<filename>images/gallery/pinkflower.gif</filename>
+		<filename>images/gallery/redflower.gif</filename>
+		<filename>images/gallery/skater.gif</filename>
+		<filename>images/gallery/index.html</filename>
+		<filename>js/index.html</filename>
+		<filename>js/tabpane.js</filename>
+		<filename>js/tabpane.min.js</filename>
+		<filename>js/overlib_mini.js</filename>
+		<filename>js/overlib_hideform_mini.js</filename>
+		<filename>js/overlib_anchor_mini.js</filename> 
+		<filename>js/overlib_centerpopup_mini.js</filename> 
+		<filename>js/calendar.js</filename>
+		<filename>js/calendar.min.js</filename>
+		<filename>js/calendar-setup.js</filename>
+		<filename>js/calendar-setup.min.js</filename>
+		<filename>js/calendardateinput.js</filename>
+		<filename>js/calendardateinput.min.js</filename>
+		<filename>js/menubest.js</filename>
+		<filename>js/menubest.min.js</filename>
+		<filename>js/cb12.js</filename>
+		<filename>js/cb12.min.js</filename>
+		<filename>js/jquery-1.3.1/index.html</filename>
+		<filename>js/jquery-1.3.1/jquery-1.3.1.js</filename>
+		<filename>js/jquery-1.3.1/jquery-1.3.1.min.js</filename>
+		<filename>js/jquery-1.3.1/jquery.ajaxfileupload.js</filename>
+		<filename>js/jquery-1.3.1/jquery.ajaxfileupload.min.js</filename>
+		<filename>js/jquery-1.3.1/jquery.autogrow.js</filename>
+		<filename>js/jquery-1.3.1/jquery.autogrow.min.js</filename>
+		<filename>js/jquery-1.3.1/jquery.cluetip.js</filename>
+		<filename>js/jquery-1.3.1/jquery.cluetip.min.js</filename>
+		<filename>js/jquery-1.3.1/jquery.excanvas.js</filename>
+		<filename>js/jquery-1.3.1/jquery.excanvas.min.js</filename>
+		<filename>js/jquery-1.3.1/jquery.flot.js</filename>
+		<filename>js/jquery-1.3.1/jquery.flot.min.js</filename>
+		<filename>js/jquery-1.3.1/jquery.flydom.js</filename>
+		<filename>js/jquery-1.3.1/jquery.flydom.min.js</filename>		
+		<filename>js/jquery-1.3.1/jquery.form.js</filename>
+		<filename>js/jquery-1.3.1/jquery.form.min.js</filename>
+		<filename>js/jquery-1.3.1/jquery.jeditable.js</filename>
+		<filename>js/jquery-1.3.1/jquery.jeditable.min.js</filename>
+		<filename>js/jquery-1.3.1/jquery.jmap.js</filename>
+		<filename>js/jquery-1.3.1/jquery.jmap.min.js</filename>
+		<filename>js/jquery-1.3.1/jquery.maskedinput.js</filename>
+		<filename>js/jquery-1.3.1/jquery.maskedinput.min.js</filename>
+		<filename>js/jquery-1.3.1/jquery.metadata.js</filename>
+		<filename>js/jquery-1.3.1/jquery.metadata.min.js</filename>
+		<filename>js/jquery-1.3.1/jquery.slimbox2.js</filename>
+		<filename>js/jquery-1.3.1/jquery.slimbox2.min.js</filename>
+		<filename>js/jquery-1.3.1/jquery.rating.js</filename>
+		<filename>js/jquery-1.3.1/jquery.rating.min.js</filename>
+		<filename>js/jquery-1.3.1/jquery.ui-all.js</filename>
+		<filename>js/jquery-1.3.1/jquery.ui-all.min.js</filename>
+		<filename>js/jquery-1.3.1/jquery.validate.js</filename>
+		<filename>js/jquery-1.3.1/jquery.validate.min.js</filename>
+		<filename>js/jquery-1.3.1/jquery.wysiwyg.css</filename>
+		<filename>js/jquery-1.3.1/jquery.wysiwyg.gif</filename>
+		<filename>js/jquery-1.3.1/jquery.wysiwyg.js</filename>
+		<filename>js/jquery-1.3.1/jquery.wysiwyg.min.js</filename>
+	</files>
+	<install>
+		<queries>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__comprofiler` (
+`id` int(11) NOT NULL default '0',
+`user_id` int(11) NOT NULL default '0',
+`firstname` VARCHAR( 100 ),
+`middlename` VARCHAR( 100 ) ,
+`lastname` VARCHAR( 100 ),
+`hits` int(11) NOT NULL default '0',
+`avatar` varchar(255) default NULL,
+`avatarapproved` tinyint(4) default '1',
+`approved` tinyint(4) NOT NULL default '1',
+`confirmed` tinyint(4) NOT NULL default '1',
+`lastupdatedate` datetime NOT NULL default '0000-00-00 00:00:00',
+`banned` tinyint(4) NOT NULL default '0',
+`banneddate` datetime default NULL,
+`bannedby` int(11) default NULL,
+`bannedreason` mediumtext,
+`acceptedterms` tinyint(1) NOT NULL default '0',
+PRIMARY KEY  (`id`)
+) TYPE=MyISAM;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__comprofiler_field_values` (
+`fieldvalueid` int(11) NOT NULL auto_increment,
+`fieldid` int(11) NOT NULL default '0',
+`fieldtitle` varchar(50) NOT NULL default '',
+`ordering` int(11) NOT NULL default '0',
+`sys` tinyint(4) NOT NULL default '0',
+PRIMARY KEY  (`fieldvalueid`)
+) TYPE=MyISAM AUTO_INCREMENT=16 ;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__comprofiler_fields` (
+`fieldid` int(11) NOT NULL auto_increment,
+`name` varchar(50) NOT NULL default '',
+`table` varchar(50) NOT NULL default '#__comprofiler',
+`title` varchar(255) NOT NULL default '',
+`type` varchar(50) NOT NULL default '',
+`maxlength` int(11) default NULL,
+`size` int(11) default NULL,
+`required` tinyint(4) default '0',
+`tabid` int(11) default NULL,
+`ordering` int(11) default NULL,
+`cols` int(11) default NULL,
+`rows` int(11) default NULL,
+`value` varchar(50) default NULL,
+`default` MEDIUMTEXT default NULL,
+`published` tinyint(1) NOT NULL default '1',
+`registration` tinyint(1) NOT NULL default '0',
+`profile` tinyint(1) NOT NULL default '1',
+`readonly` TINYINT( 1 ) DEFAULT '0' NOT NULL,
+`calculated` tinyint(1) NOT NULL default '0',
+`sys` tinyint(4) NOT NULL default '0',
+PRIMARY KEY  (`fieldid`)
+) TYPE=MyISAM AUTO_INCREMENT=54 ;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__comprofiler_lists` (
+`listid` int(11) NOT NULL auto_increment,
+`title` varchar(255) NOT NULL default '',
+`description` mediumtext,
+`published` tinyint(1) NOT NULL default '0',
+`default` tinyint(1) DEFAULT '0' NOT NULL, 
+`usergroupids` varchar(255) NULL,
+`sortfields` varchar(255) NULL,
+`ordering` int(11) NOT NULL default '0',
+`col1title` varchar(255) default NULL,
+`col1enabled` tinyint(1) NOT NULL default '0',
+`col1fields` mediumtext,
+`col2title` varchar(255) default NULL,
+`col2enabled` tinyint(1) NOT NULL default '0',
+`col1captions` tinyint(1) NOT NULL default '0',
+`col2fields` mediumtext,
+`col2captions` tinyint(1) NOT NULL default '0',
+`col3title` varchar(255) default NULL,
+`col3enabled` tinyint(1) NOT NULL default '0',
+`col3fields` mediumtext,
+`col3captions` tinyint(1) NOT NULL default '0',
+`col4title` varchar(255) default NULL,
+`col4enabled` tinyint(1) NOT NULL default '0',
+`col4fields` mediumtext,
+`col4captions` tinyint(1) NOT NULL default '0',
+PRIMARY KEY  (`listid`)
+) TYPE=MyISAM AUTO_INCREMENT=4 ;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__comprofiler_tabs` (
+`tabid` int(11) NOT NULL auto_increment,
+`title` varchar(50) NOT NULL default '',
+`description` text,
+`ordering` int(11) NOT NULL default '0',
+`width` VARCHAR( 10 ) DEFAULT '.5' NOT NULL ,
+`enabled` TINYINT( 1 ) DEFAULT '1' NOT NULL , 
+`plugin` VARCHAR( 255 ) DEFAULT NULL ,
+`sys` tinyint(4) NOT NULL default '0',
+PRIMARY KEY  (`tabid`)
+) TYPE=MyISAM AUTO_INCREMENT=11 ;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__comprofiler_userreports` (
+`reportid` int(11) NOT NULL auto_increment,
+`reporteduser` int(11) NOT NULL default '0',
+`reportedbyuser` int(11) NOT NULL default '0',
+`reportedondate` date NOT NULL default '0000-00-00',
+`reportexplaination` text NOT NULL,
+`reportedstatus` tinyint(4) NOT NULL default '0',
+PRIMARY KEY  (`reportid`)
+) TYPE=MyISAM AUTO_INCREMENT=11 ;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__comprofiler_members` (
+`referenceid` int(11) NOT NULL default '0',
+`memberid` int(11) NOT NULL default '0',
+`accepted` tinyint(1) NOT NULL default '1',
+`pending` tinyint(1) NOT NULL default '0',
+`membersince` date NOT NULL default '0000-00-00',
+`description` varchar(255) default NULL,
+`type` MEDIUMTEXT default NULL,
+PRIMARY KEY  (`referenceid`,`memberid`)
+) TYPE=MyISAM ;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__comprofiler_views` (
+`viewer_id` int(11) NOT NULL default '0',
+`profile_id` int(11) NOT NULL default '0',
+`lastip` varchar(50) NOT NULL default '',
+`lastview` datetime NOT NULL default '0000-00-00 00:00:00',
+`viewscount` int(11) NOT NULL default '0',
+`vote` tinyint(3) default NULL,
+`lastvote` datetime NOT NULL default '0000-00-00 00:00:00',
+PRIMARY KEY  (`viewer_id`,`profile_id`,`lastip`)
+) TYPE=MyISAM ;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__comprofiler_plugin` (
+`id` int( 11 ) NOT NULL AUTO_INCREMENT ,
+`name` varchar( 100 ) NOT NULL default '',
+`element` varchar( 100 ) NOT NULL default '',
+`type` varchar( 100 ) NULL default '',
+`folder` varchar( 100 ) NULL default '',
+`access` tinyint( 3 ) unsigned NOT NULL default '0',
+`ordering` int( 11 ) NOT NULL default '0',
+`published` tinyint( 3 ) NOT NULL default '0',
+`iscore` tinyint( 3 ) NOT NULL default '0',
+`client_id` tinyint( 3 ) NOT NULL default '0',
+`checked_out` int( 11 ) unsigned NOT NULL default '0',
+`checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+`params` text NOT NULL ,
+PRIMARY KEY ( `id` ) ,
+KEY `idx_folder` ( `published` , `client_id` , `access` , `folder` )
+) TYPE=MyISAM AUTO_INCREMENT=500;
+			</query>
+			<query> 
+INSERT IGNORE INTO `#__comprofiler_fields` (`fieldid`, `name`, `table`, `title`, `type`, `maxlength`, `size`, `required`, `tabid`, `ordering`, `cols`, `rows`, `value`, `default`, `published`, `registration`, `profile`, `calculated`, `sys`) 
+VALUES (41, 'name', '#__users', '_UE_NAME', 'predefined', NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, 1, 1, 1), 
+(26, 'NA', '#__comprofiler', '_UE_ONLINESTATUS', 'status', NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, 1, 1, 1), 
+(27, 'lastvisitDate', '#__users', '_UE_LASTONLINE', 'date', NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, 1, 1, 1), 
+(28, 'registerDate', '#__users', '_UE_MEMBERSINCE', 'date', NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, 1, 1, 1), 
+(29, 'avatar', '#__comprofiler', '_UE_IMAGE', 'image', NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, 1, 1, 1), 
+(42, 'username', '#__users', '_UE_UNAME', 'predefined', NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, 1, 1, 1), 
+(45, 'NA', '#__comprofiler', '_UE_FORMATNAME', 'formatname', NULL , NULL , 0, NULL , NULL , NULL , NULL , NULL , NULL , 1, 0, 1, 1, 1),
+(46, 'firstname', '#__comprofiler', '_UE_YOUR_FNAME', 'predefined', NULL, NULL, 0, NULL , NULL, NULL, NULL, NULL, NULL, 1, 0, 1, 1, 1),
+(47, 'middlename', '#__comprofiler', '_UE_YOUR_MNAME', 'predefined', NULL, NULL, 0, NULL , NULL, NULL, NULL, NULL, NULL, 1, 0, 1, 1, 1),
+(48, 'lastname', '#__comprofiler', '_UE_YOUR_LNAME', 'predefined', NULL, NULL, 0, NULL , NULL, NULL, NULL, NULL, NULL, 1, 0, 1, 1, 1),
+(49, 'lastupdatedate', '#__comprofiler', '_UE_LASTUPDATEDON', 'date', NULL , NULL , 0, NULL , NULL , NULL , NULL , NULL , NULL , 1, 0, 1, 1, 1),
+(50, 'email', '#__users', '_UE_EMAIL', 'primaryemailaddress', NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, 1, 1, 1);
+			</query>
+			<query>
+INSERT IGNORE INTO #__comprofiler (id,user_id) SELECT id,id FROM #__users
+			</query> 
+			<query>
+INSERT IGNORE INTO `#__comprofiler_plugin` (`id`, `name`, `element`, `type`, `folder`, `access`, `ordering`, `published`, `iscore`, `client_id`, `checked_out`, `checked_out_time`, `params`) 
+VALUES (1, 'CB Core', 'cb.core', 'user', 'plug_cbcore', 0, 1, 1, 1, 0, 0, '0000-00-00 00:00:00', ''),
+(2, 'CB Connections', 'cb.connections', 'user', 'plug_cbconnections', 0, 3, 1, 1, 0, 0, '0000-00-00 00:00:00', ''),
+(3, 'Content Author', 'cb.authortab', 'user', 'plug_cbmamboauthortab', 0, 4, 1, 1, 0, 0, '0000-00-00 00:00:00', ''),
+(4, 'Fireboard Forum', 'cb.simpleboardtab', 'user', 'plug_cbsimpleboardtab', 0, 5, 0, 1, 0, 0, '0000-00-00 00:00:00', ''),
+(5, 'Mamblog Blog', 'cb.mamblogtab', 'user', 'plug_cbmamblogtab', 0, 6, 0, 1, 0, 0, '0000-00-00 00:00:00', ''),
+(6, 'YaNC Newsletters', 'yanc', 'user', 'plug_yancintegration', 0, 7, 0, 1, 0, 0, '0000-00-00 00:00:00', ''), 
+(7, 'Default', 'default', 'templates', 'default', 0, 1, 1, 1, 0, 0, '0000-00-00 00:00:00', ''),
+(8, 'WinClassic', 'winclassic', 'templates', 'winclassic', 0, 2, 1, 1, 0, 0, '0000-00-00 00:00:00', ''),
+(9, 'WebFX', 'webfx', 'templates', 'webfx', 0, 3, 1, 1, 0, 0, '0000-00-00 00:00:00', ''),
+(10, 'OSX', 'osx', 'templates', 'osx', 0, 4, 1, 1, 0, 0, '0000-00-00 00:00:00', ''),
+(11, 'Luna', 'luna', 'templates', 'luna', 0, 5, 1, 1, 0, 0, '0000-00-00 00:00:00', ''),
+(12, 'Dark', 'dark', 'templates', 'dark', 0, 6, 1, 1, 0, 0, '0000-00-00 00:00:00', ''),
+(13, 'Default language (English)', 'default_language', 'language', 'default_language', 0, -1, 1, 1, 0, 0, '0000-00-00 00:00:00', ''),
+(14, 'CB Menu', 'cb.menu', 'user', 'plug_cbmenu', 0, 2, 1, 1, 0, 0, '0000-00-00 00:00:00', ''),
+(15, 'PMS MyPMS and Pro', 'pms.mypmspro', 'user', 'plug_pms_mypmspro', 0, 8, 0, 1, 0, 0, '0000-00-00 00:00:00', '');
+			</query>
+		</queries>
+	</install>
+	<installfile>install.comprofiler.php</installfile>
+	<uninstallfile>uninstall.comprofiler.php</uninstallfile>
+	<administration>
+		<menu>Community Builder</menu>
+		<submenu>
+			<menu task="showusers">User Management</menu>
+			<menu task="showTab">Tab Management</menu>
+			<menu task="showField">Field Management</menu>
+			<menu task="showLists">List Management</menu>
+			<menu task="showPlugins">Plugin Management</menu>
+			<menu task="tools">Tools</menu>
+			<menu task="showconfig">Configuration</menu>
+		</submenu>
+		<files>
+			<filename>admin.comprofiler.php</filename>
+			<filename>admin.comprofiler.controller.php</filename>
+			<filename>admin.comprofiler.html.php</filename>
+			<filename>comprofiler.toolbar.php</filename>
+			<filename>toolbar.comprofiler.php</filename>
+			<filename>toolbar.comprofiler.html.php</filename>
+			<filename>ue_config.php</filename>
+			<filename>comprofiler.class.php</filename>
+			<filename>imgToolbox.class.php</filename>
+			<filename>plugin.foundation.php</filename>
+			<filename>plugin.class.php</filename>
+			<filename>Snoopy.class.php</filename>
+			<filename>database/index.html</filename>
+			<filename>database/database.cbcore.xml</filename>
+			<filename>xmlcb/index.html</filename>
+			<filename>xmlcb/cb.lists.xml</filename>
+			<filename>library/index.html</filename>
+			<filename>library/cb/index.html</filename>
+			<filename>library/cb/cb.params.php</filename>
+			<filename>library/cb/cb.adminfilesystem.php</filename>
+			<filename>library/cb/cb.installer.php</filename>
+			<filename>library/cb/cb.pagination.php</filename>
+			<filename>library/cb/cb.database.php</filename>
+			<filename>library/cb/cb.dbchecker.php</filename>
+			<filename>library/cb/cb.acl.php</filename>
+			<filename>library/cb/cb.session.php</filename>
+			<filename>library/cb/cb.tables.php</filename>
+			<filename>library/cb/xml/index.html</filename>
+			<filename>library/cb/xml/cb.xml.simplexml.php</filename>
+			<filename>library/cb/xml/cb.xml.xml.php</filename>
+			<filename>library/cb/xml/cb.xml.domit.php</filename>
+			<filename>library/cb/sql/index.html</filename>
+			<filename>library/cb/sql/cb.sql.upgrader.php</filename>
+			<filename>library/phpinputfilter/index.html</filename>
+			<filename>library/phpinputfilter/phpinputfilter.inputfilter.php</filename>
+			<filename>library/pcl/index.html</filename>
+			<filename>library/pcl/pcl.tar.php</filename>
+			<filename>library/pcl/pcl.pclziplib.php</filename>
+			<filename>library/phpmailer/index.html</filename>
+			<filename>library/phpmailer/phpmailer.phpmailer.php</filename>
+			<filename>library/phpmailer/phpmailer.smtp.php</filename>
+			<filename>library/phpmailer/phpmailer.pop3.php</filename>
+			<filename>library/phpmailer/language/index.html</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-br.php</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-ca.php</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-cz.php</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-de.php</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-dk.php</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-en.php</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-es.php</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-et.php</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-fi.php</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-fo.php</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-fr.php</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-hu.php</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-it.php</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-ja.php</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-nl.php</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-no.php</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-pl.php</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-ro.php</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-ru.php</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-se.php</filename>
+			<filename>library/phpmailer/language/phpmailer.lang-tr.php</filename>
+			<filename>index.html</filename>
+			<filename>language/index.html</filename>
+			<filename>language/english.php</filename>
+			<filename>pluginsfiles.tgz</filename>
+		</files>
+	</administration>
+</mosinstall>

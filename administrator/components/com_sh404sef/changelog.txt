@@ -1,0 +1,540 @@
+                      sh404SEF for Joomla 1.5.x changelog
+
+
+                         (08/06/09 21:12 - build #237)
+
+
+
+--------------------------------------------------------------------------------
+ [2009-06-08] Version 1.0.20 (build 237)
+--------------------------------------------------------------------------------
+
+2009-06-07
+     [bug] Possible XSS vulnerability
+     [bug] Possible path disclosure
+2009-01-17
+     [chg] Generalized call to getConfig instead of having a global variable
+           $sefConfig. Still there for backward compat
+     [bug] Changed inclusion order so that config class is defined in cache
+           library
+     [chg] Generalized call to getConfig instead of having a global variable
+           $sefConfig. Still there for backward compat
+     [new] Added locking to cache file, to prevent corruption
+
+--------------------------------------------------------------------------------
+ [2009-01-14] Version 1.0.19 (build 232)
+--------------------------------------------------------------------------------
+
+2009-01-14
+     [chg] Adjusted call to Joomfish function, after parameters change in
+           Joomfish from 2.0.0 to 2.0.1
+2009-01-10
+     [chg] Updated default language detection due to change in Joomfish 2.0.1
+
+--------------------------------------------------------------------------------
+ [2009-01-08] Version 1.0.17 (build 225)
+--------------------------------------------------------------------------------
+
+2009-01-08
+     [chg] Removed .htaccess reference in help text in config.sef.php, would
+           trigger mod_security rules on some servers
+2009-01-03
+     [bug] Fixed slug removal when using an array in query string - Thanks to
+           3dentech
+           Tracker #14107
+
+--------------------------------------------------------------------------------
+ [2009-01-02] Version 1.0.16 (build 222)
+--------------------------------------------------------------------------------
+
+2009-01-02
+     [chg] Updated version and date info
+     [chg] Updated documentation : dual-level interface
+     [bug] Insert h1 tags not compatible with Insert read more links
+           Tracker #30
+     [chg] Respect user entry done in Joomla backedn for html "robot" tag
+           Tracker #21
+     [bug] Wrong pagination in page title on category blog content
+           Tracker #39
+     [bug] Old code from joomla 1.0.x prevented logging in when using fallback
+           urls (Joomla 1.0.x sef)
+           Tracker #25
+     [chg] Minor HTML changes for validation
+     [bug] Old code from joomla 1.0.x prevented logging in when using fallback
+           urls (Joomla 1.0.x sef)
+           Tracker #25
+2008-12-30
+     [chg] Added a workaround for base tag issue in Joomfish
+2008-11-25
+     [chg] Fix for encoded urls when checking aliases, thanks ByeVas
+
+--------------------------------------------------------------------------------
+ [2008-11-17] Version 1.0.14 build 213
+--------------------------------------------------------------------------------
+
+2008-11-17
+     [chg] Added automatic disabling of Joomfish language selection module href
+           caching - would prevent SEF url to be created in non-default
+           language. Is done upon entering the configuration screen
+     [chg] Adjust to new method for cookie check in Virtuemart 1.1.x and up
+2008-11-13
+     [chg] Moved outgoing links images to the /components dir instead of
+           /administrator dir, to allow protecting admin dir with htaccess
+           password
+     [new] Joomfish compatibility - still need to disable global translation
+           caching (as module caching setting is not working in Joomfish as of
+           today)
+2008-11-11
+     [new] Joomfish compatibility, first version
+     [bug] Wrong pagination on page title for blog views
+           Tracker #39
+     [bug] Incorrect page title (bad $option initialization)
+2008-11-10
+     [chg] New (nicer) outgoing links images. Thanks Clarisse at
+           http://sitewebstudio.com
+           Tracker #51
+2008-10-19
+     [chg] Security check : alpha-num variables now can also be underscore (_) -
+           mostly for virtuemart
+           Tracker #45
+2008-10-14
+     [new] Add parameter to switch Joomla output between table-less/table-full
+           Tracker #44
+     [new] Use category/section/menu item alias when building urls.
+           Added 3 new parameters in Plugin tabs (in Advanced mode).
+           Using aliases is off by default, to preserver backward compatibility
+           Tracker #6
+     [chg] Use category/section alias when building urls
+           Tracker #6
+     [bug] Option variable gets overriden on feeds links - Thanks orgg
+           Tracker #43
+2008-10-13
+     [new] sh404sef does not handle arrays in urls
+           Tracker #15
+     [chg] Changed default values of GuessItemidOnHomepage from true to false,
+           and InsertGlobalItemidIfNone from true to false
+     [bug] Spelling error on $limitstart
+           Tracker #41
+     [chg] Removed unneeded queries when using Joomla 1.0.x fallback type of sef
+           url
+     [bug] Incorrect url parameter when param is empty - needed fixing elsewhere
+           Tracker #32
+     [bug] Incorrect url parameter when param is empty - thanks doorknob for
+           report and fix
+           Tracker #40
+     [bug] Page titles turned to lowercase if sef url is lowercase
+           Tracker #19
+     [bug] Add index, follow on print page
+           Tracker #19
+     [new] Allows creating custom url if sef already exists
+           Tracker #35
+2008-10-11
+     [bug] On some configurations, cannot save config when in Extended display
+           mode
+           Tracker #31
+2008-10-05
+     [bug] Typo in english language tool tip - thanks rowby
+     [new] Added Very advanced parameter to control whether to apply the
+           workaround to protect against plugins calling JFactory::getDocument()
+           too early. Param is sh404SEF_PROTECT_AGAINST_DOCUMENT_TYPE_ERROR
+2008-10-02
+     [new] Only remove $format if it is 'html', to prevent pdf and rss feeds not
+           working when using system plugins that call JFactory::getDocument
+           from onAfterInitialize event handler
+     [new] Added Very advanced config param to allow Virtuemart products to
+           appear in several categories
+           Bug : prevent issues when &limit is not numeric (mostly Virtuemart)
+     [bug] We don't comply with Joomla $live_site parameter
+           Tracker #25
+2008-09-26
+     [chg] The virtuemart exception : allow a dot (.) when checking vars to be
+           alpha num, to allow page=shop.browse
+2008-09-22
+     [new] Virtuemart : products in multiple categories can now have urls to
+           each category. Can be switched in Very advanced configuration
+2008-08-08
+     []    Minor edits
+2008-07-19
+     []    Fixed: archive were not handled properly, redirecting tohome page.
+
+--------------------------------------------------------------------------------
+ [2008-07-13] Released version 1.0.11
+--------------------------------------------------------------------------------
+
+2008-07-13
+     []    Fixed: prevent redirect non-sef to sef if tmpl=component : means ajax
+           stuff, will break things
+
+--------------------------------------------------------------------------------
+ [2008-07-10] Released version 1.0.10
+--------------------------------------------------------------------------------
+
+2008-07-10
+     []    Fixed no sef when superadmin in frontend
+     []    Improved pagination handling for multipages articles
+
+--------------------------------------------------------------------------------
+ [2008-07-10] Released version 1.0.9
+--------------------------------------------------------------------------------
+
+2008-07-10
+     []    Added : sef url for Filter product hack
+2008-07-09
+     []    Added : search for aliases with or without query string (allow Google
+           clid and alias)
+
+--------------------------------------------------------------------------------
+ [2008-07-08] Released version 1.0.8
+--------------------------------------------------------------------------------
+
+2008-07-08
+     []    Fixed : VALID_MOS was not upgraded to _JEXEC when recovering th
+           custom.sef.php file from previous install
+     []    Added allowance for language files with backwardlang instead of
+           backwardLang as a xml tag
+     []    Fixed regexp to detect system-pagebreak see Joomla tracker #11718
+2008-07-07
+     []    Added protection when reading languages xml files. Sometimes, there
+           are other than language xml file in the same dir (install.xml for
+           instance
+2008-07-06
+     []    Removed unneeded call to setCredentialsFromRequest
+     []    Fixed dutch language file, forum post #9509
+     []    Fixed bug in www/non-www redirection
+2008-07-01
+     []    Fixed small bug in pagination list-limit handling
+2008-06-25
+     []    Fixed possible PHP4 compatibility issue
+2008-06-24
+     []    Updated some (c) from 2007 to 2008
+2008-06-23
+     []    Fixed missing echo. Would cause bad HTML, only visible in IE7 ???
+     []    Added tentative workarounds for VM index2.php handling
+     []    Fixed VM plugin for VM 1.1, according to
+           http://forum.virtuemart.net/index.php?topic=39913.0
+     []    fixed pagination issues
+     []    Changed version to 1.0.7
+     []    fixed pagination issues
+     []    Updatd Dutch language, by Marieke www.dutchjoomla.org
+     []    Fixed : only output title and meta for html document (not rss feeds
+           or raw)
+     []    Fixed bug #11562 : missing $database declaration
+     []    Fixed German language file for Fireboard
+2008-06-10
+     []    Fixed various language handling stuff
+2008-06-09
+     []    Fixed myblog plugin, as per
+           http://extensions.siliana.com/forums/index.php?topic=9136.0. Thanks
+           to Mark@azrul.com
+     []    Fixed Notice errors on usage of $_SERVER['QUERY_STRING'] if not set
+     []    Fixed wrong default value for email admin in case of attack
+     []    Fixed bug in getting language name
+     []    Remove catid from default Num only vars, as cause 403 with J 1.5 urls
+           (have : in them)
+     []    Fixed : bad setting of ssl live_site config value
+     []    Added : read virtuemart categories even if unpublished. Some people
+           show products from unpublished categories
+2008-06-05
+     []    Fixed : added setting up $_SERVER['QUERYSTRING'] after decoding a sef
+           url
+2008-05-17
+     []    Reformatted source using Eclipse
+2008-05-15
+     []    Prevented www/nonwww redirect when there is some POST data
+     []    Protect against empty delimiter coming from outbound links detection
+           regexp
+     []    Removed legacy mode requirement
+     []    Removed PHP4 compat issue - Thanks to Piotr Wójcik
+     []    Fixed warning in configuration if no content category defined
+2008-05-08
+     []    Fixed bug in cache manager due to html_entity encoding introduced in
+           1.0.4
+           Added optional display of cache hits and misses
+     []    Added display of cache hits and misses stats
+2008-05-07
+     []    Added handling of $task=logout, in case this is called directly
+     []    Language related changes - prepare for Joomfish
+     []    Fixed bad variable name $start instead of $topic
+     []    Language related changes - prepare for Joomfish
+2008-05-02
+     []    Fixed bad url when purging SEF urls
+2008-05-01
+     []    Added a custom.sef.php file to hold custom values for unusual
+           parameters (Very advanced tab in config).
+           Added code to handle updates transparently on these parameters
+     []    Fixed a few issues with new native mode
+     []    Fixed missing parenthesis
+     []    Added check to prevent automatic title generation of page title based
+           on URL (when no plugin exists) if URL is 1.0.x SEF style
+     []    Changes for 1.5 native mode
+     []    Updated readme information
+     []    Changes for 1.5 native mode
+     []    Changes for 1.5 native mode
+           Added table-less output for main component
+     []    Changes for 1.5 native mode
+     []    Changes for 1.5 native mode
+           Fixed issue in 404 page itemid selection
+     []    Moved from htmlspecialchars to html_entity_decode for PHP4 compat
+           Updated code for 1.5 w/o legacy
+     []    Changes for 1.5 native mode
+     []    Changes for 1.5 native mode
+           Fixed bug in homepage custom tag display
+     []    Changes for 1.5 native mode
+     []    Changes for 1.5 native
+           Fixed bug in multi-page articles handling
+2008-04-25
+     []    Added pagerewrite protection against notice when a non sef url is
+           requested
+     []    Updated date and version number to 1.0.5
+     []    Added default.sef.php content
+     []    Fixed bug (reamins of J! 1.0.x db query) in homepage link building
+     []    Fixed stupid bug in homepage link building
+     []    Fixed bug (typo) in pagination handling for homepage
+     []    Added call to htmlspecialchars before writing NON-sef url to url
+           cache. Some extensions leave quotes in their non-sef, causing errors
+           when cache is read from disk
+2008-04-09
+     []    Increased 404 page editor area
+     []    updated to 1.0.4
+     []    Protected against destroying config data when calling saveConfig from
+           non-form situation (like when switching interface levels)
+2008-04-08
+     []    Fixed bad handling of view=frontpage when not default menu item
+     []    Fixed typo
+     []    Included changelog.txt file in build
+     []    Protected default.sef.php param file, upon upgrading
+     []    Auto-redirect of outbound links is not a 303 instead of 301
+2008-04-02
+     []    Fixed : mosGetParam would prevent changing the 404 page
+2008-04-01
+     []    Fixed bug in homepage retrieval : 1.0.x code not reliable on 1.5,
+           better use built in functions
+     []    Improved handling of /index.php to / redirect : fixed bug in
+           multilingual sites
+           and added a param to disable it alltogether in case server does not
+           provide correct URI
+     []    Improved security checks by handling & passed as &amp;
+     []    Improved Sobi2 plugin, sponsored by Sean at http://themebot.com
+     []    Removed params, now in default.sef.php file
+     []    Updated to handle new "Very advanced" config tab
+           Added default.sef.php file
+     []    Updated strings for new "Very advanced" tab in config
+     []    Updated to handle new "Very advanced" config tab
+           Added default.sef.php file
+     []    Added new logo, removed old. Thanks to Chris at http://jommlajunkie !
+2008-03-23
+     []    Updated readme and some links to go to new support site domaon
+           (extensions.siliana.com)
+2008-03-19
+     []    Set language auto detect to off by default
+2008-03-18
+     []    Fixed potential bug with search engine detection when user agent
+           string is empty
+     []    Added deeppckets plugin
+           Fixed bug preventing usage of cache!
+           Fixed myblog plugin for missing dashboard new items
+2008-03-08
+     []    Changed to 1.0.2 beta
+     []    Fixed mising " in control panel
+           Added Cache ttl, with params
+2008-03-04
+     []    Fixed big bug : we did not wheck for 404 before saving a new homepage
+           in other than default lang to the DB
+           Added : insert custom root dir for pdf links, so that one can provide
+           pre-calculated pdf instead of generating them on the fly
+2008-03-02
+     []    Added german updated translation by M. Pagler
+           Fixed small bugs
+2008-03-01
+     []    Integrated xhtml compliance in backend by Michael Pagler
+           (info@joomx.com)
+           Updated backend to look a bit better under J 1.5 : classes, info
+           messages, etc
+2008-02-29
+     []    Fixed big bug : $SERVER['REQUEST_URI'] was wrongly set : included
+           mosConfig_live_site, where it should not!
+           Added some data inside ip and user agent white and black list, to
+           avoid warning from j! installer on empty file
+2008-02-23
+     []    Useing now JPATH_ROOT to avoid confusion
+2008-02-21
+     []    Adjusted documentation
+           Changed mainframe->getcfg("live_site") for JURI::base() in install
+           script
+           Fixed various bugs
+     []    Added insertion of symbol on outbound links
+2008-02-18
+     []    Removed &$uri = null param of shSefRelToAbs(), to prevent issues with
+           php 4. Not sure though
+2008-02-17
+     []    Fixed stupid bug in com_smf
+2008-02-16
+     []    Added a fix for action="index.php" not working on siliana-tech.com
+           because of base link inserted by Joomla 1.5.
+           Does not cause any problem locally though. Maybe linked to running
+           NGINX ?
+     []    Several bug fixes
+2008-02-15
+     []    Starts to work fine !
+           Mostly fixes in installation scritps
+2008-02-14
+     []    Installs fine on 1.5.0
+     []    Added auto-activation of Legacy plugin on install
+     []    Install file has to run with legacy off !
+2008-02-13
+     []    Updatede a few filenames
+     []    Added sysplugin dir
+           Various installation stuff
+     []    Updated backend help string about removal of module shCustomtags
+     []    Updated @package string to 1.5
+           Removed module setting config - need to update help! as well
+     []    A few file renames
+           Changed encoding to UTF-8
+     []    Changed xml file name to sh404sef
+     []    Renamed com_sef to com_sh404sef
+2008-02-12
+     []    Fixed 404 internal handling to mimic 1.0.X behavior
+           Meta/seo functions now OK
+           A few fixes and improvements in meta and sef_ext plugins
+     []    Basic routing and parsing OK
+           com_weblinks and com_newsfeeds OK
+2008-02-08
+     []    Building sef and parsing for basic content seems OK
+2008-02-06
+     []    A start!
+2008-02-04
+     []    Not there yet !
+2008-02-03
+     []    Branched at rev 239 from J15RC3 branch
+     []    Added com_smf to version control
+     []    Second attempt. Need to port to J1.5 stable now
+2007-10-25
+     []    Moved things around to allow inclusions in 1.5
+     []    Added J1.5 system plugin to hook up with the routing system
+     []    Trial with J 1.5 RC3 - branched at rev 120
+     []    Updated Russian translation
+     []    Merged back dual level admin branch
+2007-10-21
+     []    Fixed login/logout bug when using com login component page
+     []    Changed default value from 6 to 10 requests per second as anti-flood
+           limit
+     []    Added some files to svn:ignore
+     []    Fixed login/logout bug, where POST option value was overwritten when
+           retrieving SEF URL, in other than default language
+2007-10-20
+     []    Made sure IP white listing has priority over other ip control
+           (anti-flood, Project Honey pot) to allow operation from behind a
+           company firewall for instance
+     []    Fixed missing $ infront of Itemid in Docman plugin. Would cause
+           "docman" to be used instead of menu item name
+     []    Changed default anti-flood value from 4 per 10 seconds to 6 per 10
+           seconds
+2007-10-19
+     []    Fixed name change in sef.xml (sh404sef.class.php)
+2007-10-18
+     []    Changed name of sef.class.php to sh404sef.class.php/ not fully
+           committed first time
+     []    Changed name of sef.class.php to sh404sef.class.php
+2007-10-17
+     []    Changed pagination handling for Virtuemart so as to allow operation
+           of Display # drop-down list and get back to first page
+2007-10-16
+     []    Added Joomfish version detection to use either iso (V 1.7) or
+           shortcode (V1.8) DB field for insertion in URL
+2007-10-15
+     []    Fixed small details in email sending to admin for attack information
+     []    Added sending an email to admin when an attack is logged on the site
+           (optional, set by a constant in sef.class.php)
+     []    Fixed #231 : added $Itemid to call to getMenuTitle(), in case same
+           comp is reached from several menu items when using foreign
+           sef_ext.php file
+     []    Tentative fix : mod_shCustomtags : replace ob_start('gz_handler') by
+           a call to initGzip() to fix compat issues with other extensions
+           Fixed: Virtuemart plugin : $shAppendRemainingGETVars used instead of
+           $sefConfig->shAppendRemaining... in checkout process
+           Fixed: admin.sef.php : $sort variable may not always be initialized
+           when viewing Dupicate URLs
+2007-10-11
+     []    Added : use Page-x-y format for page numbering for all comp. Governed
+           by a constant in sef.class.php
+           Added : left / trim of URl before trying to revert it from DB
+     []    Fixed: have . as a replacement char
+2007-10-10
+     []    Added a few items to svn:ignore
+     []    Fixed small bug in nokkaew class inclusion in shInitlanguageList
+     []    Fixing manip error
+2007-10-09
+     []    Importing as a try to fix svn/ missing .svn files on disk
+           Improved mambo/nokkaew compat.
+           Nokkaew uses fr_FR instead of 'french' when forcing translation +
+           other small checks
+           1 Missing lang string in language files
+     []    trying to fix svn
+2007-10-07
+     []    Fixed added " in h1 replacement regexp, from Lindsay Bigelow at
+           omba.org
+     []    Fixed language files encoding, back to CP 1252, except for
+           russian.php, left in UTF-8
+2007-10-05
+     []    Finalized per component prefix
+           Integrated latest russian translation
+           Added per language page numbering template string (before was unique
+           for whole site)
+2007-10-04
+     []    Added a sample 404 static page template
+     []    Added static 404 page
+           Added inclusion of component prefix set by user (80% of plugins
+           done)
+           Converted all text files (language strings) to UTF-8
+2007-10-02
+     []    Added backend handling of individual prefix for each installed
+           component
+           Added compatibility code to transfer old prefix (before was possible
+           to set prefix for a few comp, those with native plugins) to new
+           params
+           Converted all main languages files to UTF-8 (plugin languages files
+           not done yet)
+2007-10-01
+     []    Fixed: bad variable name in com_profiler plugin
+2007-09-30
+     []    Added backend param to enter a default initial URL fragment per
+           component.
+           Added use of this param for foreign plugins (sef_ext.php)
+           Not added for native plugins as requires removal of older params and
+           write of backward compatibility code
+     []    Added backend param to have a default string per component at beg. of
+           URL
+     []    Updtated language files with per language backend strings
+2007-09-29
+     []    Added unused files to svn:ignore
+     []    Merged per language url translation and insert code branch at
+           revision 67
+           Removed old debug information ('echo xxx') from main files
+2007-09-26
+     []    Fixed bug : removing meta tag would result in also remmoving an sef
+           URL (with the same cid)
+     []    Fixed Fireboard plugin bug : shFBCategoryName() was called without
+           passing $shLangName as parameter, thus resulting in bad translation
+     []    Removed inclusion of MTree config file in Mtree sef ext plugin : has
+           changed in MTree 2.00 and not needed anyway
+2007-09-25
+     []    Fixed notice error on clean install as log dir does not exists in
+           /media
+     []    titleToLocation: protected against empty replacement character + #
+           signs now replaced by replace char, as it breaks anchor management
+     []    Fixed useless /index.php/ on homelink if default language
+     []    Prevent antiflood to fire up on current request
+     []    Fixed bug in security parameters input html
+2007-09-24
+     []    Added anti-flood to security section, plus a few params to control it
+           in backend
+2007-09-23
+     []    Added missing strings : _SH404SEF_MYBLOG_VIEW  and
+           _SH404SEF_MYBLOG_USERBLOG
+2007-09-22
+     []    Bug fix : meta export would not work, as function was not called due
+           to bad param in function call
+2007-09-21
+     []    Importing in trying to fix transaction out of date error
+
+                         (08/06/09 21:12 - build #237)

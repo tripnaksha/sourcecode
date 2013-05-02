@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system">
+	<name>System - Google Gears Support</name>
+	<author>Phil Taylor / Blue Flame IT Ltd.</author>
+	<creationDate>September 2008</creationDate>
+	<copyright>Copyright (C) 2008 Blue Flame IT  Ltd. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>phil@phil-taylor.com</authorEmail>
+	<authorUrl>www.phil-taylor.com</authorUrl>
+	<version>1.0.2</version>
+	<description>Provides support for Google Gears - Speeding up Joomla Administrator LOADS!</description>
+	<files>
+		<filename plugin="gears">gears.php</filename>
+		<filename>gears.xml</filename>
+		<filename>GoogleGears/gears_init.js</filename>
+		<filename>GoogleGears/gears-manifest.php</filename>
+		<filename>GoogleGears/gears.css</filename>
+		<filename>GoogleGears/joomlaGears.js</filename>
+		<filename>GoogleGears/gear.png</filename>
+	</files>
+	<params>
+	</params>
+</install>

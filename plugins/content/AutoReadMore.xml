@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+
+	<name>Content - Auto Read More</name>
+	<author>www.toao.net</author>
+	<creationDate>May 2009</creationDate>
+	<copyright>Copyright (C) 2009 www.toao.net. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorUrl>http://www.toao.net/</authorUrl>
+	<version>1.0</version>
+	<description>AUTO_READ_MORE_DESC</description>
+	<files>
+		<filename plugin="AutoReadMore">AutoReadMore.php</filename>
+	</files>
+	
+	<params>	
+	  <param name="Max_Chars" type="text" default="500" label="MAX_CHARS_LABEL" description="MAX_CHARS_DESC"/>
+      <param name="Enabled_Front_Page" type="radio" default="1" label="ENABLED_FRONT_PAGE_LABEL" description="ENABLED_FRONT_PAGE_DESC">
+         <option value="1">YES</option>
+         <option value="0">NO</option>
+      </param>
+      <param name="Exclude_Article_Ids" type="text" default="" label="EXCLUDE_ARTICLE_IDS_LABEL" description="EXCLUDE_ARTICLE_IDS_DESC"/>
+      <param name="Exclude_Category_Ids" type="text" default="" label="EXCLUDE_CATEGORY_IDS_LABEL" description="EXCLUDE_CATEGORY_IDS_DESC"/>
+      <param name="Exclude_Section_Ids" type="text" default="" label="EXCLUDE_SECTION_IDS_LABEL" description="EXCLUDE_SECTION_IDS_DESC"/>
+	</params>
+
+	<languages folder="language">
+	  <language tag="en-GB">en-GB.plg_content_AutoReadMore.ini</language>
+   </languages>
+   
+</install>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Welcome to the Joomla! Twilight Zone.
+	
+	In Joomla! 1.6, Andrew decided to change the container elements of configuration options
+	from <params> - <param>	to <fieldset> - <field>, so as to support multiple groups. Why he did
+	change the tag names is still a mystery to me. Anyway, in order to make Akeeba Backup backward
+	and forward compatible, I had to duplicate ALL parameters using both formats.
+	
+	The funny think is that we were assured that only *minor* changes would need be done to our
+	extensions and that, generally, Joomla! 1.5 extensions would run on 1.6. Yeah, right. Whatever.
+-->
+<config>
+	<fieldset name="backend" label="CONFIG_BACKEND_HEADER_LABEL" description="CONFIG_BACKEND_HEADER_DESC">
+		<field name="backend_jquery_source" type="radio" default="0"
+			label="CONFIG_BACKEND_JQUERYSRC_LABEL"
+			description="CONFIG_BACKEND_JQUERYSRC_DESC">
+			<option value="0">CONFIG_BACKEND_JQUERYSRC_LOCAL</option>
+			<option value="1">CONFIG_BACKEND_JQUERYSRC_GOOGLE</option>
+			<option value="2">CONFIG_BACKEND_JQUERYSRC_NONE</option>
+		</field>
+		<field name="backend_jqueryui_source" type="radio" default="0"
+			label="CONFIG_BACKEND_JQUERYUISRC_LABEL"
+			description="CONFIG_BACKEND_JQUERYUISRC_DESC">
+			<option value="0">CONFIG_BACKEND_JQUERYUISRC_LOCAL</option>
+			<option value="1">CONFIG_BACKEND_JQUERYUISRC_GOOGLE</option>
+			<option value="2">CONFIG_BACKEND_JQUERYUISRC_NONE</option>
+		</field>
+	</fieldset>
+
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+		>
+
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox"
+			filter="rules"
+			component="com_akeeba"
+			section="component" />
+	</fieldset>
+	
+	<fieldset name="frontend" label="CONFIG_FRONTEND_HEADER_LABEL" description="CONFIG_FRONTEND_HEADER_DESC">
+		<field name="frontend_enable" type="radio" default="0"
+			label="CONFIG_FEBENABLE_LABEL"
+			description="CONFIG_FEBENABLE_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="frontend_secret_word" type="password" default="" size="30"
+			label="CONFIG_SECRETWORD_LABEL"
+			description="CONFIG_SECRETWORD_DESC" />
+		<field name="frontend_email_on_finish" type="radio" default="0"
+			label="CONFIG_FRONTENDEMAIL_LABEL"
+			description ="CONFIG_FRONTENDEMAIL_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="frontend_email_address" type="text" default="" size="80"
+			label="CONFIG_ARBITRARYFEEMAIL_LABEL"
+			description ="CONFIG_ARBITRARYFEEMAIL_DESC" />		
+		<field name="siteurl" type="hidden" default=""
+			label="" />		
+		<field name="jversion" type="hidden" default=""
+			label="" />		
+	</fieldset>
+
+	<fieldset name="liveupdate" label="CONFIG_LIVEUPDATE_HEADER_LABEL" description="CONFIG_LIVEUPDATE_HEADER_DESC">
+		<field name="update_username" type="text" default="" size="80"
+			label="CONFIG_UPDUSERNAME_LABEL"
+			description ="CONFIG_UPDUSERNAME_DESC" />		
+		<field name="update_password" type="password" default="" size="30"
+			label="CONFIG_UPDPASSWORD_LABEL"
+			description="CONFIG_UPDPASSWORD_DESC" />
+		<field name="lastupdatecheck" type="hidden" default="2009-01-01"
+			label="" />
+		<field name="updateini" type="hidden" default=""
+			label="" />		
+	</fieldset>
+	
+	
+	<!-- ... whereas Joomla! 1.5 uses params (Andrew, you're making my life harder than it should be!) -->
+	<params>
+		<param name="backend_jquery_source" type="radio" default="0"
+			label="CONFIG_BACKEND_JQUERYSRC_LABEL"
+			description="CONFIG_BACKEND_JQUERYSRC_DESC">
+			<option value="0">CONFIG_BACKEND_JQUERYSRC_LOCAL</option>
+			<option value="1">CONFIG_BACKEND_JQUERYSRC_GOOGLE</option>
+			<option value="2">CONFIG_BACKEND_JQUERYSRC_NONE</option>
+		</param>
+		<param name="backend_jqueryui_source" type="radio" default="0"
+			label="CONFIG_BACKEND_JQUERYUISRC_LABEL"
+			description="CONFIG_BACKEND_JQUERYUISRC_DESC">
+			<option value="0">CONFIG_BACKEND_JQUERYUISRC_LOCAL</option>
+			<option value="1">CONFIG_BACKEND_JQUERYUISRC_GOOGLE</option>
+			<option value="2">CONFIG_BACKEND_JQUERYUISRC_NONE</option>
+		</param>
+		<param name="siteurl" type="hidden" default=""
+			label="Site's URL, for the front-end backup" />
+		<param name="jversion" type="hidden" default=""
+			label="Joomla! version family" />		
+		
+
+		<!-- Access control setup -->
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="minimum_acl_group" type="radio" default="super administrator"
+			label="CONFIG_MINACL_LABEL"
+			description="CONFIG_MINACL_DESC">
+			<option value="super administrator">CONFIG_OPT_AUTHSUPER</option>
+			<option value="administrator">CONFIG_OPT_AUTHADMIN</option>
+			<option value="manager">CONFIG_OPT_AUTHMANAGER</option>
+		</param>
+		
+		<!-- Front-end backup feature -->
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="frontend_enable" type="radio" default="0"
+			label="CONFIG_FEBENABLE_LABEL"
+			description="CONFIG_FEBENABLE_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="frontend_secret_word" type="password" default="" size="30"
+			label="CONFIG_SECRETWORD_LABEL"
+			description="CONFIG_SECRETWORD_DESC" />
+		<param name="frontend_email_on_finish" type="radio" default="0"
+			label="CONFIG_FRONTENDEMAIL_LABEL"
+			description ="CONFIG_FRONTENDEMAIL_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="frontend_email_address" type="text" default="" size="80"
+			label="CONFIG_ARBITRARYFEEMAIL_LABEL"
+			description ="CONFIG_ARBITRARYFEEMAIL_DESC" />
+
+		<!-- Live update -->
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="update_username" type="text" default="" size="80"
+			label="CONFIG_UPDUSERNAME_LABEL"
+			description ="CONFIG_UPDUSERNAME_DESC" />		
+		<param name="update_password" type="password" default="" size="30"
+			label="CONFIG_UPDPASSWORD_LABEL"
+			description="CONFIG_UPDPASSWORD_DESC" />
+		<param name="lastupdatecheck" type="hidden" default="2009-01-01"
+			label="Last update check date" />
+		<param name="updateini" type="hidden" default=""
+			label="Update information cache" />
+	</params>	
+</config>

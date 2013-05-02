@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5.4" type="plugin" group="content" method="upgrade">
+	<name>Content - Trail Review</name>
+	<author>Ajay Reddy</author>
+	<creationDate>February 2009</creationDate>
+	<copyright>Copyright (C) 2009 - 2008 Ajay Reddy. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>ajyrds@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0</version>
+	<description>
+		A plugin to store the link between trail and its review.
+		Name of category and section should be entered from admin front end as query will use these.
+		SELECT MAX(A.id) AS latest .
+		FROM `jos_content` A, `jos_categories` B, `jos_sections` C .
+		WHERE A.catid = B.id  .
+		AND A.sectionid = C.id  .
+		AND INSTR( B.title, ' . catname . ' ) .
+		AND INSTR( C.title, ' . secname . ' );
+	     Order of installation -
+		 com_savetrail
+		 com_searchTrails - drops _trailReview, _trailList and then creates _trailList, _trailReview
+		 com_searchTrailReviews
+		 plgContentSearchReview
+		 com_contentsubmit_mod - uses _trailReview
+		 com_trailDisplay - js functions use _trailReview and _trailList
+		 plgSearchTrailReviews - uses _trailReview
+	</description>
+	<files>
+		<filename plugin="TrailReview">TrailReview.php</filename>
+	</files>
+
+	<params>
+		<param name="TrailReview Description" type="textarea" default="" label="" description=""/>
+		<param name="catname" type="text" default="" label="Category Name" description="Category Name" />
+		<param name="secname" type="text" default="" label="Section Name" description="Section Name" />
+	</params>

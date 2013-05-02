@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5.0" type="component">
+     <name>First Page</name>
+	 <author>Ajay Reddy</author>
+	 <creationDate>July 2009</creationDate>
+	 <copyright>Copyright (C) 2008 - 2009 Ajay Reddy. All rights reserved.</copyright>
+	 <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	 <authorEmail>ajay@tripnaksha.com</authorEmail>
+	 <authorUrl></authorUrl>
+	 <version>1.0</version>
+     <description>
+	     Display front page.
+	     <br />main items on website
+     </description>
+
+     <files>
+          <filename>firstpage.php</filename>
+          <filename>index.html</filename>
+          <filename>css/page.css</filename>
+          <filename>images/index.html</filename>
+          <filename>images/bg.png</filename>
+          <filename>images/bgb.png</filename>
+          <filename>images/hbg.png</filename>
+          <filename>images/hbgb.png</filename>
+          <filename>js/index.html</filename>
+          <filename>js/page.js</filename>
+     </files>
+
+    <administration>
+       <menu >First Page</menu>
+       <files>
+              <filename component="admin.firstpage">admin.firstpage.php</filename>
+       </files>
+     </administration>
+</install>
